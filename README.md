@@ -1,6 +1,8 @@
 # FXR60-90 API packages
 
-Self-contained final packages for **REST** and **MQTT** (FXR60 / FXR90).
+REST and MQTT API reference for Zebra FXR60 and FXR90 fixed RFID readers, covering
+endpoints, command payloads, responses, events, and configuration workflows used to
+monitor and control reader operation.
 
 For full session history and decisions, see **[CONTEXT.md](CONTEXT.md)**.
 
