@@ -1,0 +1,19 @@
+{
+  "mlan0": {
+    "enable": true,
+    "accesspoint": {
+      "autoConn": true,
+      "connect": true,
+      "essid": "MyWPA3EnterpriseNetwork",
+      "security": {
+        "enable": true,
+        "WPA3Enterprise": {
+          "authentication": "PEAP",
+          "innerAuthentication": "MSCHAPv2",
+          "username": "john.doe",
+          "password": "secret"
+        }
+      }
+    }
+  }
+}
