@@ -1,7 +1,6 @@
 {
   "command": "get_config",
   "command_id": "req-get-config",
-  "response": "success",
   "payload": {
     "GPIO-LED": {
       "GPODefaults": {
@@ -330,5 +329,6 @@
         }
       ]
     }
-  }
+  },
+  "response": "success"
 }

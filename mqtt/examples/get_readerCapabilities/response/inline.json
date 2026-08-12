@@ -1,7 +1,6 @@
 {
   "command": "get_readerCapabilities",
   "command_id": "req-get-readerCapabilities",
-  "response": "success",
   "payload": {
     "capabilities": {
       "antennas": [
@@ -202,5 +201,6 @@
         "GPI"
       ]
     }
-  }
+  },
+  "response": "success"
 }

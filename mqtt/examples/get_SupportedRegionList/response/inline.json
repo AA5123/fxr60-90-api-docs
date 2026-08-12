@@ -1,7 +1,6 @@
 {
   "command": "get_SupportedRegionList",
   "command_id": "req-get-SupportedRegionList",
-  "response": "success",
   "payload": {
     "SupportedRegions": [
       "Argentina",
@@ -37,5 +36,6 @@
       "Venezuela",
       "Vietnam"
     ]
-  }
+  },
+  "response": "success"
 }

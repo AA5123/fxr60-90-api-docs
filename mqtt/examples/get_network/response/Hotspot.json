@@ -1,7 +1,6 @@
 {
   "command": "get_network",
   "command_id": "req-get-network",
-  "response": "success",
   "payload": {
     "hostName": "FXR90C5F1AB",
     "networkInterface": {
@@ -22,5 +21,6 @@
         ]
       }
     }
-  }
+  },
+  "response": "success"
 }

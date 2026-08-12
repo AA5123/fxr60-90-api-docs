@@ -1,7 +1,6 @@
 {
   "command": "get_logs",
   "command_id": "req-get-logs",
-  "response": "success",
   "payload": {
     "radioPacketLog": true,
     "components": [
@@ -14,5 +13,6 @@
         "level": "DEBUG"
       }
     ]
-  }
+  },
+  "response": "success"
 }

@@ -1,8 +1,8 @@
 {
   "command": "get_stackled",
   "command_id": "req-get-stackled",
-  "response": "success",
   "payload": {
     "status": "DEFAULT"
-  }
+  },
+  "response": "success"
 }

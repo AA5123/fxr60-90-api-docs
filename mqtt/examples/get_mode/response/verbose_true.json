@@ -1,7 +1,6 @@
 {
   "command": "get_mode",
   "command_id": "req-get-mode",
-  "response": "success",
   "payload": {
     "antennaStopCondition": {
       "type": "DURATION",
@@ -48,5 +47,6 @@
       27
     ],
     "type": "INVENTORY"
-  }
+  },
+  "response": "success"
 }

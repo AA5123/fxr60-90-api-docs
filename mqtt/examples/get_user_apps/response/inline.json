@@ -1,7 +1,6 @@
 {
   "command": "get_user_apps",
   "command_id": "req-get-user-apps",
-  "response": "success",
   "payload": [
     {
       "appname": "mylogger",
@@ -15,5 +14,6 @@
       "autostart": true,
       "metadata": "APP_TYPE: NORMAL"
     }
-  ]
+  ],
+  "response": "success"
 }

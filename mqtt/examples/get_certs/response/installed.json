@@ -1,7 +1,6 @@
 {
   "command": "get_certs",
   "command_id": "req-get-certs",
-  "response": "success",
   "payload": [
     {
       "installTime": "Mon Aug 10 05:12:32 2026",
@@ -25,5 +24,6 @@
       "validityEnd": "05/08/2046",
       "validityStart": "10/08/2026"
     }
-  ]
+  ],
+  "response": "success"
 }

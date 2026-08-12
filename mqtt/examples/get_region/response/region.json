@@ -1,7 +1,6 @@
 {
   "command": "get_region",
   "command_id": "req-get-region",
-  "response": "success",
   "payload": {
     "FrequencyHopping": true,
     "channelData": [
@@ -62,5 +61,6 @@
     "minTxPowerSupported": 0,
     "region": "FCC_Generic",
     "regulatoryStandard": "CANADA_FCC_15"
-  }
+  },
+  "response": "success"
 }

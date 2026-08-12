@@ -1557,7 +1557,6 @@
                                         "value": {
                                             "command": "get_mode",
                                             "command_id": "req-get-mode",
-                                            "response": "success",
                                             "payload": {
                                                 "antennaStopCondition": {
                                                     "type": "DURATION",
@@ -1591,7 +1590,8 @@
                                                     27
                                                 ],
                                                 "type": "INVENTORY"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "verbose_true": {
@@ -1599,7 +1599,6 @@
                                         "value": {
                                             "command": "get_mode",
                                             "command_id": "req-get-mode",
-                                            "response": "success",
                                             "payload": {
                                                 "antennaStopCondition": {
                                                     "type": "DURATION",
@@ -1646,7 +1645,8 @@
                                                     27
                                                 ],
                                                 "type": "INVENTORY"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -3326,8 +3326,8 @@
                                         "value": {
                                             "command": "set_mode",
                                             "command_id": "req-set-mode",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -3549,8 +3549,8 @@
                                         "value": {
                                             "command": "start",
                                             "command_id": "req-start",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -3742,8 +3742,8 @@
                                         "value": {
                                             "command": "stop",
                                             "command_id": "req-stop",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -3891,10 +3891,10 @@
                                         "value": {
                                             "command": "get_preSelection",
                                             "command_id": "req-get-preSelection",
-                                            "response": "success",
                                             "payload": {
                                                 "preSelection": "disabled"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -4039,8 +4039,8 @@
                                         "value": {
                                             "command": "set_preSelection",
                                             "command_id": "req-set-preSelection",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -4459,8 +4459,8 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     },
                                     "fastID_configured": {
@@ -4468,12 +4468,12 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
                                             "payload": {
                                                 "fastID": {
                                                     "enabled": true
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "tagFocus_configured": {
@@ -4481,12 +4481,12 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
                                             "payload": {
                                                 "tagFocus": {
                                                     "enabled": true
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "tagProtect_configured": {
@@ -4494,7 +4494,6 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
                                             "payload": {
                                                 "tagProtect": {
                                                     "action": "enableTagProtection",
@@ -4502,7 +4501,8 @@
                                                     "tagID": "e2801191a5030069073b426d",
                                                     "enableShortRange": true
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "tagQuieting_advanced_configured": {
@@ -4510,7 +4510,6 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
                                             "payload": {
                                                 "tagQuieting": {
                                                     "advanced": {
@@ -4522,7 +4521,8 @@
                                                         "stateAwareAction": "ASSERTSL"
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "tagQuieting_basic_configured": {
@@ -4530,7 +4530,6 @@
                                         "value": {
                                             "command": "get_impinjGen2X",
                                             "command_id": "req-get-impinjGen2X",
-                                            "response": "success",
                                             "payload": {
                                                 "tagQuieting": {
                                                     "basic": {
@@ -4540,7 +4539,8 @@
                                                         ]
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -5208,8 +5208,8 @@
                                         "value": {
                                             "command": "set_impinjGen2X",
                                             "command_id": "req-set-impinjGen2X",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -5347,7 +5347,6 @@
                                         "value": {
                                             "command": "get_version",
                                             "command_id": "req-get-version",
-                                            "response": "success",
                                             "payload": {
                                                 "availableOsUpgrades": {},
                                                 "cloudAgentApplication": "0.6.2.64",
@@ -5357,7 +5356,8 @@
                                                 "readerApplication": "5.0.3",
                                                 "revertBackFirmware": {},
                                                 "serialNumber": "260995251E0047"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -5815,84 +5815,90 @@
                                         "value": {
                                             "command": "get_status",
                                             "command_id": "req-get-status",
-                                            "response": "success",
                                             "payload": {
                                                 "antennas": {
-                                                    "1": "connected",
-                                                    "2": "connected",
+                                                    "1": "disconnected",
+                                                    "2": "disconnected",
                                                     "3": "disconnected",
                                                     "4": "disconnected",
                                                     "5": "connected",
                                                     "6": "connected"
                                                 },
+                                                "ble": {
+                                                    "beaconCounts": {
+                                                        "altBeacon": 0,
+                                                        "eddystone": 0,
+                                                        "generic": 0,
+                                                        "iBeacon": 0,
+                                                        "total": 0
+                                                    },
+                                                    "scanStartTime": "",
+                                                    "scanState": "stopped"
+                                                },
                                                 "cpu": {
-                                                    "system": 4,
-                                                    "user": 18
+                                                    "system": 0,
+                                                    "user": 8
                                                 },
                                                 "flash": {
                                                     "platform": {
-                                                        "free": 100,
-                                                        "total": 200,
-                                                        "used": 100
+                                                        "free": 0,
+                                                        "total": 0,
+                                                        "used": 0
                                                     },
                                                     "readerConfig": {
-                                                        "free": 50,
-                                                        "total": 100,
-                                                        "used": 50
+                                                        "free": 0,
+                                                        "total": 0,
+                                                        "used": 0
                                                     },
                                                     "readerData": {
-                                                        "free": 80,
-                                                        "total": 100,
-                                                        "used": 20
+                                                        "free": 0,
+                                                        "total": 0,
+                                                        "used": 0
                                                     },
                                                     "rootFileSystem": {
-                                                        "free": 900,
-                                                        "total": 1200,
-                                                        "used": 300
+                                                        "free": 0,
+                                                        "total": 0,
+                                                        "used": 0
                                                     }
+                                                },
+                                                "impinjGen2X": {
+                                                    "feature": "none",
+                                                    "isActive": false
                                                 },
                                                 "interfaceConnectionStatus": {
                                                     "data": [
                                                         {
                                                             "connectionError": "",
                                                             "connectionStatus": "connected",
-                                                            "description": "MQTT data",
-                                                            "interface": "mqtt_emqx_data"
+                                                            "description": "awsend1",
+                                                            "interface": "Mqqtendpoint"
+                                                        },
+                                                        {
+                                                            "connectionError": "",
+                                                            "connectionStatus": "disconnected",
+                                                            "description": "WEBSOCKET",
+                                                            "interface": "WEBSOCKET"
                                                         }
                                                     ]
                                                 },
                                                 "ntp": {
-                                                    "offset": 2,
+                                                    "offset": 0.005446,
                                                     "reach": 377
                                                 },
                                                 "powerNegotiation": "POE+",
-                                                "powerSource": "POE",
+                                                "powerSource": "PWR_BRICK",
                                                 "radioActivity": "active",
-                                                "radioConnection": "connected",
+                                                "radioConnection": "disconnected",
                                                 "ram": {
-                                                    "free": 60,
+                                                    "free": 58,
                                                     "total": 100,
-                                                    "used": 40
+                                                    "used": 42
                                                 },
-                                                "systemTime": "07/08/2026 10:15",
-                                                "temperature": 48,
-                                                "uptime": "1D0H15M00S",
-                                                "impinjGen2X": {
-                                                    "active": true,
-                                                    "feature": "tagFocus"
-                                                },
-                                                "ble": {
-                                                    "scanState": "running",
-                                                    "scanStartTime": "2026-08-07T09:00:00.000Z",
-                                                    "beaconCounts": {
-                                                        "altBeacon": 10,
-                                                        "eddystone": 0,
-                                                        "generic": 0,
-                                                        "iBeacon": 40,
-                                                        "total": 50
-                                                    }
-                                                }
-                                            }
+                                                "systemTime": "12/08/2026 08:02",
+                                                "temperature": 37,
+                                                "uptime": "36D3H12M26S"
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -7116,7 +7122,6 @@
                                         "value": {
                                             "command": "get_config",
                                             "command_id": "req-get-config",
-                                            "response": "success",
                                             "payload": {
                                                 "GPIO-LED": {
                                                     "GPODefaults": {
@@ -7445,7 +7450,8 @@
                                                         }
                                                     ]
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -12376,8 +12382,8 @@
                                         "value": {
                                             "command": "set_config",
                                             "command_id": "req-set-config",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -12548,10 +12554,10 @@
                                         "value": {
                                             "command": "set_passthru",
                                             "command_id": "req-set-passthru-status",
-                                            "response": "success",
                                             "payload": {
                                                 "response": "Success: {\"numTagReads\": 8034512,\"numTagReadsPerAntenna\": {\"1\": 8034512,\"2\": 0,\"3\": 0,\"4\": 0},\"numRadioPacketsRxed\": 12131354,\"numDataMessagesTxed\": 8034512,\"cpuUtilization\": 0.0,\"ramUtilization\": 1.0,\"uptime\": \"140:56:48\",\"numErrors\": 9313,\"numWarnings\": 20,\"radioConnection\": \"connected\",\"radioActivity\": \"active\",\"antennas\": {\"1\": \"disconnected\",\"2\": \"disconnected\",\"3\": \"connected\",\"4\": \"disconnected\"},\"temperature\": {\"ambient\":33,\"pa\":30},\"impinjGen2X\": {\"isActive\": false,\"feature\": \"none\"}}"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -14407,8 +14413,8 @@
                                         "value": {
                                             "command": "set_importCloudConfig",
                                             "command_id": "req-set-importCloudConfig",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -14874,7 +14880,6 @@
                                         "value": {
                                             "command": "get_readerCapabilities",
                                             "command_id": "req-get-readerCapabilities",
-                                            "response": "success",
                                             "payload": {
                                                 "capabilities": {
                                                     "antennas": [
@@ -15075,7 +15080,8 @@
                                                         "GPI"
                                                     ]
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -15244,7 +15250,6 @@
                                         "value": {
                                             "command": "get_cableLossCompensation",
                                             "command_id": "req-get-cableLossCompensation",
-                                            "response": "success",
                                             "payload": {
                                                 "1": {
                                                     "cableLength": 10,
@@ -15262,7 +15267,8 @@
                                                     "cableLength": 10,
                                                     "cableLossPerHundredFt": 10
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -15458,8 +15464,8 @@
                                         "value": {
                                             "command": "set_cableLossCompensation",
                                             "command_id": "req-set-cableLossCompensation",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -15597,8 +15603,8 @@
                                         "value": {
                                             "command": "reboot",
                                             "command_id": "req-reboot",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -15776,8 +15782,8 @@
                                         "value": {
                                             "command": "set_password",
                                             "command_id": "req-set-password",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -15927,10 +15933,10 @@
                                         "value": {
                                             "command": "get_hostname",
                                             "command_id": "req-get-hostname",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C60C001"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16079,8 +16085,8 @@
                                         "value": {
                                             "command": "set_hostname",
                                             "command_id": "req-set-hostname",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16228,10 +16234,10 @@
                                         "value": {
                                             "command": "get_appled",
                                             "command_id": "req-get-appled",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "DEFAULT"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "overridden_state": {
@@ -16239,10 +16245,10 @@
                                         "value": {
                                             "command": "get_appled",
                                             "command_id": "req-get-appled",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "NON_DEFAULT"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16401,8 +16407,8 @@
                                         "value": {
                                             "command": "set_appled",
                                             "command_id": "req-set-appled",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16566,10 +16572,10 @@
                                         "value": {
                                             "command": "get_stackled",
                                             "command_id": "req-get-stackled",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "DEFAULT"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "flashing_red_with_countdown": {
@@ -16577,7 +16583,6 @@
                                         "value": {
                                             "command": "get_stackled",
                                             "command_id": "req-get-stackled",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "NON_DEFAULT",
                                                 "color": "red",
@@ -16585,7 +16590,8 @@
                                                 "flash": true,
                                                 "seconds": 30,
                                                 "seconds_remaining": 18
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "solid_green": {
@@ -16593,7 +16599,6 @@
                                         "value": {
                                             "command": "get_stackled",
                                             "command_id": "req-get-stackled",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "NON_DEFAULT",
                                                 "color": "green",
@@ -16601,7 +16606,8 @@
                                                 "flash": false,
                                                 "seconds": 0,
                                                 "seconds_remaining": 0
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16790,8 +16796,8 @@
                                         "value": {
                                             "command": "set_stackled",
                                             "command_id": "req-set-stackled",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -16960,13 +16966,13 @@
                                         "value": {
                                             "command": "get_gpostatus",
                                             "command_id": "req-get-gpostatus",
-                                            "response": "success",
                                             "payload": {
                                                 "1": "LOW",
                                                 "2": "LOW",
                                                 "3": "HIGH",
                                                 "4": "LOW"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -17120,8 +17126,8 @@
                                         "value": {
                                             "command": "set_gpo",
                                             "command_id": "req-set-gpo",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -17300,13 +17306,13 @@
                                         "value": {
                                             "command": "get_gpi_status",
                                             "command_id": "req-get-gpi-status",
-                                            "response": "success",
                                             "payload": {
                                                 "1": "LOW",
                                                 "2": "LOW",
                                                 "3": "HIGH",
                                                 "4": "LOW"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -17483,7 +17489,6 @@
                                         "value": {
                                             "command": "get_region",
                                             "command_id": "req-get-region",
-                                            "response": "success",
                                             "payload": {
                                                 "FrequencyHopping": true,
                                                 "channelData": [
@@ -17544,7 +17549,8 @@
                                                 "minTxPowerSupported": 0,
                                                 "region": "FCC_Generic",
                                                 "regulatoryStandard": "CANADA_FCC_15"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -17710,8 +17716,8 @@
                                         "value": {
                                             "command": "set_region",
                                             "command_id": "req-set-region",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -17865,7 +17871,6 @@
                                         "value": {
                                             "command": "get_SupportedRegionList",
                                             "command_id": "req-get-SupportedRegionList",
-                                            "response": "success",
                                             "payload": {
                                                 "SupportedRegions": [
                                                     "Argentina",
@@ -17901,7 +17906,8 @@
                                                     "Venezuela",
                                                     "Vietnam"
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -18170,7 +18176,6 @@
                                         "value": {
                                             "command": "get_supportedStandardList",
                                             "command_id": "req-get-supportedStandardList",
-                                            "response": "success",
                                             "payload": {
                                                 "SupportedStandards": [
                                                     {
@@ -18232,7 +18237,8 @@
                                                         "isLBTConfigurable": "false"
                                                     }
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -18415,7 +18421,6 @@
                                         "value": {
                                             "command": "get_logs",
                                             "command_id": "req-get-logs",
-                                            "response": "success",
                                             "payload": {
                                                 "radioPacketLog": true,
                                                 "components": [
@@ -18428,7 +18433,8 @@
                                                         "level": "DEBUG"
                                                     }
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -18623,8 +18629,8 @@
                                         "value": {
                                             "command": "set_logs",
                                             "command_id": "req-set-logs",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -18771,11 +18777,11 @@
                                         "value": {
                                             "command": "get_logs_syslog",
                                             "command_id": "req-get-logs-syslog",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "syslog.tar.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -18914,11 +18920,11 @@
                                         "value": {
                                             "command": "del_syslogs",
                                             "command_id": "req-del-syslogs",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "syslog.tar.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19069,11 +19075,11 @@
                                         "value": {
                                             "command": "get_rc_log",
                                             "command_id": "req-get-rc-log",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "rc_info.log.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19220,11 +19226,11 @@
                                         "value": {
                                             "command": "get_rg_warn_logs",
                                             "command_id": "req-get-rg-warn-logs",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "rg_warning.log.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19373,11 +19379,11 @@
                                         "value": {
                                             "command": "get_rg_error_logs",
                                             "command_id": "req-get-rg-error-logs",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "rg_error.log.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19524,11 +19530,11 @@
                                         "value": {
                                             "command": "get_radio_pkt_logs",
                                             "command_id": "req-get-radio-pkt-logs",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "radio_packet.pcap.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19667,11 +19673,11 @@
                                         "value": {
                                             "command": "del_radio_pkt_logs",
                                             "command_id": "req-del-radio-pkt-logs",
-                                            "response": "success",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
                                                 "filename": "radio_packet.pcap.gz"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -19924,10 +19930,10 @@
                                         "value": {
                                             "command": "get_timeZone",
                                             "command_id": "req-get-timeZone",
-                                            "response": "success",
                                             "payload": {
                                                 "timeZone": "UTC"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -20345,8 +20351,8 @@
                                         "value": {
                                             "command": "set_timeZone",
                                             "command_id": "req-set-timeZone",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -20497,10 +20503,10 @@
                                         "value": {
                                             "command": "get_ntpServer",
                                             "command_id": "req-get-ntpServer",
-                                            "response": "success",
                                             "payload": {
                                                 "server": "time.google.com"
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -20707,8 +20713,8 @@
                                         "value": {
                                             "command": "set_ntpServer",
                                             "command_id": "req-set-ntpServer",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -20907,7 +20913,6 @@
                                         "value": {
                                             "command": "get_certs",
                                             "command_id": "req-get-certs",
-                                            "response": "success",
                                             "payload": [
                                                 {
                                                     "installTime": "Mon Aug 10 05:12:32 2026",
@@ -20931,7 +20936,8 @@
                                                     "validityEnd": "05/08/2046",
                                                     "validityStart": "10/08/2026"
                                                 }
-                                            ]
+                                            ],
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -21092,8 +21098,8 @@
                                         "value": {
                                             "command": "del_certs",
                                             "command_id": "req-del-certs",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -21357,8 +21363,8 @@
                                         "value": {
                                             "command": "set_update_cert",
                                             "command_id": "req-set-update-cert",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -21527,8 +21533,8 @@
                                         "value": {
                                             "command": "refresh-cert",
                                             "command_id": "req-refresh-cert",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -21670,11 +21676,11 @@
                                         "value": {
                                             "command": "get_CACertificates",
                                             "command_id": "req-get-CACertificates",
-                                            "response": "success",
                                             "payload": [
                                                 "AmazonRootCA1",
                                                 "broker.emqx.io-ca"
-                                            ]
+                                            ],
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -21872,8 +21878,8 @@
                                         "value": {
                                             "command": "set_installCACertificate",
                                             "command_id": "req-set-installCACertificate",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -22063,8 +22069,8 @@
                                         "value": {
                                             "command": "del_CACertificate",
                                             "command_id": "req-del-CACertificate",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -22768,7 +22774,6 @@
                                         "value": {
                                             "command": "get_network",
                                             "command_id": "req-get-network",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C5F1AB",
                                                 "networkInterface": {
@@ -22787,7 +22792,8 @@
                                                         "usePassKey": true
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "Ethernet": {
@@ -22795,7 +22801,6 @@
                                         "value": {
                                             "command": "get_network",
                                             "command_id": "req-get-network",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C5F1AB",
                                                 "networkInterface": {
@@ -22821,7 +22826,8 @@
                                                         "macAddress": "C8:1C:FE:C5:F1:AB"
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "Hotspot": {
@@ -22829,7 +22835,6 @@
                                         "value": {
                                             "command": "get_network",
                                             "command_id": "req-get-network",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C5F1AB",
                                                 "networkInterface": {
@@ -22850,7 +22855,8 @@
                                                         ]
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "WAN": {
@@ -22858,7 +22864,6 @@
                                         "value": {
                                             "command": "get_network",
                                             "command_id": "req-get-network",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C5F1AB",
                                                 "networkInterface": {
@@ -22886,7 +22891,8 @@
                                                         }
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "WiFi": {
@@ -22894,7 +22900,6 @@
                                         "value": {
                                             "command": "get_network",
                                             "command_id": "req-get-network",
-                                            "response": "success",
                                             "payload": {
                                                 "hostName": "FXR90C5F1AB",
                                                 "networkInterface": {
@@ -22928,7 +22933,8 @@
                                                         "macAddress": "48:A4:93:BF:A9:50"
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -23902,8 +23908,8 @@
                                         "value": {
                                             "command": "set_network",
                                             "command_id": "req-set-network",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -24115,7 +24121,6 @@
                                         "value": {
                                             "command": "get_availableWifiNetworks",
                                             "command_id": "req-get-availableWifiNetworks",
-                                            "response": "success",
                                             "payload": {
                                                 "availableWifiNetworks": [
                                                     {
@@ -24265,7 +24270,8 @@
                                                         "signalStrength": "69%"
                                                     }
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -24399,7 +24405,6 @@
                                         "value": {
                                             "command": "get_networkInterfaces",
                                             "command_id": "req-get-networkInterfaces-fxr60",
-                                            "response": "success",
                                             "payload": {
                                                 "availableNetworkInterfaces": [
                                                     "eth0",
@@ -24408,7 +24413,8 @@
                                                     "blescan",
                                                     "uap0"
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "fxr90": {
@@ -24416,7 +24422,6 @@
                                         "value": {
                                             "command": "get_networkInterfaces",
                                             "command_id": "req-get-networkInterfaces-fxr90",
-                                            "response": "success",
                                             "payload": {
                                                 "availableNetworkInterfaces": [
                                                     "eth0",
@@ -24424,7 +24429,8 @@
                                                     "bnep0",
                                                     "wan0"
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -24564,7 +24570,6 @@
                                         "value": {
                                             "command": "get_readPoints",
                                             "command_id": "req-get-readPoints",
-                                            "response": "success",
                                             "payload": [
                                                 "1",
                                                 "2",
@@ -24572,7 +24577,8 @@
                                                 "4",
                                                 "5",
                                                 "6"
-                                            ]
+                                            ],
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -24727,13 +24733,13 @@
                                         "value": {
                                             "command": "get_gpsCoordinates",
                                             "command_id": "req-get-gpsCoordinates",
-                                            "response": "success",
                                             "payload": {
                                                 "lastReportedTime": "2026-08-07T09:41:12Z",
                                                 "latitude": "12.9703",
                                                 "longitude": "77.7101",
                                                 "satellitesUsed": 9
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "no_fix": {
@@ -24741,13 +24747,13 @@
                                         "value": {
                                             "command": "get_gpsCoordinates",
                                             "command_id": "req-get-gpsCoordinates",
-                                            "response": "success",
                                             "payload": {
                                                 "lastReportedTime": "",
                                                 "latitude": "0.0",
                                                 "longitude": "0.0",
                                                 "satellitesUsed": 0
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -24922,7 +24928,6 @@
                                         "value": {
                                             "command": "get_eSimConfig",
                                             "command_id": "req-get-eSimConfig",
-                                            "response": "success",
                                             "payload": {
                                                 "eid": "89049032005008882600033489161010",
                                                 "imei": "356938035643809",
@@ -24940,7 +24945,8 @@
                                                         "provider": "Vodafone"
                                                     }
                                                 ]
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -25129,8 +25135,8 @@
                                         "value": {
                                             "command": "set_eSimConfig",
                                             "command_id": "req-set-eSimConfig",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -25386,8 +25392,8 @@
                                         "value": {
                                             "command": "set_os",
                                             "command_id": "req-set-os",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -25526,8 +25532,8 @@
                                         "value": {
                                             "command": "revertback",
                                             "command_id": "req-revertback",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -25769,8 +25775,8 @@
                                         "value": {
                                             "command": "install_user_app",
                                             "command_id": "req-install-user-app",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -25917,8 +25923,8 @@
                                         "value": {
                                             "command": "start_user_app",
                                             "command_id": "req-start-user-app",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26065,8 +26071,8 @@
                                         "value": {
                                             "command": "stop_user_app",
                                             "command_id": "req-stop-user-app",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26233,8 +26239,8 @@
                                         "value": {
                                             "command": "autostart_user_app",
                                             "command_id": "req-autostart-user-app",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26404,7 +26410,6 @@
                                         "value": {
                                             "command": "get_user_apps",
                                             "command_id": "req-get-user-apps",
-                                            "response": "success",
                                             "payload": [
                                                 {
                                                     "appname": "mylogger",
@@ -26418,7 +26423,8 @@
                                                     "autostart": true,
                                                     "metadata": "APP_TYPE: NORMAL"
                                                 }
-                                            ]
+                                            ],
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26556,8 +26562,8 @@
                                         "value": {
                                             "command": "set_dataToRG",
                                             "command_id": "req-set-dataToRG",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26755,12 +26761,12 @@
                                         "value": {
                                             "command": "set_req_usr_app",
                                             "command_id": "req-set-req-usr-app",
-                                            "response": "success",
                                             "payload": {
                                                 "status": "ok",
                                                 "echo": "status",
                                                 "uptimeSec": 3241
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -26907,8 +26913,8 @@
                                         "value": {
                                             "command": "uninstall-user-app",
                                             "command_id": "req-uninstall-user-app",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -27241,12 +27247,12 @@
                                         "value": {
                                             "command": "get_bleConfig",
                                             "command_id": "req-get-bleConfig",
-                                            "response": "success",
                                             "payload": {
                                                 "ble": {
                                                     "enable": false
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     },
                                     "inline": {
@@ -27254,7 +27260,6 @@
                                         "value": {
                                             "command": "get_bleConfig",
                                             "command_id": "req-get-bleConfig",
-                                            "response": "success",
                                             "payload": {
                                                 "ble": {
                                                     "enable": true,
@@ -27327,7 +27332,8 @@
                                                         ]
                                                     }
                                                 }
-                                            }
+                                            },
+                                            "response": "success"
                                         }
                                     }
                                 }
@@ -27794,8 +27800,8 @@
                                         "value": {
                                             "command": "set_bleConfig",
                                             "command_id": "req-set-bleConfig",
-                                            "response": "success",
-                                            "payload": {}
+                                            "payload": {},
+                                            "response": "success"
                                         }
                                     }
                                 }

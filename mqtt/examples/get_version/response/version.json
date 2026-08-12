@@ -1,7 +1,6 @@
 {
   "command": "get_version",
   "command_id": "req-get-version",
-  "response": "success",
   "payload": {
     "availableOsUpgrades": {},
     "cloudAgentApplication": "0.6.2.64",
@@ -11,5 +10,6 @@
     "readerApplication": "5.0.3",
     "revertBackFirmware": {},
     "serialNumber": "260995251E0047"
-  }
+  },
+  "response": "success"
 }

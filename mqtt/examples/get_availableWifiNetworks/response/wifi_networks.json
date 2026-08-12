@@ -1,7 +1,6 @@
 {
   "command": "get_availableWifiNetworks",
   "command_id": "req-get-availableWifiNetworks",
-  "response": "success",
   "payload": {
     "availableWifiNetworks": [
       {
@@ -151,5 +150,6 @@
         "signalStrength": "69%"
       }
     ]
-  }
+  },
+  "response": "success"
 }

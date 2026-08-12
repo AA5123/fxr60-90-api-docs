@@ -1,6 +1,6 @@
 {
   "command": "set_mode",
   "command_id": "req-set-mode",
-  "response": "success",
-  "payload": {}
+  "payload": {},
+  "response": "success"
 }

@@ -1,7 +1,6 @@
 {
   "command": "get_network",
   "command_id": "req-get-network",
-  "response": "success",
   "payload": {
     "hostName": "FXR90C5F1AB",
     "networkInterface": {
@@ -35,5 +34,6 @@
         "macAddress": "48:A4:93:BF:A9:50"
       }
     }
-  }
+  },
+  "response": "success"
 }

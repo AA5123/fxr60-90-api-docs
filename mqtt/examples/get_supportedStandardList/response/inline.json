@@ -1,7 +1,6 @@
 {
   "command": "get_supportedStandardList",
   "command_id": "req-get-supportedStandardList",
-  "response": "success",
   "payload": {
     "SupportedStandards": [
       {
@@ -63,5 +62,6 @@
         "isLBTConfigurable": "false"
       }
     ]
-  }
+  },
+  "response": "success"
 }

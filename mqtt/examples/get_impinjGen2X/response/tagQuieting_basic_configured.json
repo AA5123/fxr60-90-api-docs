@@ -1,7 +1,6 @@
 {
   "command": "get_impinjGen2X",
   "command_id": "req-get-impinjGen2X",
-  "response": "success",
   "payload": {
     "tagQuieting": {
       "basic": {
@@ -11,5 +10,6 @@
         ]
       }
     }
-  }
+  },
+  "response": "success"
 }

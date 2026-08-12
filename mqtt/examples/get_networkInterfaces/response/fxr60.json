@@ -1,7 +1,6 @@
 {
   "command": "get_networkInterfaces",
   "command_id": "req-get-networkInterfaces-fxr60",
-  "response": "success",
   "payload": {
     "availableNetworkInterfaces": [
       "eth0",
@@ -10,5 +9,6 @@
       "blescan",
       "uap0"
     ]
-  }
+  },
+  "response": "success"
 }

@@ -1,7 +1,6 @@
 {
   "command": "get_impinjGen2X",
   "command_id": "req-get-impinjGen2X",
-  "response": "success",
   "payload": {
     "tagProtect": {
       "action": "enableTagProtection",
@@ -9,5 +8,6 @@
       "tagID": "e2801191a5030069073b426d",
       "enableShortRange": true
     }
-  }
+  },
+  "response": "success"
 }

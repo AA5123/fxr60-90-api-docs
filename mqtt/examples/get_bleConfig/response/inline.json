@@ -1,7 +1,6 @@
 {
   "command": "get_bleConfig",
   "command_id": "req-get-bleConfig",
-  "response": "success",
   "payload": {
     "ble": {
       "enable": true,
@@ -74,5 +73,6 @@
         ]
       }
     }
-  }
+  },
+  "response": "success"
 }
