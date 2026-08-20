@@ -165,7 +165,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "message": "Configuration saved successfully"
+  "message": "Success: Gen2X configured. Use applyImpinjGen2X flag in start command to apply features."
 }
 ```
 

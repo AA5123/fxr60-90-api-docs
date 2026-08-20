@@ -39,7 +39,7 @@ Decide on your mode configuration before sending this request. Changing mode whi
 | What You Need | Details |
 |---|---|
 | Mode type | One of `SIMPLE`, `INVENTORY`, `PORTAL`, `CONVEYOR`, or `CUSTOM`. |
-| Antenna ports and power | Which antenna ports (or ATR beams) to enable and the transmit power in dBm for each. |
+| Antenna ports and power | Which antenna ports to enable and the transmit power in dBm for each. |
 | Environment profile | Optional - set to match the RF environment at the deployment site. Use `AUTO_DETECT` if unsure. |
 | Mode-specific settings | Inventory interval for `INVENTORY`; GPI triggers and stop interval for `PORTAL`. Only include the sub-object relevant to the chosen mode type. |
 | Gen2 and reporting settings | Query settings, select operations, and optional access operations, plus metadata fields, report filter, RSSI filter, and radio start/stop conditions. |

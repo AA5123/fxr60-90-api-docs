@@ -2,20 +2,18 @@
   "hostName": "FXR90C5F1AB",
   "networkInterface": {
     "uap0": {
-      "ssid": "FXR90Hotspot",
-      "ssidPassword": "MyP@ssword",
-      "isHidden": false,
-      "securityType": "WPA3Personal",
-      "Status": "active",
-      "isEnabled": true,
-      "macAddress": "48:A4:93:BF:A9:53",
       "Clients": [
         {
-          "hostName": "my-laptop",
-          "IP": "192.168.43.2",
-          "MAC": "AA:BB:CC:DD:EE:FF"
+          "IP": "192.168.12.174",
+          "MAC": "90:75:de:14:fa:26",
+          "hostName": "FXR609BC6A7"
         }
-      ]
+      ],
+      "isEnabled": true,
+      "isHidden": false,
+      "securityType": "WPA2Personal",
+      "ssid": "VULCAN_HOTSPOT",
+      "ssidPassword": "12345678"
     }
   }
 }

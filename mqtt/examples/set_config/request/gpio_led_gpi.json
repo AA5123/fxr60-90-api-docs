@@ -17,7 +17,7 @@
       "GPI_1_H": [
         {
           "type": "LED",
-          "led": 1,
+          "led": 3,
           "color": "AMBER"
         },
         {
@@ -29,7 +29,7 @@
       "GPI_1_L": [
         {
           "type": "LED",
-          "led": 1,
+          "led": 3,
           "color": "GREEN"
         },
         {
@@ -41,39 +41,11 @@
       "GPI_2_H": [
         {
           "type": "LED",
-          "led": 2,
+          "led": 3,
           "color": "AMBER"
         }
       ],
       "GPI_2_L": [
-        {
-          "type": "LED",
-          "led": 2,
-          "color": "GREEN"
-        }
-      ],
-      "GPI_3_H": [
-        {
-          "type": "GPO",
-          "pin": 3,
-          "state": "HIGH"
-        }
-      ],
-      "GPI_3_L": [
-        {
-          "type": "GPO",
-          "pin": 3,
-          "state": "LOW"
-        }
-      ],
-      "GPI_4_H": [
-        {
-          "type": "LED",
-          "led": 3,
-          "color": "RED"
-        }
-      ],
-      "GPI_4_L": [
         {
           "type": "LED",
           "led": 3,

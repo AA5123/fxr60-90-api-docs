@@ -4,7 +4,7 @@ The `GET /cloud/config` REST endpoint retrieves the reader's full configuration,
 
 This endpoint returns:
 
-- GPIO and LED trigger configuration (`GPIO-LED`), including GPO and LED defaults; returned as `NOT_CONFIGURED` when unset
+- GPIO and LED trigger configuration (`GPIO-LED`), including GPO and LED defaults; returned as an empty object `{}` when unset
 - Reader-gateway settings including tag data retention, batching, and endpoint configuration
 
 No request body is required.

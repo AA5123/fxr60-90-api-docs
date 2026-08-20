@@ -7,31 +7,32 @@
       "mlan0": {
         "IPV4": {
           "dhcp": true,
-          "dnsAddress": "1.1.1.1",
-          "domainName": "FXR90C5F1AB",
-          "gatewayAddress": "192.168.0.1",
-          "ipAddress": "192.168.0.201",
+          "dnsAddress": "10.117.226.5",
+          "domainName": "117asd.zebra.lan",
+          "gatewayAddress": "10.117.228.1",
+          "ipAddress": "10.117.228.251",
           "subnetMask": "255.255.255.0"
         },
         "IPV6": {
           "dhcp": true,
-          "dnsAddress": "fd6c:10:233:1::201",
-          "domainName": "FXR90C5F1AB",
-          "gatewayAddress": "fe80::c206:c3ff:febe:ee3c",
-          "ipAddress": "fe80::3626:9125:eda5:36d7",
-          "prefix": 64
+          "dnsAddress": "fd6c:0:75e2::5",
+          "domainName": "117asd.zebra.lan",
+          "gatewayAddress": "fe80:0:75e4::1",
+          "ipAddress": "fd6c:0:75e4:0:ffff:ffff:ffff:ff92",
+          "prefix": "128"
         },
         "Status": "connected",
         "accesspoint": {
-          "autoConn": false,
-          "essid": "GLaDOS",
-          "status": "connected",
+          "autoConn": true,
+          "essid": "Vulcan_WPA2_24_ENT_SHA256",
           "security": {
-            "securityType": "WPA2Personal"
+            "authentication": "PEAP",
+            "innerAuthentication": "MSCHAPV2",
+            "password": "************",
+            "securityType": "WPA2Enterprise",
+            "userName": "testuser1"
           }
-        },
-        "isEnabled": true,
-        "macAddress": "48:A4:93:BF:A9:50"
+        }
       }
     }
   },

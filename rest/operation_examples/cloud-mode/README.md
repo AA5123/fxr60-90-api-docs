@@ -27,6 +27,7 @@ PUT examples sourced from `FXR-Series/examples/mode_testing/PUT_cloud_mode` (lab
 - No legacy `component` / `linkProfile` / `payload`
 - Do not combine `accesses` with `reportFilter`
 - `radioStartConditions` / `radioStopConditions` are not for PORTAL
+- SIMPLE mode baseline does not include `radioStartConditions` / `radioStopConditions`
 - Prefix `filter` should not be combined with `query` / `selects`
 
 ## Trying these against a reader

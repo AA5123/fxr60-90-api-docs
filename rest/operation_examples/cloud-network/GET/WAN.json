@@ -2,27 +2,28 @@
   "hostName": "FXR90C5F1AB",
   "networkInterface": {
     "wan0": {
-      "Status": "online",
-      "activeSim": "psim",
-      "isEnabled": true,
-      "psim": {
-        "currentDataClass": "LTE",
-        "currentServiceProvider": "Vi India",
-        "enableIPv6": false,
+      "Status": "offline",
+      "activeSim": "esim",
+      "esim": {
+        "apn": "jionet",
+        "currentDataClass": "5G",
+        "currentServiceProvider": "Jio True5G",
+        "enableIPv6": true,
         "enablePin": false,
         "enableRoaming": false,
-        "highestAvailableDataClass": "LTE",
-        "internetAccess": true,
+        "highestAvailableDataClass": "5G",
+        "internetAccess": false,
         "packetServiceState": "Attached",
         "preferredNetworkType": "AUTO",
         "registerState": "Home",
-        "rsrp": "-103.7dBm",
-        "rsrq": "-5.5dB",
-        "rssi": "-82.7dBm",
-        "signalBar": 1,
+        "rsrp": "-110.0dBm",
+        "rsrq": "-12.0dB",
+        "rssi": "0.0dBm",
+        "signalBar": 2,
         "simState": "Initialized",
-        "snr": "0.0dB"
-      }
+        "snr": "10.5dB"
+      },
+      "isEnabled": true
     }
   }
 }

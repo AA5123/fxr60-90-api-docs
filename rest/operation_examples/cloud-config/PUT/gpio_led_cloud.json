@@ -14,7 +14,7 @@
     "CLOUD_CONNECT": [
       {
         "type": "LED",
-        "led": 2,
+        "led": 3,
         "color": "GREEN"
       },
       {
@@ -26,7 +26,7 @@
     "CLOUD_DISCONNECT": [
       {
         "type": "LED",
-        "led": 2,
+        "led": 3,
         "color": "RED"
       },
       {

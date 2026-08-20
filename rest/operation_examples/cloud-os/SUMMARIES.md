@@ -5,4 +5,4 @@
 | Field | Value |
 |---|---|
 | **Example name** | `os` |
-| **Summary title** | `HTTPS OS update with installed cert` |
+| **Summary title** | `HTTPS OS update (NONE auth)` |

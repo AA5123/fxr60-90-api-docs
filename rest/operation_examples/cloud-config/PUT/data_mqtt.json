@@ -14,7 +14,7 @@
     "TAG_READ": [
       {
         "type": "LED",
-        "led": 1,
+        "led": 3,
         "color": "AMBER",
         "postActionColor": "GREEN",
         "blink": {
@@ -38,28 +38,28 @@
     "RADIO_START": [
       {
         "type": "LED",
-        "led": 1,
+        "led": 3,
         "color": "AMBER"
       }
     ],
     "RADIO_STOP": [
       {
         "type": "LED",
-        "led": 1,
+        "led": 3,
         "color": "GREEN"
       }
     ],
     "CLOUD_CONNECT": [
       {
         "type": "LED",
-        "led": 2,
+        "led": 3,
         "color": "GREEN"
       }
     ],
     "CLOUD_DISCONNECT": [
       {
         "type": "LED",
-        "led": 2,
+        "led": 3,
         "color": "RED"
       }
     ]

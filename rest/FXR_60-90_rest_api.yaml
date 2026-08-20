@@ -6,11 +6,11 @@
 # Rebuild: python FXR60-90/rest/scripts/FXR_60-90_api_rest_api.py
 openapi: 3.1.0
 info:
-  title: IoT Connector REST API (FXR60 / FXR90)
+  title: IoT Connector REST API (FXR readers)
   description: '# Overview
 
 
-    FXR60 and FXR90 readers can be controlled using the REST API documented on this page.
+    This REST API controls Zebra **FXR** RFID readers. FXR documentation includes **FXR60** and **FXR90**.
 
     The definition can be found below.
 
@@ -103,7 +103,7 @@ paths:
         '
       operationId: localrestlogin
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
@@ -175,7 +175,7 @@ paths:
         '
       operationId: getAppled
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -262,7 +262,7 @@ paths:
               flash: true
               seconds: 60
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -322,7 +322,7 @@ paths:
         '
       operationId: getStackled
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -448,7 +448,7 @@ paths:
                   flash: true
                   seconds: 30
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -522,17 +522,17 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetGpoStatusResponse'
               example:
-                '1': LOW
-                '2': LOW
-                '3': HIGH
-                '4': LOW
+                "1": LOW
+                "2": LOW
+                "3": HIGH
+                "4": LOW
       security:
       - bearerAuth: []
     put:
@@ -604,7 +604,7 @@ paths:
               port: 3
               state: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -680,17 +680,17 @@ paths:
         '
       operationId: getGPIStatus
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetGPIStatusResponse'
               example:
-                '1': LOW
-                '2': LOW
-                '3': HIGH
-                '4': LOW
+                "1": LOW
+                "2": LOW
+                "3": HIGH
+                "4": LOW
       security:
       - bearerAuth: []
   /cloud/region:
@@ -780,7 +780,7 @@ paths:
         '
       operationId: getRegion
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -789,56 +789,56 @@ paths:
               example:
                 FrequencyHopping: true
                 channelData:
-                - '915750'
-                - '915250'
-                - '903250'
-                - '926750'
-                - '926250'
-                - '904250'
-                - '927250'
-                - '920250'
-                - '919250'
-                - '909250'
-                - '918750'
-                - '917750'
-                - '905250'
-                - '904750'
-                - '925250'
-                - '921750'
-                - '914750'
-                - '906750'
-                - '913750'
-                - '922250'
-                - '911250'
-                - '911750'
-                - '903750'
-                - '908750'
-                - '905750'
-                - '912250'
-                - '906250'
-                - '917250'
-                - '914250'
-                - '907250'
-                - '918250'
-                - '916250'
-                - '910250'
-                - '910750'
-                - '907750'
-                - '924750'
-                - '909750'
-                - '919750'
-                - '916750'
-                - '913250'
-                - '923750'
-                - '908250'
-                - '925750'
-                - '912750'
-                - '924250'
-                - '921250'
-                - '920750'
-                - '922750'
-                - '902750'
-                - '923250'
+                - "915750"
+                - "915250"
+                - "903250"
+                - "926750"
+                - "926250"
+                - "904250"
+                - "927250"
+                - "920250"
+                - "919250"
+                - "909250"
+                - "918750"
+                - "917750"
+                - "905250"
+                - "904750"
+                - "925250"
+                - "921750"
+                - "914750"
+                - "906750"
+                - "913750"
+                - "922250"
+                - "911250"
+                - "911750"
+                - "903750"
+                - "908750"
+                - "905750"
+                - "912250"
+                - "906250"
+                - "917250"
+                - "914250"
+                - "907250"
+                - "918250"
+                - "916250"
+                - "910250"
+                - "910750"
+                - "907750"
+                - "924750"
+                - "909750"
+                - "919750"
+                - "916750"
+                - "913250"
+                - "923750"
+                - "908250"
+                - "925750"
+                - "912750"
+                - "924250"
+                - "921250"
+                - "920750"
+                - "922750"
+                - "902750"
+                - "923250"
                 country: Canada
                 lbtEnabled: false
                 maxTxPowerSupported: 300
@@ -924,7 +924,7 @@ paths:
               country: Canada
               standardname: CANADA_FCC_15
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1000,7 +1000,7 @@ paths:
         '
       operationId: getSupportedregionlist
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1127,7 +1127,7 @@ paths:
         schema:
           type: string
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1137,59 +1137,59 @@ paths:
                 SupportedStandards:
                 - StandardName: ARGENTINA
                   channeldata:
-                  - '915750'
-                  - '915250'
-                  - '903250'
-                  - '926750'
-                  - '926250'
-                  - '904250'
-                  - '927250'
-                  - '920250'
-                  - '919250'
-                  - '909250'
-                  - '918750'
-                  - '917750'
-                  - '905250'
-                  - '904750'
-                  - '925250'
-                  - '921750'
-                  - '914750'
-                  - '906750'
-                  - '913750'
-                  - '922250'
-                  - '911250'
-                  - '911750'
-                  - '903750'
-                  - '908750'
-                  - '905750'
-                  - '912250'
-                  - '906250'
-                  - '917250'
-                  - '914250'
-                  - '907250'
-                  - '918250'
-                  - '916250'
-                  - '910250'
-                  - '910750'
-                  - '907750'
-                  - '924750'
-                  - '909750'
-                  - '919750'
-                  - '916750'
-                  - '913250'
-                  - '923750'
-                  - '908250'
-                  - '925750'
-                  - '912750'
-                  - '924250'
-                  - '921250'
-                  - '920750'
-                  - '922750'
-                  - '902750'
-                  - '923250'
-                  isChannelSelectable: 'false'
-                  isHoppingConfigurable: 'false'
-                  isLBTConfigurable: 'false'
+                  - "915750"
+                  - "915250"
+                  - "903250"
+                  - "926750"
+                  - "926250"
+                  - "904250"
+                  - "927250"
+                  - "920250"
+                  - "919250"
+                  - "909250"
+                  - "918750"
+                  - "917750"
+                  - "905250"
+                  - "904750"
+                  - "925250"
+                  - "921750"
+                  - "914750"
+                  - "906750"
+                  - "913750"
+                  - "922250"
+                  - "911250"
+                  - "911750"
+                  - "903750"
+                  - "908750"
+                  - "905750"
+                  - "912250"
+                  - "906250"
+                  - "917250"
+                  - "914250"
+                  - "907250"
+                  - "918250"
+                  - "916250"
+                  - "910250"
+                  - "910750"
+                  - "907750"
+                  - "924750"
+                  - "909750"
+                  - "919750"
+                  - "916750"
+                  - "913250"
+                  - "923750"
+                  - "908250"
+                  - "925750"
+                  - "912750"
+                  - "924250"
+                  - "921250"
+                  - "920750"
+                  - "922750"
+                  - "902750"
+                  - "923250"
+                  isChannelSelectable: "false"
+                  isHoppingConfigurable: "false"
+                  isLBTConfigurable: "false"
       security:
       - bearerAuth: []
   /cloud/mode:
@@ -1208,11 +1208,11 @@ paths:
 
         - The operating mode type (`SIMPLE`, `INVENTORY`, `PORTAL`, `CONVEYOR`, or `CUSTOM`)
 
-        - Active antennas or beams and their transmit power settings
+        - Active antennas and their transmit power settings
 
         - The environment profile in use
 
-        - Mode-specific configuration settings (portal, conveyor, directionality, etc.)
+        - Mode-specific configuration settings (portal, conveyor, etc.)
 
         - Gen2 query, select, and access settings
 
@@ -1309,7 +1309,7 @@ paths:
                 value:
                   verbose: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1447,7 +1447,7 @@ paths:
 
         | Mode type | One of `SIMPLE`, `INVENTORY`, `PORTAL`, `CONVEYOR`, or `CUSTOM`. |
 
-        | Antenna ports and power | Which antenna ports (or ATR beams) to enable and the transmit power in dBm for each. |
+        | Antenna ports and power | Which antenna ports to enable and the transmit power in dBm for each. |
 
         | Environment profile | Optional - set to match the RF environment at the deployment site. Use `AUTO_DETECT` if unsure. |
 
@@ -1574,13 +1574,6 @@ paths:
                     target: AB
                   inventoryProtocol:
                     mode: GEN2
-                  radioStartConditions:
-                    type: GPI
-                    gpis:
-                    - port: 1
-                      signal: HIGH
-                  radioStopConditions:
-                    duration: 60
               with_accesses:
                 summary: CUSTOM mode with READ TID access
                 value:
@@ -1671,7 +1664,7 @@ paths:
                     membank: TID
                     pointer: 6
                     length: 24
-                    mask: '800600'
+                    mask: "800600"
               with_tag_metadata:
                 summary: CUSTOM mode with tag metadata fields
                 value:
@@ -1682,12 +1675,20 @@ paths:
                   tagMetaData:
                   - ANTENNA
                   - RSSI
+                  - PHASE
                   - SEEN_COUNT
                   - CHANNEL
                   - PC
+                  - XPC
                   - CRC
+                  - EPC
+                  - TID
+                  - USER
+                  - MAC
+                  - HOSTNAME
+                  - READER_LOCATION
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1706,7 +1707,18 @@ paths:
         The `PUT /cloud/start` REST endpoint starts RFID inventory, BLE scanning, or both on the reader.
 
 
-        By default, an empty request body starts RFID inventory only. Use the `scanType` field to explicitly start BLE, RFID, or both together. Optional flags allow you to apply a previously saved Impinj Gen2X configuration or control whether the start state persists across reboots.
+        By default, an empty request body starts RFID inventory only. Use the `scanType` field to start BLE, RFID, or both.
+
+
+        `scanType` can be:
+
+
+        - An **array** — global start on every data endpoint
+
+        - An **object** — targeted start per data endpoint (`dataEndpoint1`, `dataEndpoint2`)
+
+
+        If `scanType` is omitted or empty, the reader starts RFID only.
 
 
         ## 2. Endpoint Details
@@ -1764,15 +1776,36 @@ paths:
         The `scanType` field determines which scanners run and where the data is published.
 
 
+        **Global start** — send an array. The same scan types apply to every data endpoint.
+
+
         | Scan Type | Behavior |
 
         |---|---|
 
-        | `rfid` (default) | Starts RFID inventory only. Tag read events stream on the reader''s RFID data channel. |
+        | omitted / `{}` | Starts RFID inventory only (default). |
 
-        | `ble` | Starts BLE scanning only. BLE advertisement events stream on the reader''s BLE data channel. |
+        | `["rfid"]` | Starts RFID inventory only. |
 
-        | `["ble", "rfid"]` | Starts both scanners in a single session. RFID and BLE events stream independently on their respective data channels. |
+        | `["ble"]` | Starts BLE scanning only. |
+
+        | `["ble", "rfid"]` | Starts both scanners. |
+
+
+        **Targeted start** — send an object. Keys are data endpoints; values are the scan types for that endpoint.
+
+
+        | `scanType` | Behavior |
+
+        |---|---|
+
+        | `{ "dataEndpoint1": ["rfid"], "dataEndpoint2": ["rfid"] }` | RFID on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["ble"] }` | BLE on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble", "rfid"], "dataEndpoint2": ["ble", "rfid"] }` | BLE and RFID on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["rfid"] }` | BLE on endpoint 1, RFID on endpoint 2. |
 
 
         > Firmware requirement: BLE scanning — and with it the `scanType` field — is available from reader build **4.0.11** onward. On builds older than 4.0.11, `scanType` is not supported: omit it, and `PUT /cloud/start` starts RFID inventory only. Check the installed build with `GET /cloud/version` (`readerApplication`).
@@ -1830,8 +1863,42 @@ paths:
                 value:
                   scanType:
                   - rfid
+              start_targeted_BLE:
+                summary: start targeted BLE
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - ble
+              start_targeted_BLE_and_RFID:
+                summary: start targeted BLE and RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    - rfid
+                    dataEndpoint2:
+                    - ble
+                    - rfid
+              start_targeted_mixed:
+                summary: start targeted mixed
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - rfid
+              start_targeted_RFID:
+                summary: start targeted RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - rfid
+                    dataEndpoint2:
+                    - rfid
       responses:
-        '200':
+        "200":
           description: OK
       security:
       - bearerAuth: []
@@ -1846,7 +1913,15 @@ paths:
         The `PUT /cloud/stop` REST endpoint stops RFID inventory, BLE scanning, or both.
 
 
-        By default, if the request body is empty or `scanType` is not provided, the reader stops RFID inventory only. Use `scanType` when you need to stop BLE separately or stop both scan types together.
+        By default, if the request body is empty or `scanType` is not provided, the reader stops RFID inventory only.
+
+
+        `scanType` can be:
+
+
+        - An **array** — global stop on every data endpoint
+
+        - An **object** — targeted stop per data endpoint (`dataEndpoint1`, `dataEndpoint2`)
 
 
         ## 2. Endpoint Details
@@ -1876,6 +1951,9 @@ paths:
         ## 3. Stop Behavior
 
 
+        **Global stop** — send an array. The same scan types are stopped on every data endpoint.
+
+
         | Request Body | Result |
 
         |---|---|
@@ -1887,6 +1965,22 @@ paths:
         | `{ "scanType": ["ble"] }` | Stops BLE scanning only. RFID inventory continues if active. |
 
         | `{ "scanType": ["ble", "rfid"] }` | Stops both BLE scanning and RFID inventory. |
+
+
+        **Targeted stop** — send an object. Keys are data endpoints; values are the scan types to stop on that endpoint.
+
+
+        | `scanType` | Result |
+
+        |---|---|
+
+        | `{ "dataEndpoint1": ["rfid"], "dataEndpoint2": ["rfid"] }` | Stop RFID on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["ble"] }` | Stop BLE on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble", "rfid"], "dataEndpoint2": ["ble", "rfid"] }` | Stop BLE and RFID on both endpoints. |
+
+        | `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["rfid"] }` | Stop BLE on endpoint 1, RFID on endpoint 2. |
 
 
         > Firmware requirement: BLE scanning — and with it the `scanType` field — is available from reader build **4.0.11** onward. On builds older than 4.0.11, `scanType` is not supported: send an empty body `{}`, which stops RFID inventory. Check the installed build with `GET /cloud/version` (`readerApplication`).
@@ -1933,8 +2027,42 @@ paths:
                 value:
                   scanType:
                   - rfid
+              stop_targeted_BLE:
+                summary: stop targeted BLE
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - ble
+              stop_targeted_BLE_and_RFID:
+                summary: stop targeted BLE and RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    - rfid
+                    dataEndpoint2:
+                    - ble
+                    - rfid
+              stop_targeted_mixed:
+                summary: stop targeted mixed
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - rfid
+              stop_targeted_RFID:
+                summary: stop targeted RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - rfid
+                    dataEndpoint2:
+                    - rfid
       responses:
-        '200':
+        "200":
           description: OK
       security:
       - bearerAuth: []
@@ -1958,7 +2086,7 @@ paths:
 
         - Reader model and serial number
 
-        - Available OS upgrade paths and rollback firmware details
+        - Available OS upgrade paths (`availableOsUpgrades`; empty when none). The backup OS version is not returned.
 
 
         No request body is required.
@@ -1996,7 +2124,7 @@ paths:
 
         - Capture the serial number for asset tracking, remote fleet management, or support cases
 
-        - Audit available OS upgrade paths or rollback capabilities across a fleet
+        - Audit whether a downloaded OS upgrade is waiting (`availableOsUpgrades`)
 
 
         Key fields to check in the response:
@@ -2016,12 +2144,14 @@ paths:
 
         | `serialNumber` | Unique reader serial number | Identifies the device for support cases and asset records. |
 
-        | `availableOsUpgrades` | Is the object empty or populated? | A populated object means a downloaded OS upgrade is ready to install. |
+        | `availableOsUpgrades` | Is the object empty or populated? | A populated object means a downloaded OS upgrade is ready to install. An empty object `{}` means none is waiting. |
+
+        | `revertBackFirmware` | Typically `{}` | FXR60 / FXR90 do not report the backup OS version through this field. |
 
         '
       operationId: getVersion
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -2035,7 +2165,7 @@ paths:
                 radioFirmware: 2.1.70.0
                 readerApplication: 5.0.3
                 revertBackFirmware: {}
-                serialNumber: 260995251E0047
+                serialNumber: "260995251E0047"
       security:
       - bearerAuth: []
   /cloud/status:
@@ -2043,10 +2173,10 @@ paths:
       tags:
       - System
       summary: Retrieves reader operational statistics
-      description: "## 1. Description\n\nThe `GET /cloud/status` REST endpoint retrieves operational statistics and health information from the reader at the moment of the request.\n\nThis endpoint returns:\n\n- Uptime and current system time\n- Radio connection and activity state\n- Reader temperature\n- CPU and RAM usage\n- Flash storage usage by partition\n- Antenna port connection states\n- NTP synchronization status\n- Cloud interface connection status\n- Power source and power-negotiation state\n- Active Impinj Gen2X feature status (when a Gen2X feature is running)\n- BLE scanner runtime status (scan state, scan start time, and beacon counts by protocol)\n\nThe `ble` section is present only when BLE is supported and its status is available. No request body is required.\n\n## 2. Endpoint Details\n\n| Property | Value |\n|---|---|\n| Pattern Name | Reader Status Query |\n| REST Endpoint | `GET /cloud/status` |\n| Communication Type | Client to Device (HTTP request/response) |\n| Applies To | FXR60 / FXR90 |\n| Authentication | Bearer token (`Authorization: Bearer <token>`) |\n| Supported Operations | Retrieve live operational statistics and health |\n\n## 3. When to Use This Endpoint\n\nUse `GET /cloud/status` to:\n\n- Confirm the reader is powered, healthy, and reachable\n- Verify the radio is connected before starting inventory\n- Monitor reader temperature for thermal issues\n- Synchronize against the reader's current system time\n- Check CPU, RAM, and flash usage during high-load scenarios\n- Confirm BLE scanning is active and review beacon counts by protocol\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `uptime` | How long has the reader been running? | Long uptimes confirm stability; short uptimes indicate an unexpected restart. |\n| `radioConnection` | Is the value `connected`? | Inventory cannot run if the radio is disconnected. |\n| `radioActivity` | Is it `active` or `inactive`? | Confirms whether an inventory session is currently in progress. |\n| `temperature` | Is the value within safe operating range? | Excessive temperature can cause throttling or hardware faults. |\n| `antennas` | Are expected ports `connected`? | A `disconnected` antenna port means tags on that port will not be read. |\n| `ntp.offset` | Is the offset near zero? | A large NTP offset means event timestamps may be inaccurate. |\n| `ble.scanState` | Is the value `running`? | Confirms whether the BLE scanner is currently active (`running`) or `stopped`. |\n| `ble.scanStartTime` | When did the current scan start? | ISO 8601 timestamp marking when BLE scanning last started. |\n| `ble.beaconCounts` | Are advertisements being seen? | Per-protocol counts (`iBeacon`, `altBeacon`, `eddystone`, `generic`, `total`) confirm beacons are being detected in the current scan window. |\n\n## 4. BLE Status Fields\n\nWhen BLE is supported and active, the response includes a `ble` object:\n\n| Field | Type | Description |\n|---|---|---|\n| `ble.scanState` | string | Current BLE scanner state — `running` or `stopped`. |\n| `ble.scanStartTime` | string (date-time) | ISO 8601 timestamp of when the BLE scan was last started. |\n| `ble.beaconCounts.total` | integer | Total BLE advertisements observed in the current scan window. |\n| `ble.beaconCounts.iBeacon` | integer | Number of iBeacon advertisements observed. |\n| `ble.beaconCounts.altBeacon` | integer | Number of AltBeacon advertisements observed. |\n| `ble.beaconCounts.eddystone` | integer | Number of Eddystone advertisements observed. |\n| `ble.beaconCounts.generic` | integer | Number of generic BLE advertisements observed. |\n\nExample `ble` section:\n\n```json\n\"ble\": {\n  \"scanState\": \"running\",\n  \"scanStartTime\": \"2026-05-21T13:46:16.955Z\",\n  \"beaconCounts\": {\n    \"total\": 108,\n    \"iBeacon\": 75,\n    \"altBeacon\": 33,\n    \"eddystone\": 0,\n    \"generic\": 0\n  }\n}\n```\n"
+      description: "## 1. Description\n\nThe `GET /cloud/status` REST endpoint retrieves operational statistics and health information from the reader at the moment of the request.\n\nThis endpoint returns:\n\n- Uptime and current system time\n- Radio connection and activity state\n- Reader temperature\n- CPU and RAM usage\n- Flash storage usage by partition\n- Antenna port connection states\n- NTP synchronization status\n- Cloud interface connection status\n- Power source and power-negotiation state\n- Active Impinj Gen2X feature status (when a Gen2X feature is running)\n- BLE scanner runtime status (scan state, scan start time, and beacon counts by protocol)\n\nThe `ble` section is present only when BLE is supported and its status is available. No request body is required.\n\n## 2. Endpoint Details\n\n| Property | Value |\n|---|---|\n| Pattern Name | Reader Status Query |\n| REST Endpoint | `GET /cloud/status` |\n| Communication Type | Client to Device (HTTP request/response) |\n| Applies To | FXR60 / FXR90 |\n| Authentication | Bearer token (`Authorization: Bearer <token>`) |\n| Supported Operations | Retrieve live operational statistics and health |\n\n## 3. When to Use This Endpoint\n\nUse `GET /cloud/status` to:\n\n- Confirm the reader is powered, healthy, and reachable\n- Verify the radio is connected before starting inventory\n- Monitor reader temperature for thermal issues\n- Synchronize against the reader's current system time\n- Check CPU, RAM, and flash usage during high-load scenarios\n- Confirm BLE scanning is active and review beacon counts by protocol\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `uptime` | How long has the reader been running? | Long uptimes confirm stability; short uptimes indicate an unexpected restart. |\n| `radioConnection` | Is the value `connected`? | Inventory cannot run if the radio is disconnected. |\n| `radioActivity` | Is it `active` or `inactive`? | Confirms whether an inventory session is currently in progress. |\n| `temperature` | Is the value within safe operating range? | Excessive temperature can cause throttling or hardware faults. |\n| `antennas` | Are expected ports `connected`? Only ports present on this reader are listed — not every reader has 8 antennas. | A `disconnected` antenna port means tags on that port will not be read. |\n| `ntp.offset` | Is the offset near zero? | A large NTP offset means event timestamps may be inaccurate. |\n| `ble.scanState` | Is the value `running`? | Confirms whether the BLE scanner is currently active (`running`) or `stopped`. |\n| `ble.scanStartTime` | When did the current scan start? | ISO 8601 timestamp marking when BLE scanning last started. |\n| `ble.beaconCounts` | Are advertisements being seen? | Per-protocol counts (`iBeacon`, `altBeacon`, `eddystone`, `generic`, `total`) confirm beacons are being detected in the current scan window. |\n\n## 4. BLE Status Fields\n\nWhen BLE is supported and active, the response includes a `ble` object:\n\n| Field | Type | Description |\n|---|---|---|\n| `ble.scanState` | string | Current BLE scanner state — `running` or `stopped`. |\n| `ble.scanStartTime` | string (date-time) | ISO 8601 timestamp of when the BLE scan was last started. |\n| `ble.beaconCounts.total` | integer | Total BLE advertisements observed in the current scan window. |\n| `ble.beaconCounts.iBeacon` | integer | Number of iBeacon advertisements observed. |\n| `ble.beaconCounts.altBeacon` | integer | Number of AltBeacon advertisements observed. |\n| `ble.beaconCounts.eddystone` | integer | Number of Eddystone advertisements observed. |\n| `ble.beaconCounts.generic` | integer | Number of generic BLE advertisements observed. |\n\nExample `ble` section:\n\n```json\n\"ble\": {\n  \"scanState\": \"running\",\n  \"scanStartTime\": \"2026-05-21T13:46:16.955Z\",\n  \"beaconCounts\": {\n    \"total\": 108,\n    \"iBeacon\": 75,\n    \"altBeacon\": 33,\n    \"eddystone\": 0,\n    \"generic\": 0\n  }\n}\n```\n"
       operationId: getStatus
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -2054,12 +2184,12 @@ paths:
                 $ref: '#/components/schemas/GetStatusResponse'
               example:
                 antennas:
-                  '1': disconnected
-                  '2': disconnected
-                  '3': disconnected
-                  '4': disconnected
-                  '5': connected
-                  '6': connected
+                  "1": disconnected
+                  "2": disconnected
+                  "3": disconnected
+                  "4": disconnected
+                  "5": connected
+                  "6": connected
                 ble:
                   beaconCounts:
                     altBeacon: 0
@@ -2132,7 +2262,7 @@ paths:
         This endpoint returns:
 
 
-        - GPIO and LED trigger configuration (`GPIO-LED`), including GPO and LED defaults; returned as `NOT_CONFIGURED` when unset
+        - GPIO and LED trigger configuration (`GPIO-LED`), including GPO and LED defaults; returned as an empty object `{}` when unset
 
         - Reader-gateway settings including tag data retention, batching, and endpoint configuration
 
@@ -2191,257 +2321,473 @@ paths:
         '
       operationId: getConfig
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetConfigResponse'
-              example:
-                GPIO-LED:
-                  GPODefaults:
-                    '1': LOW
-                    '2': LOW
-                    '3': LOW
-                    '4': LOW
-                  LEDDefaults:
-                    '1': GREEN
-                    '2': GREEN
-                    '3': GREEN
-                  RADIO_START:
-                  - color: AMBER
-                    led: 1
-                    type: LED
-                  RADIO_STOP:
-                  - color: GREEN
-                    led: 1
-                    type: LED
-                  TAG_READ:
-                  - blink:
-                      DURATION: 500
-                      'OFF': 100
-                      'ON': 100
-                    color: AMBER
-                    led: 1
-                    postActionColor: GREEN
-                    type: LED
-                  - blink:
-                      DURATION: 1000
-                      'OFF': 200
-                      'ON': 200
-                    pin: 1
-                    postActionState: LOW
-                    state: HIGH
-                    type: GPO
-                READER-GATEWAY:
-                  batching:
-                  - maxPayloadSizePerReport: 0
-                    reportingInterval: 0
-                  endpointConfig:
-                    control:
-                      commandResponse:
-                        connections:
-                        - description: Control cmd/rsp over MQTT
-                          name: CTRL_MQTT
-                          options:
-                            additional:
-                              cleanSession: true
-                              clientId: fxr90-lab-ctrl
-                              debug: false
-                              keepAlive: 60
-                              qos: 0
-                              reconnectDelay: 1
-                              reconnectDelayMax: 30
-                            enableSecurity: false
-                            endpoint:
-                              hostName: 10.117.229.9
-                              port: 1883
-                              protocol: tcp
-                            publishTopic:
-                            - fxr90-lab/rsp
-                            subscribeTopic:
-                            - fxr90-lab/cmd
-                          type: mqtt
-                    data:
-                      event:
-                        connections:
-                        - additionalOptions:
-                            retention:
-                              maxEventRetentionTimeInMin: 500
-                              maxNumEvents: 150000
-                              throttle: 500
-                          description: Tag events to MQTT
-                          name: DATA_MQTT
-                          options:
-                            additional:
-                              cleanSession: true
-                              clientId: fxr90-lab-data
-                              debug: false
-                              keepAlive: 60
-                              qos: 0
-                              reconnectDelay: 1
-                              reconnectDelayMax: 30
-                            enableSecurity: false
-                            endpoint:
-                              hostName: 10.117.229.9
-                              port: 1883
-                              protocol: tcp
-                            publishTopic:
-                            - fxr90-lab/tevents
-                            subscribeTopic: []
-                          type: mqtt
-                    management:
-                      commandResponse:
-                        connections:
-                        - description: Management cmd/rsp
-                          name: MGMT_CMD_MQTT
-                          options:
-                            additional:
-                              cleanSession: true
-                              clientId: fxr90-lab-mcmd
-                              debug: false
-                              keepAlive: 60
-                              qos: 0
-                              reconnectDelay: 1
-                              reconnectDelayMax: 30
-                            enableSecurity: false
-                            endpoint:
-                              hostName: 10.117.229.9
-                              port: 1883
-                              protocol: tcp
-                            publishTopic:
-                            - fxr90-lab/mrsp
-                            subscribeTopic:
-                            - fxr90-lab/mcmd
-                          type: mqtt
-                      event:
-                        connections:
-                        - additionalOptions:
-                            retention:
-                              maxEventRetentionTimeInMin: 500
-                              maxNumEvents: 150000
-                              throttle: 500
-                          description: Management/heartbeat events
-                          name: MGMT_EVENTS_MQTT
-                          options:
-                            additional:
-                              cleanSession: true
-                              clientId: fxr90-lab-mevents
-                              debug: false
-                              keepAlive: 60
-                              qos: 0
-                              reconnectDelay: 1
-                              reconnectDelayMax: 30
-                            enableSecurity: false
-                            endpoint:
-                              hostName: 10.117.229.9
-                              port: 1883
-                              protocol: tcp
-                            publishTopic:
-                            - fxr90-lab/mevents
-                            subscribeTopic: []
-                          type: mqtt
-                  managementEventConfig:
-                    errors:
-                      antenna: true
-                      cpu:
-                        reportIntervalInSec: 1800
-                        threshold: 90
-                      database: true
-                      flash:
-                        reportIntervalInSec: 1800
-                        threshold: 90
-                      ntp: true
-                      radio: true
-                      radio_control: true
-                      ram:
-                        reportIntervalInSec: 1800
-                        threshold: 90
-                      reader_gateway: true
-                      userApp:
-                        reportIntervalInSec: 1800
-                        threshold: 120
-                    gpiEvents: true
-                    gpoEvents: true
-                    heartbeat:
-                      fields:
-                        radio_control:
-                        - ANTENNAS
-                        - RADIO_ACTIVITY
-                        - RADIO_CONNECTION
-                        - CPU
-                        - RAM
-                        - UPTIME
-                        - NUM_ERRORS
-                        - NUM_WARNINGS
-                        - NUM_TAG_READS
-                        - NUM_TAG_READS_PER_ANTENNA
-                        - NUM_DATA_MESSAGES_TXED
-                        - NUM_RADIO_PACKETS_RXED
-                        reader_gateway:
-                        - NUM_DATA_MESSAGES_RXED
-                        - NUM_MANAGEMENT_EVENTS_TXED
-                        - NUM_DATA_MESSAGES_TXED
-                        - NUM_DATA_MESSAGES_RETAINED
-                        - NUM_DATA_MESSAGES_DROPPED
-                        - CPU
-                        - RAM
-                        - UPTIME
-                        - NUM_ERRORS
-                        - NUM_WARNINGS
-                        - INTERFACE_CONNECTION_STATUS
-                        - NOLOCKQ_DEPTH
-                        system:
-                        - CPU
-                        - FLASH
-                        - NTP
-                        - RAM
-                        - SYSTEMTIME
-                        - TEMPERATURE
-                        - UPTIME
-                        - GPO
-                        - GPI
-                        - POWER_NEGOTIATION
-                        - POWER_SOURCE
-                        - MAC_ADDRESS
-                        - HOSTNAME
-                        userDefined: {}
-                        userapps:
-                        - STATUS
-                        - CPU
-                        - RAM
-                        - UPTIME
-                        - NUM_DATA_MESSAGES_RXED
-                        - NUM_DATA_MESSAGES_TXED
-                        - INCOMING_DATA_BUFFER_PERCENTAGE_REMAINING
-                        - OUTGOING_DATA_BUFFER_PERCENTAGE_REMAINING
-                      interval: 60
-                    userappEvents: true
-                    warnings:
-                      cpu:
-                        reportIntervalInSec: 1800
-                        threshold: 80
-                      database: true
-                      flash:
-                        reportIntervalInSec: 1800
-                        threshold: 80
-                      ntp: true
-                      radio_api: true
-                      radio_control: true
-                      ram:
-                        reportIntervalInSec: 1800
-                        threshold: 80
-                      reader_gateway: true
-                      temperature:
-                        ambient: 75
-                        pa: 105
-                      userApp:
-                        reportIntervalInSec: 1800
-                        threshold: 60
-                  retention:
-                  - maxEventRetentionTimeInMin: 500
-                    maxNumEvents: 150000
-                    throttle: 100
+              examples:
+                full_configuration:
+                  summary: Full configuration with GPIO-LED applied
+                  value:
+                    GPIO-LED:
+                      GPODefaults:
+                        "1": LOW
+                        "2": LOW
+                        "3": LOW
+                        "4": LOW
+                      LEDDefaults:
+                        "1": GREEN
+                        "2": GREEN
+                        "3": GREEN
+                      RADIO_START:
+                      - color: AMBER
+                        led: 3
+                        type: LED
+                      RADIO_STOP:
+                      - color: GREEN
+                        led: 3
+                        type: LED
+                      TAG_READ:
+                      - blink:
+                          DURATION: 500
+                          "OFF": 100
+                          "ON": 100
+                        color: AMBER
+                        led: 3
+                        postActionColor: GREEN
+                        type: LED
+                      - blink:
+                          DURATION: 1000
+                          "OFF": 200
+                          "ON": 200
+                        pin: 1
+                        postActionState: LOW
+                        state: HIGH
+                        type: GPO
+                    READER-GATEWAY:
+                      batching:
+                      - maxPayloadSizePerReport: 0
+                        reportingInterval: 0
+                      endpointConfig:
+                        control:
+                          commandResponse:
+                            connections:
+                            - description: Control cmd/rsp over MQTT
+                              name: CTRL_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-ctrl
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/rsp
+                                subscribeTopic:
+                                - fxr90-lab/cmd
+                              type: mqtt
+                        data:
+                          event:
+                            connections:
+                            - additionalOptions:
+                                retention:
+                                  maxEventRetentionTimeInMin: 500
+                                  maxNumEvents: 150000
+                                  throttle: 500
+                              description: Tag events to MQTT
+                              name: DATA_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-data
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/tevents
+                                subscribeTopic: []
+                              type: mqtt
+                        management:
+                          commandResponse:
+                            connections:
+                            - description: Management cmd/rsp
+                              name: MGMT_CMD_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-mcmd
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/mrsp
+                                subscribeTopic:
+                                - fxr90-lab/mcmd
+                              type: mqtt
+                          event:
+                            connections:
+                            - additionalOptions:
+                                retention:
+                                  maxEventRetentionTimeInMin: 500
+                                  maxNumEvents: 150000
+                                  throttle: 500
+                              description: Management/heartbeat events
+                              name: MGMT_EVENTS_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-mevents
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/mevents
+                                subscribeTopic: []
+                              type: mqtt
+                      managementEventConfig:
+                        errors:
+                          antenna: true
+                          cpu:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          database: true
+                          flash:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          ntp: true
+                          radio: true
+                          radio_control: true
+                          ram:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          reader_gateway: true
+                          userApp:
+                            reportIntervalInSec: 1800
+                            threshold: 120
+                        gpiEvents: true
+                        gpoEvents: true
+                        heartbeat:
+                          fields:
+                            radio_control:
+                            - ANTENNAS
+                            - RADIO_ACTIVITY
+                            - RADIO_CONNECTION
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_ERRORS
+                            - NUM_WARNINGS
+                            - NUM_TAG_READS
+                            - NUM_TAG_READS_PER_ANTENNA
+                            - NUM_DATA_MESSAGES_TXED
+                            - NUM_RADIO_PACKETS_RXED
+                            reader_gateway:
+                            - NUM_DATA_MESSAGES_RXED
+                            - NUM_MANAGEMENT_EVENTS_TXED
+                            - NUM_DATA_MESSAGES_TXED
+                            - NUM_DATA_MESSAGES_RETAINED
+                            - NUM_DATA_MESSAGES_DROPPED
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_ERRORS
+                            - NUM_WARNINGS
+                            - INTERFACE_CONNECTION_STATUS
+                            - NOLOCKQ_DEPTH
+                            system:
+                            - CPU
+                            - FLASH
+                            - NTP
+                            - RAM
+                            - SYSTEMTIME
+                            - TEMPERATURE
+                            - UPTIME
+                            - GPO
+                            - GPI
+                            - POWER_NEGOTIATION
+                            - POWER_SOURCE
+                            - MAC_ADDRESS
+                            - HOSTNAME
+                            userDefined: {}
+                            userapps:
+                            - STATUS
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_DATA_MESSAGES_RXED
+                            - NUM_DATA_MESSAGES_TXED
+                            - INCOMING_DATA_BUFFER_PERCENTAGE_REMAINING
+                            - OUTGOING_DATA_BUFFER_PERCENTAGE_REMAINING
+                          interval: 60
+                        userappEvents: true
+                        warnings:
+                          cpu:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          database: true
+                          flash:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          ntp: true
+                          radio_api: true
+                          radio_control: true
+                          ram:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          reader_gateway: true
+                          temperature:
+                            ambient: 75
+                            pa: 105
+                          userApp:
+                            reportIntervalInSec: 1800
+                            threshold: 60
+                      retention:
+                      - maxEventRetentionTimeInMin: 500
+                        maxNumEvents: 150000
+                        throttle: 100
+                gpio_led_not_configured:
+                  summary: GPIO-LED not configured (empty object)
+                  value:
+                    GPIO-LED: {}
+                    READER-GATEWAY:
+                      batching:
+                      - maxPayloadSizePerReport: 0
+                        reportingInterval: 0
+                      endpointConfig:
+                        control:
+                          commandResponse:
+                            connections:
+                            - description: Control cmd/rsp over MQTT
+                              name: CTRL_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-ctrl
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/rsp
+                                subscribeTopic:
+                                - fxr90-lab/cmd
+                              type: mqtt
+                        data:
+                          event:
+                            connections:
+                            - additionalOptions:
+                                retention:
+                                  maxEventRetentionTimeInMin: 500
+                                  maxNumEvents: 150000
+                                  throttle: 500
+                              description: Tag events to MQTT
+                              name: DATA_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-data
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/tevents
+                                subscribeTopic: []
+                              type: mqtt
+                        management:
+                          commandResponse:
+                            connections:
+                            - description: Management cmd/rsp
+                              name: MGMT_CMD_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-mcmd
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/mrsp
+                                subscribeTopic:
+                                - fxr90-lab/mcmd
+                              type: mqtt
+                          event:
+                            connections:
+                            - additionalOptions:
+                                retention:
+                                  maxEventRetentionTimeInMin: 500
+                                  maxNumEvents: 150000
+                                  throttle: 500
+                              description: Management/heartbeat events
+                              name: MGMT_EVENTS_MQTT
+                              options:
+                                additional:
+                                  cleanSession: true
+                                  clientId: fxr90-lab-mevents
+                                  debug: false
+                                  keepAlive: 60
+                                  qos: 0
+                                  reconnectDelay: 1
+                                  reconnectDelayMax: 30
+                                enableSecurity: false
+                                endpoint:
+                                  hostName: 10.117.229.9
+                                  port: 1883
+                                  protocol: tcp
+                                publishTopic:
+                                - fxr90-lab/mevents
+                                subscribeTopic: []
+                              type: mqtt
+                      managementEventConfig:
+                        errors:
+                          antenna: true
+                          cpu:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          database: true
+                          flash:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          ntp: true
+                          radio: true
+                          radio_control: true
+                          ram:
+                            reportIntervalInSec: 1800
+                            threshold: 90
+                          reader_gateway: true
+                          userApp:
+                            reportIntervalInSec: 1800
+                            threshold: 120
+                        gpiEvents: true
+                        gpoEvents: true
+                        heartbeat:
+                          fields:
+                            radio_control:
+                            - ANTENNAS
+                            - RADIO_ACTIVITY
+                            - RADIO_CONNECTION
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_ERRORS
+                            - NUM_WARNINGS
+                            - NUM_TAG_READS
+                            - NUM_TAG_READS_PER_ANTENNA
+                            - NUM_DATA_MESSAGES_TXED
+                            - NUM_RADIO_PACKETS_RXED
+                            reader_gateway:
+                            - NUM_DATA_MESSAGES_RXED
+                            - NUM_MANAGEMENT_EVENTS_TXED
+                            - NUM_DATA_MESSAGES_TXED
+                            - NUM_DATA_MESSAGES_RETAINED
+                            - NUM_DATA_MESSAGES_DROPPED
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_ERRORS
+                            - NUM_WARNINGS
+                            - INTERFACE_CONNECTION_STATUS
+                            - NOLOCKQ_DEPTH
+                            system:
+                            - CPU
+                            - FLASH
+                            - NTP
+                            - RAM
+                            - SYSTEMTIME
+                            - TEMPERATURE
+                            - UPTIME
+                            - GPO
+                            - GPI
+                            - POWER_NEGOTIATION
+                            - POWER_SOURCE
+                            - MAC_ADDRESS
+                            - HOSTNAME
+                            userDefined: {}
+                            userapps:
+                            - STATUS
+                            - CPU
+                            - RAM
+                            - UPTIME
+                            - NUM_DATA_MESSAGES_RXED
+                            - NUM_DATA_MESSAGES_TXED
+                            - INCOMING_DATA_BUFFER_PERCENTAGE_REMAINING
+                            - OUTGOING_DATA_BUFFER_PERCENTAGE_REMAINING
+                          interval: 60
+                        userappEvents: true
+                        warnings:
+                          cpu:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          database: true
+                          flash:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          ntp: true
+                          radio_api: true
+                          radio_control: true
+                          ram:
+                            reportIntervalInSec: 1800
+                            threshold: 80
+                          reader_gateway: true
+                          temperature:
+                            ambient: 75
+                            pa: 105
+                          userApp:
+                            reportIntervalInSec: 1800
+                            threshold: 60
+                      retention:
+                      - maxEventRetentionTimeInMin: 500
+                        maxNumEvents: 150000
+                        throttle: 100
       security:
       - bearerAuth: []
     put:
@@ -2604,46 +2950,46 @@ paths:
                 value:
                   GPIO-LED:
                     GPODefaults:
-                      '1': LOW
-                      '2': LOW
-                      '3': LOW
-                      '4': LOW
+                      "1": LOW
+                      "2": LOW
+                      "3": LOW
+                      "4": LOW
                     LEDDefaults:
-                      '1': GREEN
-                      '2': GREEN
-                      '3': GREEN
+                      "1": GREEN
+                      "2": GREEN
+                      "3": GREEN
                     TAG_READ:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                       postActionColor: GREEN
                       blink:
-                        'ON': 100
-                        'OFF': 100
+                        "ON": 100
+                        "OFF": 100
                         DURATION: 500
                     - type: GPO
                       pin: 1
                       state: HIGH
                       postActionState: LOW
                       blink:
-                        'ON': 200
-                        'OFF': 200
+                        "ON": 200
+                        "OFF": 200
                         DURATION: 1000
                     RADIO_START:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                     RADIO_STOP:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: GREEN
                     CLOUD_CONNECT:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: GREEN
                     CLOUD_DISCONNECT:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: RED
                   READER-GATEWAY:
                     batching:
@@ -2749,7 +3095,7 @@ paths:
                             type: tcpip-server
                             options:
                               enableSecurity: false
-                              tcpipport: '8081'
+                              tcpipport: "8081"
               data_websocket:
                 summary: Tag events over WebSocket
                 value:
@@ -2759,33 +3105,39 @@ paths:
                         event:
                           connections:
                           - name: DATA_WS
+                            description: Tag events over WebSocket
                             type: WEBSOCKET
                             options:
                               security:
                                 verifyPeer: false
+                            additionalOptions:
+                              retention:
+                                maxEventRetentionTimeInMin: 500
+                                maxNumEvents: 150000
+                                throttle: 100
               gpio_led_cloud:
                 summary: GPIO-LED for cloud connect/disconnect
                 value:
                   GPIO-LED:
                     GPODefaults:
-                      '1': LOW
-                      '2': LOW
-                      '3': LOW
-                      '4': LOW
+                      "1": LOW
+                      "2": LOW
+                      "3": LOW
+                      "4": LOW
                     LEDDefaults:
-                      '1': GREEN
-                      '2': GREEN
-                      '3': GREEN
+                      "1": GREEN
+                      "2": GREEN
+                      "3": GREEN
                     CLOUD_CONNECT:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: GREEN
                     - type: GPO
                       pin: 2
                       state: HIGH
                     CLOUD_DISCONNECT:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: RED
                     - type: GPO
                       pin: 2
@@ -2795,22 +3147,22 @@ paths:
                 value:
                   GPIO-LED:
                     GPODefaults:
-                      '1': LOW
-                      '2': LOW
-                      '3': LOW
-                      '4': LOW
+                      "1": LOW
+                      "2": LOW
+                      "3": LOW
+                      "4": LOW
                     LEDDefaults:
-                      '1': GREEN
-                      '2': GREEN
-                      '3': GREEN
+                      "1": GREEN
+                      "2": GREEN
+                      "3": GREEN
                     TAG_READ:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                       postActionColor: GREEN
                       blink:
-                        'ON': 100
-                        'OFF': 100
+                        "ON": 100
+                        "OFF": 100
                         DURATION: 500
                       conditions:
                       - IS_CLOUD_CONNECTED
@@ -2826,13 +3178,13 @@ paths:
                         - IS_RADIO_ONGOING
                     CLOUD_DISCONNECT:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: RED
                       conditions:
                       - ~IS_CLOUD_CONNECTED
                     RADIO_STOP:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: GREEN
                       conditions:
                         operator: or
@@ -2844,49 +3196,33 @@ paths:
                 value:
                   GPIO-LED:
                     GPODefaults:
-                      '1': LOW
-                      '2': LOW
-                      '3': LOW
-                      '4': LOW
+                      "1": LOW
+                      "2": LOW
+                      "3": LOW
+                      "4": LOW
                     LEDDefaults:
-                      '1': GREEN
-                      '2': GREEN
-                      '3': GREEN
+                      "1": GREEN
+                      "2": GREEN
+                      "3": GREEN
                     GPI_1_H:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                     - type: GPO
                       pin: 1
                       state: HIGH
                     GPI_1_L:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: GREEN
                     - type: GPO
                       pin: 1
                       state: LOW
                     GPI_2_H:
                     - type: LED
-                      led: 2
+                      led: 3
                       color: AMBER
                     GPI_2_L:
-                    - type: LED
-                      led: 2
-                      color: GREEN
-                    GPI_3_H:
-                    - type: GPO
-                      pin: 3
-                      state: HIGH
-                    GPI_3_L:
-                    - type: GPO
-                      pin: 3
-                      state: LOW
-                    GPI_4_H:
-                    - type: LED
-                      led: 3
-                      color: RED
-                    GPI_4_L:
                     - type: LED
                       led: 3
                       color: GREEN
@@ -2895,41 +3231,41 @@ paths:
                 value:
                   GPIO-LED:
                     GPODefaults:
-                      '1': LOW
-                      '2': LOW
-                      '3': LOW
-                      '4': LOW
+                      "1": LOW
+                      "2": LOW
+                      "3": LOW
+                      "4": LOW
                     LEDDefaults:
-                      '1': GREEN
-                      '2': GREEN
-                      '3': GREEN
+                      "1": GREEN
+                      "2": GREEN
+                      "3": GREEN
                     TAG_READ:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                       postActionColor: GREEN
                       blink:
-                        'ON': 100
-                        'OFF': 100
+                        "ON": 100
+                        "OFF": 100
                         DURATION: 500
                     - type: GPO
                       pin: 1
                       state: HIGH
                       postActionState: LOW
                       blink:
-                        'ON': 200
-                        'OFF': 200
+                        "ON": 200
+                        "OFF": 200
                         DURATION: 1000
                     RADIO_START:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: AMBER
                     RADIO_STOP:
                     - type: LED
-                      led: 1
+                      led: 3
                       color: GREEN
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -3013,7 +3349,7 @@ paths:
                   component: RC
                   payload: status
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -3140,6 +3476,7 @@ paths:
                       event:
                         connections:
                         - name: DATA_HTTP
+                          description: Tag events over HTTP POST
                           type: httpPost
                           options:
                             URL: https://webhook.site/your-unique-id
@@ -3193,10 +3530,11 @@ paths:
                       event:
                         connections:
                         - name: DATA_TCP
+                          description: Tag events over TCP/IP server
                           type: tcpip-server
                           options:
                             enableSecurity: false
-                            tcpipport: '8081'
+                            tcpipport: "8081"
                           additionalOptions:
                             retention:
                               maxEventRetentionTimeInMin: 60
@@ -3210,10 +3548,16 @@ paths:
                       event:
                         connections:
                         - name: DATA_WS
+                          description: Tag events over WebSocket
                           type: WEBSOCKET
                           options:
                             security:
                               verifyPeer: false
+                          additionalOptions:
+                            retention:
+                              maxEventRetentionTimeInMin: 500
+                              maxNumEvents: 150000
+                              throttle: 100
               management_cmd_mqtt:
                 summary: Management command/response over MQTT
                 value:
@@ -3812,7 +4156,7 @@ paths:
                               verifyHostName: true
                               verifyPeer: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -3903,7 +4247,7 @@ paths:
         '
       operationId: getReadercapabilities
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4125,23 +4469,23 @@ paths:
         '
       operationId: getCablelosscompensation
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCablelosscompensationResponse'
               example:
-                '1':
+                "1":
                   cableLength: 10
                   cableLossPerHundredFt: 10
-                '2':
+                "2":
                   cableLength: 10
                   cableLossPerHundredFt: 10
-                '3':
+                "3":
                   cableLength: 10
                   cableLossPerHundredFt: 10
-                '4':
+                "4":
                   cableLength: 10
                   cableLossPerHundredFt: 10
       security:
@@ -4210,24 +4554,33 @@ paths:
             schema:
               $ref: '#/components/schemas/SetCablelosscompensationRequest'
             example:
-              '1':
+              "1":
                 cableLength: 90
                 cableLossPerHundredFt: 18
+              "2":
+                cableLength: 18
+                cableLossPerHundredFt: 19
+              "3":
+                cableLength: 10
+                cableLossPerHundredFt: 11
+              "4":
+                cableLength: 10
+                cableLossPerHundredFt: 70
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SetCablelosscompensationResponse'
               example: ''
-        '400':
+        "400":
           description: Error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SetCablelosscompensationResponse400'
-        '500':
+        "500":
           description: Error
           content:
             application/json:
@@ -4287,7 +4640,7 @@ paths:
         '
       operationId: reboot
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4360,7 +4713,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4431,7 +4784,7 @@ paths:
             example:
               preSelection: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4524,7 +4877,7 @@ paths:
                   currentPassword: oldPassword@123
                   newPassword: newPassword@123
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4603,7 +4956,7 @@ paths:
         '
       operationId: getLogs
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4693,7 +5046,7 @@ paths:
                 level: DEBUG
               radioPacketLog: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4770,7 +5123,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4827,7 +5180,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4902,7 +5255,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -4981,7 +5334,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5060,7 +5413,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5141,7 +5494,7 @@ paths:
       security:
       - bearerAuth: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5198,7 +5551,7 @@ paths:
       security:
       - bearerAuth: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5268,7 +5621,7 @@ paths:
         '
       operationId: getTimezone
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5347,7 +5700,7 @@ paths:
                 value:
                   timeZone: Kolkata
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5420,7 +5773,7 @@ paths:
 
         '
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5509,7 +5862,7 @@ paths:
                 value:
                   server: time.google.com
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5590,7 +5943,7 @@ paths:
         '
       operationId: getCertificates
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5601,7 +5954,7 @@ paths:
                 issuerName: ZLAB-CA01
                 name: COMMON
                 publickey: ''
-                serial: '0x170000005232B0DE84B4545965000000000052'
+                serial: "0x170000005232B0DE84B4545965000000000052"
                 subjectName: testuser1 (ZLAB)
                 type: client
                 validityEnd: 02/06/2027
@@ -5628,7 +5981,7 @@ paths:
                   -----END PUBLIC KEY-----
 
                   '
-                serial: '0x3039'
+                serial: "0x3039"
                 subjectName: FXR609BC6A7
                 type: server
                 validityEnd: 05/08/2046
@@ -5726,7 +6079,7 @@ paths:
               type: client
               url: sftp://10.117.229.15/data2/home/labuser/Certs/testuser-2026.pfx
       responses:
-        '200':
+        "200":
           description: OK
       security:
       - bearerAuth: []
@@ -5806,7 +6159,7 @@ paths:
                 value:
                   type: server
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5883,7 +6236,7 @@ paths:
           - client
           - app
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -5959,7 +6312,7 @@ paths:
         '
       operationId: getCACertificates
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6098,7 +6451,7 @@ paths:
 
                     -----END CERTIFICATE-----'
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6157,7 +6510,7 @@ paths:
         '
       operationId: delCACertificate
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6254,7 +6607,7 @@ paths:
         '
       operationId: getNetwork
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6276,7 +6629,7 @@ paths:
                         isEnabled: true
                         isPairable: true
                         macAddress: 48:A4:93:BF:A9:52
-                        passKey: '1234'
+                        passKey: "1234"
                         subnetMask: 255.255.0.0
                         usePassKey: true
                 Ethernet:
@@ -6303,187 +6656,85 @@ paths:
                         isEnabled: true
                         macAddress: C8:1C:FE:C5:F1:AB
                 Hotspot:
-                  summary: Hotspot
+                  summary: Hotspot (uap0) — VULCAN_HOTSPOT
                   value:
                     hostName: FXR90C5F1AB
                     networkInterface:
                       uap0:
-                        ssid: FXR90Hotspot
-                        ssidPassword: MyP@ssword
-                        isHidden: false
-                        securityType: WPA3Personal
-                        Status: active
-                        isEnabled: true
-                        macAddress: 48:A4:93:BF:A9:53
                         Clients:
-                        - hostName: my-laptop
-                          IP: 192.168.43.2
-                          MAC: AA:BB:CC:DD:EE:FF
+                        - IP: 192.168.12.174
+                          MAC: 90:75:de:14:fa:26
+                          hostName: FXR609BC6A7
+                        isEnabled: true
+                        isHidden: false
+                        securityType: WPA2Personal
+                        ssid: VULCAN_HOTSPOT
+                        ssidPassword: "12345678"
                 wan_fxr90:
-                  summary: FXR90 WAN (wan0) — not on FXR60
+                  summary: FXR90 WAN (wan0) — esim with apn — not on FXR60
                   value:
                     hostName: FXR90C5F1AB
                     networkInterface:
                       wan0:
-                        Status: online
-                        activeSim: psim
-                        isEnabled: true
-                        psim:
-                          currentDataClass: LTE
-                          currentServiceProvider: Vi India
-                          enableIPv6: false
+                        Status: offline
+                        activeSim: esim
+                        esim:
+                          apn: jionet
+                          currentDataClass: 5G
+                          currentServiceProvider: Jio True5G
+                          enableIPv6: true
                           enablePin: false
                           enableRoaming: false
-                          highestAvailableDataClass: LTE
-                          internetAccess: true
+                          highestAvailableDataClass: 5G
+                          internetAccess: false
                           packetServiceState: Attached
                           preferredNetworkType: AUTO
                           registerState: Home
-                          rsrp: -103.7dBm
-                          rsrq: -5.5dB
-                          rssi: -82.7dBm
-                          signalBar: 1
+                          rsrp: -110.0dBm
+                          rsrq: -12.0dB
+                          rssi: 0.0dBm
+                          signalBar: 2
                           simState: Initialized
-                          snr: 0.0dB
+                          snr: 10.5dB
+                        isEnabled: true
                 WiFi:
-                  summary: WiFi
+                  summary: WiFi (mlan0) — WPA2 Enterprise (PEAP/MSCHAPV2)
                   value:
                     hostName: FXR90C5F1AB
                     networkInterface:
                       mlan0:
                         IPV4:
                           dhcp: true
-                          dnsAddress: 1.1.1.1
-                          domainName: FXR90C5F1AB
-                          gatewayAddress: 192.168.0.1
-                          ipAddress: 192.168.0.201
+                          dnsAddress: 10.117.226.5
+                          domainName: 117asd.zebra.lan
+                          gatewayAddress: 10.117.228.1
+                          ipAddress: 10.117.228.251
                           subnetMask: 255.255.255.0
                         IPV6:
                           dhcp: true
-                          dnsAddress: fd6c:10:233:1::201
-                          domainName: FXR90C5F1AB
-                          gatewayAddress: fe80::c206:c3ff:febe:ee3c
-                          ipAddress: fe80::3626:9125:eda5:36d7
-                          prefix: 64
+                          dnsAddress: fd6c:0:75e2::5
+                          domainName: 117asd.zebra.lan
+                          gatewayAddress: fe80:0:75e4::1
+                          ipAddress: fd6c:0:75e4:0:ffff:ffff:ffff:ff92
+                          prefix: "128"
                         Status: connected
                         accesspoint:
-                          autoConn: false
-                          essid: GLaDOS
-                          status: connected
+                          autoConn: true
+                          essid: Vulcan_WPA2_24_ENT_SHA256
                           security:
-                            securityType: WPA2Personal
-                        isEnabled: true
-                        macAddress: 48:A4:93:BF:A9:50
+                            authentication: PEAP
+                            innerAuthentication: MSCHAPV2
+                            password: '************'
+                            securityType: WPA2Enterprise
+                            userName: testuser1
       security:
       - bearerAuth: []
     put:
       tags:
       - Network
       summary: Updates reader network configuration
-      description: '## 1. Description
-
-
-        **Product note:** Cellular interface `wan0` is supported on **FXR90 only**. It is **not present on FXR60**. Do not send a `wan0` body to an FXR60 reader.
-
-
-        The `PUT /cloud/network` REST endpoint updates reader network configuration for a single interface per request.
-
-
-        This endpoint allows you to configure:
-
-
-        - Ethernet (`eth0`) - DHCP, static IPv4/IPv6 addressing, and 802.1X security
-
-        - Wi-Fi station (`mlan0`) - DHCP, static addressing, access point connection, and WPA2/WPA3/Enterprise security
-
-        - Bluetooth PAN (`bnep0`) - discoverability, pairing, and DHCP address pool
-
-        - Cellular WAN (`wan0`) - SIM selection, APN, network type preference, and IPv6 — **FXR90 only**
-
-        - Wi-Fi hotspot (`uap0`) - SSID, password, country code, and security type
-
-
-        ## 2. Endpoint Details
-
-
-        | Property | Value |
-
-        |---|---|
-
-        | Pattern Name | Network Configuration |
-
-        | REST Endpoint | `PUT /cloud/network` |
-
-        | Communication Type | Client to Device (HTTP request/response) |
-
-        | Applies To | FXR60 / FXR90 (`wan0` = FXR90 only) |
-
-        | Authentication | Bearer token (`Authorization: Bearer <token>`) |
-
-        | Content-Type | `application/json` |
-
-        | Supported Interface Keys | `eth0`, `mlan0`, `bnep0`, `wan0` (**FXR90 only**), `uap0` |
-
-        | Supported Wi-Fi Security Types | `WPA2Personal`, `WPA2Enterprise`, `WPA3Personal`, `WPA3Enterprise` |
-
-        | Supported 802.1X Outer Methods | `TLS`, `TTLS`, `PEAP` |
-
-        | Supported 802.1X Inner Methods | `TLS` (certificate-based), `MSCHAPv2` (credential-based) |
-
-
-        ## 3. Before You Begin
-
-
-        Gather all interface-specific settings before sending this request. A wrong static IP, gateway, Wi-Fi credential, or cellular setting can disconnect the reader from your network.
-
-
-        | What You Need | Details |
-
-        |---|---|
-
-        | Interface key | Include exactly one top-level interface key: `eth0`, `mlan0`, `bnep0`, `wan0` (**FXR90 only**), or `uap0`. Only one interface can be configured per request. |
-
-        | Cellular (`wan0`) | **FXR90 only** — not supported on FXR60. |
-
-        | Hotspot vs Wi-Fi client | `uap0` (hotspot) and `mlan0` (Wi-Fi client) share the same Wi-Fi radio and **cannot be active at the same time**. Enabling one disables the other. |
-
-        | IP addressing | Use `IPV4.dhcp: true` for dynamic addressing, or supply `ipAddress`, `subnetMask`, `gatewayAddress`, and `dnsAddress` for static. |
-
-        | Wi-Fi access point | For `mlan0`, include the `accesspoint` object with `essid`, `connect`, `autoConn`, and the `security` sub-object. |
-
-        | Wi-Fi security | For WPA2 Personal, provide the `password`. For Enterprise (WPA2/WPA3), provide the `authentication` type and either a client certificate (certificate-based) or a username and password (credential-based). See the 802.1X authentication combinations below. |
-
-        | Cellular settings | For `wan0` (**FXR90 only**), set `activeSim` (`psim` or `esim`) and supply the `apn` and `preferredNetworkType` for the chosen SIM. |
-
-        | Hotspot settings | For `uap0`, provide `ssid`, `ssidPassword`, `countryCode`, `securityType` (`WPA2Personal` or `WPA3Personal` only), and `isHidden`. |
-
-        | Interface enablement | Always include `enable: true` or `enable: false` on the interface object to control whether the interface is active after configuration. |
-
-
-        ### 802.1X Enterprise Authentication Combinations
-
-
-        `WPA2Enterprise` and `WPA3Enterprise` pair an outer EAP method with an inner method. The reader supports the following combinations:
-
-
-        | Authentication type | Combination | Credentials required |
-
-        |---|---|---|
-
-        | Certificate-based | `TLS` | Client certificate |
-
-        | Certificate-based | `TTLS-TLS` | Client certificate |
-
-        | Certificate-based | `PEAP-TLS` | Client certificate |
-
-        | Credential-based | `TTLS-MSCHAPv2` | Username and password |
-
-        | Credential-based | `PEAP-MSCHAPv2` | Username and password |
-
-
-        > Important: `uap0` and `mlan0` are mutually exclusive. The reader has one Wi-Fi radio, which operates either as a client joining an access point (`mlan0`) or as an access point of its own (`uap0`) — never both. Sending `uap0` with `enable: true` while `mlan0` is connected drops the Wi-Fi client connection, and vice versa. Configure them in separate requests and enable only the one you intend to run. If the reader''s only route to your network is `mlan0`, enabling the hotspot will disconnect it.
-
-        '
+      description: "## 1. Description\n\n**Product note:** Cellular interface `wan0` is supported on **FXR90 only**. It is **not present on FXR60**. Do not send a `wan0` body to an FXR60 reader.\n\nThe `PUT /cloud/network` REST endpoint updates reader network configuration for a single interface per request.\n\nThis endpoint allows you to configure:\n\n- Ethernet (`eth0`) - DHCP, static IPv4/IPv6 addressing, and 802.1X security\n- Wi-Fi station (`mlan0`) - DHCP, static addressing, access point connection, and WPA2/WPA3/Enterprise security\n- Bluetooth PAN (`bnep0`) - discoverability, pairing, and DHCP address pool\n- Cellular WAN (`wan0`) - SIM selection, APN, network type preference, and IPv6 — **FXR90 only**\n- Wi-Fi hotspot (`uap0`) - SSID, password, country code, and security type\n\n## 2. Endpoint Details\n\n| Property | Value |\n|---|---|\n| Pattern Name | Network Configuration |\n| REST Endpoint | `PUT /cloud/network` |\n| Communication Type | Client to Device (HTTP request/response) |\n| Applies To | FXR60 / FXR90 (`wan0` = FXR90 only) |\n| Authentication | Bearer token (`Authorization: Bearer <token>`) |\n| Content-Type | `application/json` |\n| Supported Interface Keys | `eth0`, `mlan0`, `bnep0`, `wan0` (**FXR90 only**), `uap0` |\n| Supported Wi-Fi Security Types | `WPA2Personal`, `WPA2Enterprise`, `WPA3Personal`, `WPA3Enterprise` |\n| Supported 802.1X Outer Methods | `TLS`, `TTLS`, `PEAP` |\n| Supported 802.1X Inner Methods | `TLS` (certificate-based), `MSCHAPV2` (credential-based) |\n\n## 3. Before You Begin\n\nGather all interface-specific settings before sending this request. A wrong static IP, gateway, Wi-Fi credential, or cellular setting can disconnect the reader from your network.\n\n| What You Need | Details |\n|---|---|\n| Interface key | Include exactly one top-level interface key: `eth0`, `mlan0`, `bnep0`, `wan0` (**FXR90 only**), or `uap0`. Only one interface can be configured per request. |\n| Cellular (`wan0`) | **FXR90 only** — not supported on FXR60. |\n| Hotspot vs Wi-Fi client | `uap0` (hotspot) and `mlan0` (Wi-Fi client) share the same Wi-Fi radio and **cannot be active at the same time**. To enable hotspot, disable `mlan0` first. To enable Wi-Fi client, disable `uap0` first. |\n| IPv4 addressing | Use `IPV4.dhcp: true` for dynamic addressing. For static IPv4, set `IPV4.dhcp: false` and supply `ipAddress`, `subnetMask`, `gatewayAddress`, and `dnsAddress`. |\n| IPv6 addressing | Use `IPV6.dhcp: true` for dynamic addressing. For static IPv6, set `IPV6.dhcp: false` and supply `ipAddress`, `gatewayAddress`, `dnsAddress`, `domainName`, and `prefix`. `prefix` is the IPv6 prefix length (CIDR), for example `64`. IPv6 has no `subnetMask` field — use `prefix` instead. |\n| Wi-Fi access point | For `mlan0`, include the `accesspoint` object with `essid`, `connect`, `autoConn`, and the `security` sub-object. |\n| Wi-Fi security | For WPA2 Personal, provide the `password`. For Enterprise (WPA2/WPA3), provide the `authentication` type and either a client certificate (certificate-based) or a username and password (credential-based). See the 802.1X authentication combinations below. |\n| Cellular settings | For `wan0` (**FXR90 only**), set `activeSim` (`psim` or `esim`) and supply the `apn` and `preferredNetworkType` for the chosen SIM. |\n| Hotspot settings | For `uap0`, provide `ssid`, `ssidPassword`, `countryCode`, `securityType` (`WPA2Personal` or `WPA3Personal` only), and `isHidden`. |\n| Interface enablement | Always include `enable: true` or `enable: false` on the interface object to control whether the interface is active after configuration. |\n| Success response (200) | Empty string (`\"\"`). The reader does not return the updated configuration. Confirm the change with `GET /cloud/network`. |\n\n### IPv4 and IPv6 addressing\n\nIPv4 and IPv6 are configured independently under `IPV4` and `IPV6`. Each can be DHCP or static.\n\n| | IPv4 | IPv6 |\n|---|---|---|\n| DHCP | `\"dhcp\": true` | `\"dhcp\": true` |\n| Static | `\"dhcp\": false` plus address fields | `\"dhcp\": false` plus address fields |\n| Network\
+        \ size | `subnetMask` (for example `255.255.255.0`) | `prefix` (for example `64`) |\n\n`prefix` is the IPv6 prefix length (CIDR). It is the IPv6 equivalent of `subnetMask`. IPv6 has no `subnetMask` field. `prefix` is required when `IPV6.dhcp` is `false`. A typical LAN value is `64`.\n\nDHCP — the reader obtains addresses automatically:\n\n```json\n\"IPV4\": { \"dhcp\": true },\n\"IPV6\": { \"dhcp\": true }\n```\n\nStatic IPv6 — set `dhcp` to `false` and supply the address fields, including `prefix`:\n\n```json\n\"IPV6\": {\n  \"dhcp\": false,\n  \"ipAddress\": \"2001:db8:1:0:8731:2eb1:cd28:f0cd\",\n  \"gatewayAddress\": \"fe80::1643:8376:b32:4a16\",\n  \"dnsAddress\": \"2001:4860:4860::9999\",\n  \"domainName\": \"example.ee.com\",\n  \"prefix\": 64\n}\n```\n\nApplies to `eth0` and `mlan0`. See the Ethernet static IP example for a full request that sets both IPv4 and IPv6.\n\n### 802.1X Enterprise Authentication Combinations\n\nEthernet `802_1XEAP` and Wi-Fi `WPA2Enterprise` / `WPA3Enterprise` pair an outer EAP method (`authentication`) with an inner method (`innerAuthentication`).\n\nSupported inner methods:\n\n- `TLS` — certificate-based\n- `MSCHAPV2` — credential-based (username and password)\n\nThe reader supports the following combinations:\n\n| Outer (`authentication`) | Inner (`innerAuthentication`) | Type | Credentials required |\n|---|---|---|---|\n| `TLS` | `\"\"` | Certificate-based | Client certificate |\n| `TTLS` | `TLS` | Certificate-based | Client certificate |\n| `PEAP` | `TLS` | Certificate-based | Client certificate |\n| `TTLS` | `MSCHAPV2` | Credential-based | Username and password |\n| `PEAP` | `MSCHAPV2` | Credential-based | Username and password |\n\n`innerAuthentication` rules:\n\n- **TTLS** or **PEAP** — set `innerAuthentication` to the inner method (`MSCHAPV2` for username/password, or `TLS` for a client certificate).\n- **TLS** (outer) — there is no inner method. Send `innerAuthentication` as an empty string (`\"\"`). Do not omit the field and do not send a space.\n\n> Note: `TTLS`+`TLS` and `PEAP`+`TLS` are supported on the reader but are non-standard on many RADIUS servers. Cisco ISE does not support TTLS-TLS. FreeRADIUS does not support PEAP-TLS. Confirm RADIUS-server support before using these combinations. The credential-based combinations `TTLS`+`MSCHAPV2` and `PEAP`+`MSCHAPV2` are widely supported.\n\n> Important: `uap0` and `mlan0` are mutually exclusive. The reader has one Wi-Fi radio, which operates either as a client joining an access point (`mlan0`) or as an access point of its own (`uap0`) — never both. If hotspot needs to be enabled, disable `mlan0` first, then enable `uap0`. If Wi-Fi client needs to be enabled, disable `uap0` first, then enable `mlan0`. Sending `uap0` with `enable: true` while `mlan0` is connected is rejected (for example `Disable WiFi to enable Hotspot`). The same applies in the other direction. Configure them in separate requests.\n"
       operationId: updateNetwork
       requestBody:
         content:
@@ -6499,7 +6750,7 @@ paths:
                     dhcpStartAddress: 192.168.0.2
                     discoverable: true
                     pairable: true
-                    passKey: '1233'
+                    passKey: "1233"
                     usePassKey: false
                     enable: true
               Network_ethernet_dhcp:
@@ -6512,36 +6763,40 @@ paths:
                       dhcp: true
                     enable: true
               Network_ethernet_dhcp_8021x_peap_mschapv2:
-                summary: Ethernet — 802.1X (PEAP/MSCHAPv2)
+                summary: Ethernet — 802.1X (PEAP/MSCHAPV2)
                 value:
                   eth0:
-                    security:
-                      802_1xEAP:
-                        authentication: PEAP
-                        innerAuthentication: MSCHAPv2
-                        username: john.doe
-                        password: secret
                     enable: true
+                    security:
+                      enable: true
+                      802_1XEAP:
+                        authentication: PEAP
+                        innerAuthentication: MSCHAPV2
+                        username: testuser1
+                        password: X!k78@rH0nL1
               Network_ethernet_dhcp_8021x_tls:
                 summary: Ethernet — 802.1X (TLS)
                 value:
                   eth0:
-                    security:
-                      802_1xEAP:
-                        authentication: TLS
-                        certificate: COMMON
                     enable: true
+                    security:
+                      enable: true
+                      802_1XEAP:
+                        authentication: TLS
+                        innerAuthentication: ''
+                        certificate: COMMON
               Network_ethernet_dhcp_8021x_ttls_mschapv2:
-                summary: Ethernet — 802.1X (TTLS/MSCHAPv2)
+                summary: Ethernet — 802.1X (TTLS/MSCHAPV2)
                 value:
                   eth0:
-                    security:
-                      802_1xEAP:
-                        authentication: TTLS
-                        innerAuthentication: MSCHAPv2
-                        username: john.doe
-                        password: secret
                     enable: true
+                    security:
+                      enable: true
+                      802_1XEAP:
+                        authentication: TTLS
+                        innerAuthentication: MSCHAPV2
+                        username: testuser1
+                        password: X!k78@rH0nL1
               Network_ethernet_static:
                 summary: Ethernet — static IP
                 value:
@@ -6581,8 +6836,10 @@ paths:
                       prefix: 64
                     enable: true
                     security:
-                      802_1xEAP:
+                      enable: true
+                      802_1XEAP:
                         authentication: TLS
+                        innerAuthentication: ''
                         certificate: COMMON
               Network_hotspot:
                 summary: Hotspot
@@ -6624,8 +6881,21 @@ paths:
                       essid: Redmi Note 12 5G
                       security:
                         WPA2Personal:
-                          password: '12345678'
+                          password: "12345678"
                     enable: true
+              Network_wifi_security_wpa3_personal:
+                summary: WiFi — WPA3 Personal
+                value:
+                  mlan0:
+                    enable: true
+                    accesspoint:
+                      autoConn: true
+                      connect: true
+                      essid: VULCAN_2.4_WPA3
+                      security:
+                        enable: true
+                        WPA3Personal:
+                          password: krishna1234567
               Network_wifi_static:
                 summary: WiFi — static IP .Similarly applicable for WPA3Personal, WPA2Enterprise, WPA3Enterprise
                 value:
@@ -6651,7 +6921,7 @@ paths:
                       essid: Redmi Note 12 5G
                       security:
                         WPA2Personal:
-                          password: '12345678'
+                          password: "12345678"
               Network_wifi_wpa2_enterprise_peap_tls:
                 summary: WiFi — WPA2 Enterprise (PEAP/TLS).Similarly applicable for WPA3 Enterprise(WPA3Enterprise)
                 value:
@@ -6680,7 +6950,7 @@ paths:
                         enable: true
                         WPA2Enterprise:
                           authentication: TLS
-                          innerAuthentication: ' '
+                          innerAuthentication: ''
                           certificate: COMMON
               Network_wifi_wpa2_enterprise_ttls_tls:
                 summary: WiFi — WPA2 Enterprise (TTLS/TLS).Similarly applicable for WPA3 Enterprise(WPA3Enterprise)
@@ -6698,44 +6968,45 @@ paths:
                           innerAuthentication: TLS
                           certificate: COMMON
               Network_wifi_wpa3_enterprise_peap_mschapv2:
-                summary: WiFi — WPA3 Enterprise (PEAP/MSCHAPv2).Similarly applicable for WPA2 Enterprise(WPA2Enterprise)
+                summary: WiFi — WPA3 Enterprise (PEAP/MSCHAPV2).Similarly applicable for WPA2 Enterprise(WPA2Enterprise)
                 value:
                   mlan0:
                     enable: true
                     accesspoint:
                       autoConn: true
                       connect: true
-                      essid: MyWPA3EnterpriseNetwork
+                      essid: Vulcan_WPA3_5_ENT_802.1x
                       security:
                         enable: true
                         WPA3Enterprise:
                           authentication: PEAP
-                          innerAuthentication: MSCHAPv2
-                          username: john.doe
-                          password: secret
+                          innerAuthentication: MSCHAPV2
+                          username: testuser1
+                          password: X!k78@rH0nL1
               Network_wifi_wpa3_enterprise_ttls_mschapv2:
-                summary: WiFi — WPA3 Enterprise (TTLS/MSCHAPv2).similarly applicable for WPA2 Enterprise (WPA2Enterprise)
+                summary: WiFi — WPA3 Enterprise (TTLS/MSCHAPV2).similarly applicable for WPA2 Enterprise (WPA2Enterprise)
                 value:
                   mlan0:
                     enable: true
                     accesspoint:
                       autoConn: true
                       connect: true
-                      essid: MyWPA3EnterpriseNetwork
+                      essid: Vulcan_WPA3_5_ENT_802.1x
                       security:
                         enable: true
                         WPA3Enterprise:
                           authentication: TTLS
-                          innerAuthentication: MSCHAPv2
-                          username: john.doe
-                          password: secret
+                          innerAuthentication: MSCHAPV2
+                          username: testuser1
+                          password: X!k78@rH0nL1
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateNetworkResponse'
+              example: ''
       security:
       - bearerAuth: []
   /cloud/wifiNetworks:
@@ -6817,7 +7088,7 @@ paths:
         '
       operationId: getAvailablewifinetworks
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6985,7 +7256,7 @@ paths:
         '
       operationId: getNetworkinterfaces
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -6999,7 +7270,6 @@ paths:
                     - eth0
                     - mlan0
                     - bnep0
-                    - blescan
                     - uap0
                 fxr90:
                   summary: FXR90 interfaces (includes wan0)
@@ -7078,19 +7348,19 @@ paths:
         '
       operationId: getReadpoints
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetReadpointsResponse'
               example:
-              - '1'
-              - '2'
-              - '3'
-              - '4'
-              - '5'
-              - '6'
+              - "1"
+              - "2"
+              - "3"
+              - "4"
+              - "5"
+              - "6"
       security:
       - bearerAuth: []
   /cloud/readerLocation:
@@ -7171,7 +7441,7 @@ paths:
         '
       operationId: getGpsCoordinates
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7268,22 +7538,22 @@ paths:
         '
       operationId: getEsimConfig
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetEsimConfigResponse'
               example:
-                eid: '89049032005008882600033489161010'
-                imei: '356938035643809'
+                eid: "89049032005008882600033489161010"
+                imei: "356938035643809"
                 profiles:
                 - enabled: true
-                  iccid: '8991101200003204510'
+                  iccid: "8991101200003204510"
                   profileNickName: gnd1
                   provider: Airtel
                 - enabled: false
-                  iccid: '8944501012345678903'
+                  iccid: "8944501012345678903"
                   profileNickName: gnd2
                   provider: Vodafone
       security:
@@ -7370,13 +7640,18 @@ paths:
                 value:
                   operation: delete
                   profileNickName: gnd1
+              eSimConfig_disable:
+                summary: eSimConfig disable
+                value:
+                  operation: disable
+                  profileNickName: gnd1
               eSimConfig_enable:
                 summary: eSimConfig enable
                 value:
                   operation: enable
                   profileNickName: gnd1
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7468,18 +7743,10 @@ paths:
             schema:
               $ref: '#/components/schemas/SetOsRequest'
             example:
-              url: https://builds.example.com/FXR90_2.0.10.tar.bz2
+              url: https://10.117.229.9:9093/BUILDS/FXR90_2.0.10.tar.bz2
               authenticationType: NONE
-              transfer_protocol: HTTPS
-              verifyPeer: true
-              verifyHost: true
-              installedCertificateType: server
-              installedCertificateName: reader-server-cert
-              retry:
-                count: 3
-                delayInSec: 30
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7528,7 +7795,7 @@ paths:
 
         |---|---|
 
-        | Current firmware version | Use `GET /cloud/version` to confirm the current and previous OS builds before rolling back. |
+        | Current firmware version | Use `GET /cloud/version` to confirm the current OS build (`readerApplication`). This endpoint does not return the backup OS version on the secondary partition. |
 
         | Downtime window | The reader reboots to the secondary partition; allow time for the reboot and reconnect. |
 
@@ -7541,7 +7808,7 @@ paths:
               $ref: '#/components/schemas/SetRevertbackosRequest'
             example: {}
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7620,18 +7887,14 @@ paths:
             schema:
               $ref: '#/components/schemas/SetInstalluserappRequest'
             example:
-              url: https://apps.example.com/packages/
-              filename: mylogger-1.2.0.deb
+              url: sftp://10.117.229.15/home/labuser/EV1/
+              filename: mylogger_1.0.1.deb
               authenticationType: BASIC
               authenticationOptions:
                 username: labuser
                 password: L@bu$3rs
-              verifyPeer: true
-              verifyHost: true
-              installedCertificateType: server
-              installedCertificateName: reader-server-cert
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7689,7 +7952,7 @@ paths:
         '
       operationId: setStartuserapp
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7752,7 +8015,7 @@ paths:
         '
       operationId: setStopuserapp
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7841,7 +8104,7 @@ paths:
                   appname: mylogger
                   autostart: true
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -7926,7 +8189,7 @@ paths:
         '
       operationId: getUserapps
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8002,7 +8265,7 @@ paths:
               $ref: '#/components/schemas/SetDataToRGRequest'
             example: {}
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8078,7 +8341,7 @@ paths:
               command:
                 message: status
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8141,7 +8404,7 @@ paths:
         '
       operationId: setUninstalluserapp
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8223,7 +8486,7 @@ paths:
         '
       operationId: getHostName
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8295,7 +8558,7 @@ paths:
             example:
               hostname: FXR90C60C001
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8376,7 +8639,7 @@ paths:
         '
       operationId: getImpinjGen2X
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8401,7 +8664,7 @@ paths:
                   value:
                     tagProtect:
                       action: enableTagProtection
-                      password: '77777777'
+                      password: "77777777"
                       tagID: e2801191a5030069073b426d
                       enableShortRange: true
                 tagQuieting_advanced_configured:
@@ -8422,7 +8685,7 @@ paths:
                         action: quiet
                         tagIDs:
                         - e2801191a5030069073b426d
-        '500':
+        "500":
           description: Internal Server Error
           content:
             application/json:
@@ -8436,7 +8699,7 @@ paths:
       summary: Set Impinj Gen2X configuration
       description: "## 1. Description\n\nThe `PUT /cloud/impinjGen2X` REST endpoint configures Impinj Gen2X proprietary RFID features on the reader.\n\nThis endpoint allows you to configure:\n\n- FastID tag TID embedding through `fastID`\n- Tag protection and visibility control through `tagProtect`\n- TagFocus session suppression through `tagFocus`\n- Tag quieting (basic or advanced) through `tagQuieting`\n\n## 2. Endpoint Details\n\n| Property | Value |\n|---|---|\n| Pattern Name | Impinj Gen2X Configuration |\n| REST Endpoint | `PUT /cloud/impinjGen2X` |\n| Communication Type | Client to Device (HTTP request/response) |\n| Applies To | FXR60 / FXR90 |\n| Authentication | Bearer token (`Authorization: Bearer <token>`) |\n| Content-Type | `application/json` |\n| Success Response | `200 OK` |\n| Error Responses | `422 Unprocessable Entity`, `500 Internal Server Error` |\n| Supported Features | `fastID`, `tagProtect`, `tagFocus`, `tagQuieting` |\n| Supported TagProtect Actions | `enableTagProtection`, `disableTagProtection`, `enableTagVisibility`, `disableTagVisibility` |\n| Supported TagQuieting Modes | `basic` (quiet/unquiet by EPC list), `advanced` (pre-select with mask) |\n| Supported TagQuieting Basic Actions | `quiet`, `unquiet` |\n| Supported Gen2 Memory Banks | EPC, TID, USER, RESERVED |\n| Supported Select Targets | S0, S1, S2, S3, SL |\n| Supported Tag Quiet Masks | S0A, S0B, S1A, S1B, S2A, S2B, S3A, S3B, SL_ASSERT, SL_DEASSERT |\n| Mutually Exclusive Features | `fastID`, `tagFocus`, `tagQuieting` (only one reader-scoped feature active at a time) |\n\n## 3. Before You Begin\n\nDecide which Gen2X feature to configure before sending this request. At least one feature object must be included in the request body, but mutually exclusive reader-scoped features cannot be combined in a single request. To apply the saved Gen2X configuration during inventory, send `PUT /cloud/start` with `applyImpinjGen2X: true`.\n\n| What You Need | Details |\n|---|---|\n| Feature selection | At least one of `fastID`, `tagProtect`, `tagFocus`, or `tagQuieting` must be present - an empty request body will be rejected. Choose only one reader-scoped feature (`fastID`, `tagFocus`, or `tagQuieting`) per request; `tagProtect` is tag-scoped and can be configured independently. |\n| FastID | Decide whether to enable or disable TID embedding. Optionally specify a TID word selector (`TID[0]`-`TID[3]`). |\n| TagProtect action | Choose one of: `enableTagProtection` (protect a specific tag), `disableTagProtection` (remove protection from a tag), `enableTagVisibility` (allow reading protected tags), `disableTagVisibility` (block reading protected tags). |\n| TagProtect password | An 8-character hex string (32-bit) is required for all TagProtect actions. |\n| TagProtect tag EPC | `tagID` (hex EPC) is required for `enableTagProtection` and `disableTagProtection`. It must be omitted for `enableTagVisibility` and `disableTagVisibility`. |\n| TagFocus | Whether to enable or disable the feature. TagFocus targets session S1. |\n| TagQuieting | For basic: provide `action` (`quiet`/`unquiet`) and the `tagIDs` EPC array (maximum 31 tag IDs per request). For advanced: provide the `preSelect` array, `tagQuietMasks`, `target`, and `stateAwareAction`. |\n| Inventory state | Configure Gen2X before starting inventory. Stop any active inventory first with `PUT /cloud/stop`. |\n| Activation | Gen2X settings are saved but not applied until `PUT /cloud/start` is sent with `applyImpinjGen2X: true`. |\n\n## 4. Choosing a Gen2X Feature\n\nThe Gen2X feature you select determines the reader's behavior during inventory. Choose based on your operational goal.\n\n| Feature | Description | Scope |\n|---|---|---|\n| `fastID` | Returns the EPC and TID together in a single read, eliminating the need for a separate TID read. Best for applications that require chip-level identity (anti-counterfeit, authentication). | Reader-scoped |\n| `tagProtect` | Password-protects individual tags or controls reader visibility of protected tags. Use for securing sensitive items or restricting access.\
         \ | Tag-scoped |\n| `tagFocus` | Silences already-read tags so the reader focuses only on new tags entering the field. Ideal for portal and conveyor applications. | Reader-scoped |\n| `tagQuieting` (basic) | Silences a specific list of tag EPCs from being reported during inventory. Use when you know exactly which tags to suppress. | Reader-scoped |\n| `tagQuieting` (advanced) | Uses Gen2 select pre-conditions (mask + state-aware action) to silence tags based on memory content or session state. Use for complex filtering in dense environments. | Reader-scoped |\n\n> Mutually exclusive: Only one of `fastID`, `tagFocus`, or `tagQuieting` can be active at a time. `tagProtect` can coexist with any one of them because it operates at the tag level.\n\n## 5. Choosing TagProtect Actions\n\nTagProtect operations either lock/unlock individual tags or temporarily allow the reader to see already-protected tags. Each action has specific field requirements.\n\n| Action | What It Does | Required Fields | Key Constraints |\n|---|---|---|---|\n| `enableTagProtection` | Permanently protects a tag; the tag becomes invisible to standard reads until unprotected. | `password`, `tagID` | `password` must be exactly 8 hex characters. Optional `enableShortRange` reduces read range during protection. |\n| `disableTagProtection` | Removes protection from a previously protected tag, restoring normal visibility. | `password`, `tagID` | `password` must match the tag's existing access password exactly. |\n| `enableTagVisibility` | Temporarily allows the reader to read protected tags during this session. Does not change the tag's protection state. | `password` | Reader-scoped; affects all protected tags in field. |\n| `disableTagVisibility` | Restores the default behavior where protected tags are hidden from the reader. | `password` | Reverts the effect of `enableTagVisibility`. |\n\n> Important: `enableTagProtection` and `disableTagProtection` are tag-specific (require `tagID`). `enableTagVisibility` and `disableTagVisibility` are reader-wide visibility toggles.\n\n## 6. Choosing TagQuieting Strategy\n\nTagQuieting silences tags from being reported during inventory. Choose between **basic** (EPC-list based) and **advanced** (Gen2 select mask based) depending on your filtering complexity.\n\n### Basic TagQuieting\n\n| Field | What It Controls |\n|---|---|\n| `action: quiet` | Silences the listed tags from being reported in future inventories. |\n| `action: unquiet` | Restores reporting for previously quieted tags. |\n| `tagIDs` | Array of EPCs (hex strings) to quiet or unquiet. Maximum **31 EPCs** per request. |\n\n### Advanced TagQuieting\n\nAdvanced quieting uses Gen2 select pre-conditions to silence tags based on memory content and state, instead of explicit EPC lists.\n\n| Field | What It Controls |\n|---|---|\n| `preSelect[]` | Array of Gen2 select operations applied **before** quieting. Each entry contains `target`, `action`, and `mask`. |\n| `preSelect[].target` | The session flag or SL to act upon (`S0`, `S1`, `S2`, `S3`, `SL`). |\n| `preSelect[].action` | The state-aware action to take on match/mismatch (e.g., `ASSERTSL_NOTHING`, `INVB_INVA`, `DEASSERTSL_NOTHING`, `INVA_INVB`). |\n| `preSelect[].mask` | The memory mask: `bank` (EPC/TID/USER/RESERVED), `pointer` (bit offset), `length` (bits), `value` (hex). |\n| `tagQuietMasks` | Array of session-flag combinations defining the quieted state (`S0A`, `S2B`, `SL_ASSERT`, `SL_DEASSERT`, etc.). |\n| `target` | The target session/flag used for the actual quieting operation. |\n| `stateAwareAction` | The compound state action (e.g., `ASSERTSL_DEASSERTSL`, `DEASSERTSL_ASSERTSL`) applied during quieting. |\n\n> Important: Use `basic` when you have a discrete list of EPCs. Use `advanced` when filtering by memory content, session state, or complex multi-step Gen2 select conditions.\n\n## 7. Choosing FastID and TagFocus\n\nThese two reader-scoped features improve inventory performance but cannot be combined.\n\n### `fastID`\n\n| Field | What It Controls |\n|---|---|\n| `enabled: true` | Reader returns EPC\
-        \ + TID together in a single read, reducing total operations. |\n| `enabled: false` | Reverts to standard EPC-only reads. |\n\n**Use FastID when:** Your application needs TID for every tag (e.g., authentication, chip-level traceability) and you want to avoid the extra round-trip of a separate TID read.\n\n### `tagFocus`\n\n| Field | What It Controls |\n|---|---|\n| `enabled: true` | Once a tag is read, it is silenced for the rest of the inventory cycle. The reader focuses only on new tags entering the field. |\n| `enabled: false` | Standard inventory behavior; tags can be reported multiple times. |\n\n**Use TagFocus when:** You operate portals, conveyors, or other scenarios with many duplicate reads of the same tag set and want unique-tag reporting.\n\n## 8. Applying the Configuration\n\nCalling this endpoint only **saves** the configuration on the reader; it is not active until inventory is started with the activation flag.\n\n### REST Workflow\n\n```text\nPUT  /cloud/stop                 -> stop any active inventory\nPUT  /cloud/impinjGen2X          -> save the configuration\nGET  /cloud/impinjGen2X          -> verify the saved configuration\nPUT  /cloud/start                -> body: { \"applyImpinjGen2X\": true }\n```\n\n### Request Format\n\nEvery request to this endpoint follows this structure:\n\n```http\nPUT /cloud/impinjGen2X HTTP/1.1\nHost: <reader-address>\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  // one or more Gen2X feature objects\n}\n```\n\n### Success Response (`200 OK`)\n\n```http\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n  \"message\": \"Configuration saved successfully\"\n}\n```\n\n### Error Responses\n\n| Status Code | Meaning | When It Occurs |\n|---|---|---|\n| `422 Unprocessable Entity` | Validation error | Empty body, mutually exclusive features sent together, invalid enum value, or constraint violation. |\n| `500 Internal Server Error` | Reader-side failure | Internal reader error while persisting the configuration. |\n\n> Persistence: The reader stores the last saved configuration and restores it across reboots and reconnects. The configuration is only applied during inventory when `applyImpinjGen2X: true` is sent in the `PUT /cloud/start` request body.\n"
+        \ + TID together in a single read, reducing total operations. |\n| `enabled: false` | Reverts to standard EPC-only reads. |\n\n**Use FastID when:** Your application needs TID for every tag (e.g., authentication, chip-level traceability) and you want to avoid the extra round-trip of a separate TID read.\n\n### `tagFocus`\n\n| Field | What It Controls |\n|---|---|\n| `enabled: true` | Once a tag is read, it is silenced for the rest of the inventory cycle. The reader focuses only on new tags entering the field. |\n| `enabled: false` | Standard inventory behavior; tags can be reported multiple times. |\n\n**Use TagFocus when:** You operate portals, conveyors, or other scenarios with many duplicate reads of the same tag set and want unique-tag reporting.\n\n## 8. Applying the Configuration\n\nCalling this endpoint only **saves** the configuration on the reader; it is not active until inventory is started with the activation flag.\n\n### REST Workflow\n\n```text\nPUT  /cloud/stop                 -> stop any active inventory\nPUT  /cloud/impinjGen2X          -> save the configuration\nGET  /cloud/impinjGen2X          -> verify the saved configuration\nPUT  /cloud/start                -> body: { \"applyImpinjGen2X\": true }\n```\n\n### Request Format\n\nEvery request to this endpoint follows this structure:\n\n```http\nPUT /cloud/impinjGen2X HTTP/1.1\nHost: <reader-address>\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  // one or more Gen2X feature objects\n}\n```\n\n### Success Response (`200 OK`)\n\n```http\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n  \"message\": \"Success: Gen2X configured. Use applyImpinjGen2X flag in start command to apply features.\"\n}\n```\n\n### Error Responses\n\n| Status Code | Meaning | When It Occurs |\n|---|---|---|\n| `422 Unprocessable Entity` | Validation error | Empty body, mutually exclusive features sent together, invalid enum value, or constraint violation. |\n| `500 Internal Server Error` | Reader-side failure | Internal reader error while persisting the configuration. |\n\n> Persistence: The reader stores the last saved configuration and restores it across reboots and reconnects. The configuration is only applied during inventory when `applyImpinjGen2X: true` is sent in the `PUT /cloud/start` request body.\n"
       operationId: setImpinjGen2X
       requestBody:
         required: true
@@ -8505,7 +8768,7 @@ paths:
                 value:
                   tagProtect:
                     action: disableTagVisibility
-                    password: '77777777'
+                    password: "77777777"
               disable_tagFocus:
                 summary: disable tagFocus
                 value:
@@ -8521,7 +8784,7 @@ paths:
                 value:
                   tagProtect:
                     action: enableTagVisibility
-                    password: '77777777'
+                    password: "77777777"
               enable_tagFocus:
                 summary: enable tagFocus
                 value:
@@ -8532,7 +8795,7 @@ paths:
                 value:
                   tagProtect:
                     action: enableTagProtection
-                    password: '77777777'
+                    password: "77777777"
                     tagID: e2801191a5030069073b426d
                     enableShortRange: true
               quiet_tags:
@@ -8549,7 +8812,7 @@ paths:
                 value:
                   tagProtect:
                     action: disableTagProtection
-                    password: '77777777'
+                    password: "77777777"
                     tagID: e2801191a5030069073b426d
               unquiet_tags:
                 summary: unquiet tags
@@ -8560,19 +8823,21 @@ paths:
                       tagIDs:
                       - e2801191a5030069073b426d
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SetImpinjGen2XResponse'
-        '422':
+              example:
+                message: 'Success: Gen2X configured. Use applyImpinjGen2X flag in start command to apply features.'
+        "422":
           description: Unprocessable Entity
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SetImpinjGen2XResponse422'
-        '500':
+        "500":
           description: Internal Server Error
           content:
             application/json:
@@ -8725,7 +8990,7 @@ paths:
                         - frameType: UID
                           txPower: -18
                           namespace: 0102030405060708090A
-                          instance: '000000000001'
+                          instance: "000000000001"
                         - frameType: EID
                           txPower: -18
                           ephemeralId: 0102030405060708
@@ -8752,7 +9017,7 @@ paths:
                     additionalFilters:
                       rssi: -70
       responses:
-        '200':
+        "200":
           description: OK
       security:
       - bearerAuth: []
@@ -8832,7 +9097,7 @@ paths:
         '
       operationId: getBleConfig
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -8875,7 +9140,7 @@ paths:
                           - frameType: UID
                             txPower: -18
                             namespace: 0102030405060708090A
-                            instance: '000000000001'
+                            instance: "000000000001"
                           - frameType: EID
                             txPower: -18
                             ephemeralId: 0102030405060708
@@ -8981,9 +9246,12 @@ components:
       properties:
         port:
           type: integer
-          minimum: 1
-          maximum: 2
-          description: GPI Port Number
+          enum:
+          - 1
+          - 2
+          - 3
+          - 4
+          description: GPI port number. FXR60 / FXR90 support GPI ports 1 through 4.
         signal:
           type: string
           enum:
@@ -9467,7 +9735,7 @@ components:
     tagMetaData.v1:
       title: tagMetaData
       type: array
-      description: "Controls the metadata that is sent when a tag is reported\n\n  “ANTENNA” will report the antenna port upon which the tag was inventoried.\n\n  “RSSI” will report the rssi (in dbm) of the inventoried tag. If the tag is only reported occasionally (see reportFilter), this tag will be the peak rssi since the last reported read.\n\n   “PHASE” will report the phase (in degrees) of the inventoried tag. This value will only be reported if each individual tag read is reported (in other words, if reportFilter duration is set to 0). Otherwise, it will not be reported.\n\n  “CHANNEL” will report the channel (in MHz) the reader was using when the tag was inventoried. This value will only be reported if each individual tag read is reported (in other words, if reportFilter duration is set to 0). Otherwise, it will not be reported.\n\n  “SEEN_COUNT” will report the number of times the tag has been inventoried since the previous report. This value will always be 1 if each individual tag read is reported (in other words, if reportFilter duration is set to 0). \n\n  “PC” will report the PC bits of the inventoried tag as a hex string. \n\n  “XPC” will report the XPC bits of the inventoried tag, if present, as a hex string. \n\n  “CRC” will report the CRC bits of the inventoried tag as a hex string.\n\n  “EPC” will report the entire contents of the EPC bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “EPC[1]”. If the first word and the 3-5 word are desired, the value can be set to “EPC[1,3-5]”.\n\n  “TID” will report the entire contents of the TID bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “TID[1]”. If the first word and the 3-5 word are desired, the value can be set to “TID[1,3-5]”.\n\n  “USER” will report the entire contents of the USER bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “TID[1]”. If the first word and the 3-5 word are desired, the value can be set to “TID[1,3-5]”.\n\n  “MAC” will report the MAC Address of the reader reporting the tag.\n\n  “HOSTNAME” will report the hostname of the reader reporting the tag.\n\nThe array may also contain an object or objects. The object must contain a single name value pair with the name being set to “userDefined”, “antennaNames”, or “gpsCoordinates”.\n\n\nIf absent,\n“SIMPLE” mode does not report any additional meta data, “PORTAL” and “CONVEYOR” modes reports “ANTENNA”, and “INVENTORY” mode reports “ANTENNA”, “RSSI”, and “SEEN_COUNT”.\n"
+      description: "Controls the metadata that is sent when a tag is reported\n\n  “ANTENNA” will report the antenna port upon which the tag was inventoried.\n\n  “RSSI” will report the rssi (in dbm) of the inventoried tag. If the tag is only reported occasionally (see reportFilter), this tag will be the peak rssi since the last reported read.\n\n   “PHASE” will report the phase (in degrees) of the inventoried tag. This value will only be reported if each individual tag read is reported (in other words, if reportFilter duration is set to 0). Otherwise, it will not be reported.\n\n  “CHANNEL” will report the channel (in MHz) the reader was using when the tag was inventoried. This value will only be reported if each individual tag read is reported (in other words, if reportFilter duration is set to 0). Otherwise, it will not be reported.\n\n  “SEEN_COUNT” will report the number of times the tag has been inventoried since the previous report. This value will always be 1 if each individual tag read is reported (in other words, if reportFilter duration is set to 0). \n\n  “PC” will report the PC bits of the inventoried tag as a hex string. \n\n  “XPC” will report the XPC bits of the inventoried tag, if present, as a hex string. \n\n  “CRC” will report the CRC bits of the inventoried tag as a hex string.\n\n  “EPC” will report the entire contents of the EPC bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “EPC[1]”. If the first word and the 3-5 word are desired, the value can be set to “EPC[1,3-5]”.\n\n  “TID” will report the entire contents of the TID bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “TID[1]”. If the first word and the 3-5 word are desired, the value can be set to “TID[1,3-5]”.\n\n  “USER” will report the entire contents of the USER bank as a hex string. If only a portion of the memory bank is desired, this can be requested by appending a [] to the string and placing the words requested. For instance, if only the first word is desired, the value can be set as “TID[1]”. If the first word and the 3-5 word are desired, the value can be set to “TID[1,3-5]”.\n\n  “MAC” will report the MAC Address of the reader reporting the tag.\n\n  “HOSTNAME” will report the hostname of the reader reporting the tag.\n\n  “READER_LOCATION” will report the reader’s configured location (latitude, longitude, altitude, and an optional user-defined label) with each tag event.\n\nThe array may also contain an object or objects. The object must contain a single name value pair with the name being set to “userDefined”, “antennaNames”, or “gpsCoordinates”.\n\n\nIf absent,\n“SIMPLE” mode does not report any additional meta data, “PORTAL” and “CONVEYOR” modes reports “ANTENNA”, and “INVENTORY” mode reports “ANTENNA”, “RSSI”, and “SEEN_COUNT”.\n"
       items:
         oneOf:
         - type: string
@@ -9679,7 +9947,6 @@ components:
           - CONVEYOR
           - CUSTOM
           description: 'The type of mode of operation '
-          default: SIMPLE
         modeSpecificSettings:
           description: One of inventorySettings or portalSettings, depending on the selected mode type.
           oneOf:
@@ -9801,11 +10068,11 @@ components:
       type: object
       description: action blink configuration for GPO or LED
       properties:
-        'ON':
+        "ON":
           type: number
           minimum: 0
           description: SET GPO or LED to desired state for ON (milliseconds) duration
-        'OFF':
+        "OFF":
           type: number
           minimum: 0
           description: Toggle GPO or LED for OFF(milliseconds) duration
@@ -9814,8 +10081,8 @@ components:
           minimum: 0
           description: Total duration in milliseconds to perform blink. 0 will blink GPO or LED forever
       required:
-      - 'ON'
-      - 'OFF'
+      - "ON"
+      - "OFF"
       - DURATION
     conditionsArray.v1:
       type: array
@@ -9906,6 +10173,22 @@ components:
       - type
       - pin
       - state
+    cableLossPort.v1:
+      title: Cable loss port settings
+      type: object
+      description: Cable loss compensation settings for a single antenna port.
+      required:
+      - cableLength
+      - cableLossPerHundredFt
+      properties:
+        cableLength:
+          type: number
+          minimum: 0
+          description: Length of the cable connected to this antenna port, in feet.
+        cableLossPerHundredFt:
+          type: number
+          minimum: 0
+          description: Cable signal loss per 100 feet, in dB.
     ledAction.v1:
       title: LED Action
       type: object
@@ -9921,10 +10204,8 @@ components:
           - LED
         led:
           type: number
-          description: LED number
+          description: LED number. Only LED 3 is supported on FXR60 / FXR90.
           enum:
-          - 1
-          - 2
           - 3
         color:
           type: string
@@ -9940,7 +10221,7 @@ components:
           - GREEN
           - RED
           - AMBER
-          - 'OFF'
+          - "OFF"
         blink:
           $ref: '#/components/schemas/actionBlink.v1'
         conditions:
@@ -9976,47 +10257,42 @@ components:
 
         4. GPI_2_H: event raised when GPI 2 changed from LOW to HIGH
 
-        5. GPI_3_L: event raised when GPI 3 changed from HIGH to LOW
+        5. CLOUD_DISCONNECT: event raised when reader is disconnected from cloud
 
-        6. GPI_3_H: event raised when GPI 3 changed from LOW to HIGH
+        6. CLOUD_CONNECT: event raised when reader is connected to cloud
 
-        7. GPI_4_L: event raised when GPI 4 changed from HIGH to LOW
+        7. TAG_READ: event raised when a tag is read
 
-        8. GPI_4_H: event raised when GPI 4 changed from LOW to HIGH
+        8. RADIO_START: event raised when inventory operation started using START API
 
-        9. CLOUD_DISCONNECT: event raised when reader is disconnected from cloud
+        9. RADIO_STOP: event raised when inventory operation stopped using STOP API
 
-        10. CLOUD_CONNECT: event raised when reader is connected to cloud
 
-        11. TAG_READ: event raised when a tag is read
-
-        12. RADIO_START: event raised when inventory operation started using START API
-
-        13. RADIO_STOP: event raised when inventory operation stopped using STOP API'
+        GPI 3 and GPI 4 events are not supported on FXR60 / FXR90.'
       properties:
         GPODefaults:
           type: object
           description: GPO default configurations
           properties:
-            '1':
+            "1":
               type: string
               enum:
               - HIGH
               - LOW
               description: set default state for GPO pin 1
-            '2':
+            "2":
               type: string
               enum:
               - LOW
               - HIGH
               description: set default state for GPO pin 2
-            '3':
+            "3":
               type: string
               enum:
               - HIGH
               - LOW
               description: set default state for GPO pin 3
-            '4':
+            "4":
               type: string
               enum:
               - HIGH
@@ -10026,21 +10302,21 @@ components:
           type: object
           description: LED default configurations
           properties:
-            '1':
+            "1":
               type: string
               enum:
               - GREEN
               - RED
               - AMBER
               description: set default color for LED 2
-            '2':
+            "2":
               type: string
               enum:
               - GREEN
               - RED
               - AMBER
               description: set default color for LED 3
-            '3':
+            "3":
               type: string
               enum:
               - RED
@@ -10054,14 +10330,6 @@ components:
         GPI_2_H:
           $ref: '#/components/schemas/gpoledAction.v1'
         GPI_2_L:
-          $ref: '#/components/schemas/gpoledAction.v1'
-        GPI_3_H:
-          $ref: '#/components/schemas/gpoledAction.v1'
-        GPI_3_L:
-          $ref: '#/components/schemas/gpoledAction.v1'
-        GPI_4_H:
-          $ref: '#/components/schemas/gpoledAction.v1'
-        GPI_4_L:
           $ref: '#/components/schemas/gpoledAction.v1'
         CLOUD_DISCONNECT:
           $ref: '#/components/schemas/gpoledAction.v1'
@@ -10388,7 +10656,7 @@ components:
                 type: string
                 description: Log level to apply to the selected component.
                 enum:
-                - 'OFF'
+                - "OFF"
                 - FATAL
                 - ERROR
                 - WARNING
@@ -10794,7 +11062,7 @@ components:
           - red
           - amber
           - green
-          - 'off'
+          - "off"
         flash:
           type: boolean
           description: Whether the LED should blink.
@@ -10821,7 +11089,7 @@ components:
           - amber
           - green
           - blue
-          - 'off'
+          - "off"
         brightness:
           type: string
           description: The brightness of the LED (low, med, high).
@@ -10849,7 +11117,7 @@ components:
           - amber
           - green
           - blue
-          - 'off'
+          - "off"
         brightness:
           type: string
           description: The brightness of the LED (low, med, high). Defaults to low.
@@ -10867,22 +11135,22 @@ components:
     GetGpoStatusResponse:
       type: object
       properties:
-        '1':
+        "1":
           type: string
           enum:
           - HIGH
           - LOW
-        '2':
+        "2":
           type: string
           enum:
           - HIGH
           - LOW
-        '3':
+        "3":
           type: string
           enum:
           - HIGH
           - LOW
-        '4':
+        "4":
           type: string
           enum:
           - HIGH
@@ -10907,30 +11175,30 @@ components:
     GetGPIStatusResponse:
       type: object
       required:
-      - '1'
-      - '2'
-      - '3'
-      - '4'
+      - "1"
+      - "2"
+      - "3"
+      - "4"
       properties:
-        '1':
+        "1":
           type: string
           description: GPI port 1 state reported by the reader.
           enum:
           - HIGH
           - LOW
-        '2':
+        "2":
           type: string
           description: GPI port 2 state reported by the reader.
           enum:
           - HIGH
           - LOW
-        '3':
+        "3":
           type: string
           description: GPI port 3 state reported by the reader.
           enum:
           - HIGH
           - LOW
-        '4':
+        "4":
           type: string
           description: GPI port 4 state reported by the reader.
           enum:
@@ -11019,20 +11287,20 @@ components:
                 type: string
                 description: Whether individual channels can be selected. String-encoded boolean.
                 enum:
-                - 'true'
-                - 'false'
+                - "true"
+                - "false"
               isHoppingConfigurable:
                 type: string
                 description: Whether frequency hopping is configurable. String-encoded boolean.
                 enum:
-                - 'true'
-                - 'false'
+                - "true"
+                - "false"
               isLBTConfigurable:
                 type: string
                 description: Whether Listen-Before-Talk (LBT) is configurable. String-encoded boolean.
                 enum:
-                - 'true'
-                - 'false'
+                - "true"
+                - "false"
     GetModeRequest:
       type: object
       properties:
@@ -11061,15 +11329,44 @@ components:
       type: object
       properties:
         scanType:
-          type: array
-          description: Which scan types to start. Omit for RFID-only (default).
-          items:
-            type: string
-            enum:
-            - ble
-            - rfid
-          minItems: 1
-          uniqueItems: true
+          description: 'Which scan types to start. Omit for RFID-only (default). Send an array for a global start on all data endpoints, or an object to target named endpoints (`dataEndpoint1`, `dataEndpoint2`).
+
+            '
+          oneOf:
+          - type: array
+            description: Global start — the same scan types on every data endpoint.
+            items:
+              type: string
+              enum:
+              - ble
+              - rfid
+            minItems: 1
+            uniqueItems: true
+          - type: object
+            description: Targeted start — scan types per data endpoint.
+            additionalProperties:
+              type: array
+              items:
+                type: string
+                enum:
+                - ble
+                - rfid
+              uniqueItems: true
+            properties:
+              dataEndpoint1:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - ble
+                  - rfid
+              dataEndpoint2:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - ble
+                  - rfid
         doNotPersistState:
           type: boolean
           description: Applies to RFID inventory only — it has no effect on BLE scanning. Controls whether the started RFID inventory state is persisted across reboot. If `true`, the state is not persisted and auto-start is not enabled after reboot. If `false`, the state is persisted across reboot, enabling auto-start.
@@ -11080,18 +11377,51 @@ components:
       type: object
       properties:
         scanType:
-          type: array
-          description: Which scan types to stop. Omit for RFID-only (default).
-          items:
-            type: string
-            enum:
-            - ble
-            - rfid
-          minItems: 1
-          uniqueItems: true
+          description: 'Which scan types to stop. Omit for RFID-only (default). Send an array for a global stop on all data endpoints, or an object to target named endpoints (`dataEndpoint1`, `dataEndpoint2`).
+
+            '
+          oneOf:
+          - type: array
+            description: Global stop — the same scan types on every data endpoint.
+            items:
+              type: string
+              enum:
+              - ble
+              - rfid
+            minItems: 1
+            uniqueItems: true
+          - type: object
+            description: Targeted stop — scan types per data endpoint.
+            additionalProperties:
+              type: array
+              items:
+                type: string
+                enum:
+                - ble
+                - rfid
+              uniqueItems: true
+            properties:
+              dataEndpoint1:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - ble
+                  - rfid
+              dataEndpoint2:
+                type: array
+                items:
+                  type: string
+                  enum:
+                  - ble
+                  - rfid
     GetVersionResponse:
       type: object
       properties:
+        availableOsUpgrades:
+          type: object
+          description: OS upgrade builds currently available on the reader. An empty object means no downloaded upgrade is waiting to be installed.
+          additionalProperties: true
         cloudAgentApplication:
           type: string
           description: Version of the cloud agent application.
@@ -11099,6 +11429,7 @@ components:
           type: string
           description: Reader model identifier returned by the device.
           enum:
+          - FXR60
           - FXR90
         radioControlApplication:
           type: string
@@ -11109,6 +11440,10 @@ components:
         readerApplication:
           type: string
           description: Version of the main reader application.
+        revertBackFirmware:
+          type: object
+          description: Present in the response. On FXR60 / FXR90 this object is empty and does not report the backup OS version on the secondary partition.
+          additionalProperties: true
         serialNumber:
           type: string
           description: Reader serial number.
@@ -11117,56 +11452,19 @@ components:
       properties:
         antennas:
           type: object
-          description: Per-antenna connection status reported by the reader.
-          properties:
-            1:
-              type: string
-              description: Antenna 1 connection state.
-              enum:
-              - connected
-              - disconnected
-            2:
-              type: string
-              description: Antenna 2 connection state.
-              enum:
-              - connected
-              - disconnected
-            3:
-              type: string
-              description: Antenna 3 connection state.
-              enum:
-              - connected
-              - disconnected
-            4:
-              type: string
-              description: Antenna 4 connection state.
-              enum:
-              - connected
-              - disconnected
-            5:
-              type: string
-              description: Antenna 5 connection state.
-              enum:
-              - connected
-              - disconnected
-            6:
-              type: string
-              description: Antenna 6 connection state.
-              enum:
-              - connected
-              - disconnected
-            7:
-              type: string
-              description: Antenna 7 connection state.
-              enum:
-              - connected
-              - disconnected
-            8:
-              type: string
-              description: Antenna 8 connection state.
-              enum:
-              - connected
-              - disconnected
+          description: 'Per-antenna connection status reported by the reader.
+
+            Keys are antenna port numbers as strings. Only ports present on this reader are included; not every reader has 8 antennas.
+
+            Use GET /cloud/readPoints to list the ports available on this device.
+
+            '
+          additionalProperties:
+            type: string
+            description: Antenna port connection state.
+            enum:
+            - connected
+            - disconnected
         cpu:
           type: object
           description: CPU utilization statistics reported by the reader.
@@ -11227,7 +11525,8 @@ components:
           properties:
             data:
               type: array
-              description: Per-interface connection status entries.
+              description: Per-interface connection status entries. A maximum of 2 data interfaces is supported.
+              maxItems: 2
               items:
                 type: object
                 properties:
@@ -11258,9 +11557,9 @@ components:
           description: Power negotiation mode reported by the reader.
         powerSource:
           type: string
-          description: Current power source for the reader. On the FXR90, `DC` indicates the reader is powered by the external DC power brick (Power Brick).
+          description: Current power source for the reader. `PWR_BRICK` indicates the external power brick. `DC` is not used on FXR60 or FXR90.
           enum:
-          - DC
+          - PWR_BRICK
           - POE
           - POE+
         radioActivity:
@@ -11303,8 +11602,9 @@ components:
               description: Indicates whether an Impinj Gen2X feature is currently active
             feature:
               type: string
-              description: The name of the active Impinj Gen2X feature
+              description: The name of the active Impinj Gen2X feature. `none` when no Gen2X feature is running.
               enum:
+              - none
               - fastId
               - tagFocus
               - tagProtect
@@ -11346,10 +11646,9 @@ components:
       type: object
       properties:
         GPIO-LED:
-          description: GPIO and LED trigger mapping configuration. Returns "NOT_CONFIGURED" when no GPIO-LED configuration has been applied.
-          oneOf:
-          - type: string
-            description: Returned as "NOT_CONFIGURED" when GPIO-LED config has not been set.
+          description: GPIO and LED trigger mapping configuration. An empty object {} is returned when no GPIO-LED configuration has been applied.
+          allOf:
+          - $ref: '#/components/schemas/GPIOLEDConfig.v1'
         READER-GATEWAY:
           type: object
           description: Reader Gateway cloud connectivity configuration, including endpoint connections, batching, retention, and management event settings.
@@ -11362,10 +11661,10 @@ components:
                 properties:
                   maxPayloadSizePerReport:
                     type: number
-                    description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                    description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                   reportingInterval:
                     type: number
-                    description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                    description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
               - type: array
                 description: Per-endpoint batching config (one entry per data endpoint connection).
                 items:
@@ -11373,10 +11672,10 @@ components:
                   properties:
                     maxPayloadSizePerReport:
                       type: number
-                      description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                      description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                     reportingInterval:
                       type: number
-                      description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                      description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
             endpointConfig:
               type: object
               description: Cloud connectivity endpoint configuration for control, data, and management planes.
@@ -11500,10 +11799,10 @@ components:
                       properties:
                         maxPayloadSizePerReport:
                           type: number
-                          description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                          description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                         reportingInterval:
                           type: number
-                          description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                          description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
                     event:
                       type: object
                       description: Data event endpoint (publishes tag read events to cloud connections).
@@ -11524,17 +11823,17 @@ components:
                                     properties:
                                       maxPayloadSizePerReport:
                                         type: number
-                                        description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                                        description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                                       reportingInterval:
                                         type: number
-                                        description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                                        description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
                                   retention:
                                     type: object
                                     description: Per-connection event retention configuration when the connection is offline.
                                     properties:
                                       maxEventRetentionTimeInMin:
                                         type: number
-                                        description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                                        description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                                       maxNumEvents:
                                         type: number
                                         description: Maximum number of events to buffer when offline (0 - 150000).
@@ -11543,7 +11842,7 @@ components:
                                         description: Rate limit in events/sec for replaying retained events after reconnect (0 - 1000). 0 means no throttling.
                                   dataAck:
                                     type: object
-                                    description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered.
+                                    description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered. Requires MQTT 5. Not supported on Azure IoT Hub (Azure does not support MQTT 5).
                                     properties:
                                       enable:
                                         type: boolean
@@ -11655,7 +11954,7 @@ components:
                       properties:
                         maxEventRetentionTimeInMin:
                           type: number
-                          description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                          description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                         maxNumEvents:
                           type: number
                           description: Maximum number of events to buffer when offline (0 - 150000).
@@ -11794,7 +12093,7 @@ components:
                                     properties:
                                       maxEventRetentionTimeInMin:
                                         type: number
-                                        description: Maximum time in minutes to retain management events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                                        description: Maximum time in minutes to retain management events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                                       maxNumEvents:
                                         type: number
                                         description: Maximum number of management events to buffer when offline (0 - 150000).
@@ -11803,7 +12102,7 @@ components:
                                         description: Rate limit in events/sec for replaying retained management events after reconnect (0 - 1000).
                                   dataAck:
                                     type: object
-                                    description: Data acknowledgement configuration for management events. When enabled, the reader waits for an ACK before marking management events as delivered.
+                                    description: Data acknowledgement configuration for management events. When enabled, the reader waits for an ACK before marking management events as delivered. Requires MQTT 5. Not supported on Azure IoT Hub (Azure does not support MQTT 5).
                                     properties:
                                       enable:
                                         type: boolean
@@ -12096,7 +12395,7 @@ components:
                 properties:
                   maxEventRetentionTimeInMin:
                     type: number
-                    description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                    description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                   maxNumEvents:
                     type: number
                     description: Maximum number of events to buffer when offline (0 - 150000).
@@ -12110,7 +12409,7 @@ components:
                   properties:
                     maxEventRetentionTimeInMin:
                       type: number
-                      description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                      description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                     maxNumEvents:
                       type: number
                       description: Maximum number of events to buffer when offline (0 - 150000).
@@ -12152,19 +12451,19 @@ components:
                                   batching:
                                     description: Per-connection batching configuration. Set to null to use global batching settings. When provided as an object, overrides global batching for this connection only.
                                     oneOf:
-                                    - type: 'null'
+                                    - type: "null"
                                       description: Use global batching settings for this connection.
                                     - type: object
                                       description: Per-connection batching overriding global settings.
                                       properties:
                                         maxPayloadSizePerReport:
                                           type: integer
-                                          description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                                          description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                                           minimum: 0
                                           maximum: 256000
                                         reportingInterval:
                                           type: integer
-                                          description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                                          description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
                                           minimum: 0
                                           maximum: 86400000
                                   retention:
@@ -12173,7 +12472,7 @@ components:
                                     properties:
                                       maxEventRetentionTimeInMin:
                                         type: integer
-                                        description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                                        description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                                         minimum: 0
                                         maximum: 10080
                                       maxNumEvents:
@@ -12188,7 +12487,7 @@ components:
                                         maximum: 1000
                                   dataAck:
                                     type: object
-                                    description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered. Supported on MQTT-based connections only.
+                                    description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered. Requires MQTT 5. Not supported on Azure IoT Hub (Azure does not support MQTT 5).
                                     properties:
                                       enable:
                                         type: boolean
@@ -12313,12 +12612,12 @@ components:
                 properties:
                   maxPayloadSizePerReport:
                     type: integer
-                    description: Maximum payload size in bytes (0 - 256000). -1 to disable.
+                    description: Maximum payload size in bytes (0 - 256000). 0 disables this setting.
                     minimum: 0
                     maximum: 256000
                   reportingInterval:
                     type: integer
-                    description: Report interval in milliseconds (0 - 86400000). -1 to disable.
+                    description: Report interval in milliseconds (0 - 86400000). 0 disables this setting.
                     minimum: 0
                     maximum: 86400000
               - type: array
@@ -12342,7 +12641,7 @@ components:
                 properties:
                   maxEventRetentionTimeInMin:
                     type: integer
-                    description: Maximum event retention time in minutes (0 - 10080). 0 or -1 retains forever.
+                    description: Maximum event retention time in minutes (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                     minimum: 0
                     maximum: 10080
                   maxNumEvents:
@@ -12536,19 +12835,19 @@ components:
                               batching:
                                 description: Per-connection batching configuration. Set to null to use global batching settings. When provided as an object, overrides global batching for this connection only.
                                 oneOf:
-                                - type: 'null'
+                                - type: "null"
                                   description: Use global batching settings for this connection.
                                 - type: object
                                   description: Per-connection batching overriding global settings.
                                   properties:
                                     maxPayloadSizePerReport:
                                       type: integer
-                                      description: Maximum payload size per batch report in bytes (0 - 256000). -1 to disable.
+                                      description: Maximum payload size per batch report in bytes (0 - 256000). 0 disables this setting.
                                       minimum: 0
                                       maximum: 256000
                                     reportingInterval:
                                       type: integer
-                                      description: Batch reporting interval in milliseconds (0 - 86400000). -1 to disable.
+                                      description: Batch reporting interval in milliseconds (0 - 86400000). 0 disables this setting.
                                       minimum: 0
                                       maximum: 86400000
                               retention:
@@ -12557,7 +12856,7 @@ components:
                                 properties:
                                   maxEventRetentionTimeInMin:
                                     type: integer
-                                    description: Maximum time in minutes to retain events when offline (0 - 10080). 0 or -1 retains events indefinitely until maxNumEvents is reached.
+                                    description: Maximum time in minutes to retain events when offline (0 - 10080). 0 retains events indefinitely until maxNumEvents is reached.
                                     minimum: 0
                                     maximum: 10080
                                   maxNumEvents:
@@ -12572,7 +12871,7 @@ components:
                                     maximum: 1000
                               dataAck:
                                 type: object
-                                description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered. Supported on MQTT-based connections only.
+                                description: Data acknowledgement configuration. When enabled, the reader waits for an ACK from the cloud before marking events as delivered. Requires MQTT 5. Not supported on Azure IoT Hub (Azure does not support MQTT 5).
                                 properties:
                                   enable:
                                     type: boolean
@@ -13080,7 +13379,6 @@ components:
               items:
                 type: string
                 enum:
-                - DC
                 - POE
                 - POE+
                 - POWERBRICK
@@ -13098,26 +13396,11 @@ components:
                 type: string
     GetCablelosscompensationResponse:
       type: object
-      description: Cable loss compensation settings keyed by read point number.
+      description: Cable loss compensation settings keyed by read point number (`"1"` through `"8"`). Only ports present on this reader are included.
       minProperties: 1
       maxProperties: 8
-      additionalProperties: false
-      patternProperties:
-        ^[1-8]$:
-          type: object
-          description: Cable loss compensation settings for a single antenna port.
-          required:
-          - cableLength
-          - cableLossPerHundredFt
-          properties:
-            cableLength:
-              type: number
-              minimum: 0
-              description: Length of the cable connected to this antenna port, in feet.
-            cableLossPerHundredFt:
-              type: number
-              minimum: 0
-              description: Cable signal loss per 100 feet, in dB.
+      additionalProperties:
+        $ref: '#/components/schemas/cableLossPort.v1'
     SetCablelosscompensationRequest:
       type: object
       oneOf:
@@ -13136,28 +13419,13 @@ components:
             type: number
             description: Cable loss applied to all read points per 100 feet, in dB.
             minimum: 0
-      - description: Adjust cable loss compensation per read point using numeric read-point keys.
+      - description: Adjust cable loss compensation per read point using numeric read-point keys (`"1"` through `"8"`). Only include ports present on this reader.
         title: Each
         type: object
         minProperties: 1
         maxProperties: 8
-        additionalProperties: false
-        patternProperties:
-          ^[1-8]$:
-            type: object
-            description: Cable loss compensation settings for a single antenna port.
-            required:
-            - cableLength
-            - cableLossPerHundredFt
-            properties:
-              cableLength:
-                type: number
-                description: Length of the cable connected to this antenna port, in feet.
-                minimum: 0
-              cableLossPerHundredFt:
-                type: number
-                description: Cable signal loss for this antenna port per 100 feet, in dB.
-                minimum: 0
+        additionalProperties:
+          $ref: '#/components/schemas/cableLossPort.v1'
     SetCablelosscompensationResponse:
       type: string
       description: Returns an empty string on success.
@@ -13498,7 +13766,7 @@ components:
                       description: IPv6 gateway address for this interface.
                     prefix:
                       type: string
-                      description: IPv6 prefix for the assigned address.
+                      description: IPv6 prefix length (CIDR) of the assigned address, for example `64`. IPv6 has no subnetMask field; this value is the prefix length.
                     dnsAddress:
                       type: string
                       description: IPv6 DNS server address for this interface.
@@ -13513,19 +13781,19 @@ components:
                       type: string
                       description: Security protocol in use.
                       enum:
-                      - 802_1xEAP
+                      - 802_1XEAP
                     authentication:
                       type: string
                       description: EAP authentication method (TLS, TTLS, PEAP).
                     innerAuthentication:
                       type: string
-                      description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPv2).
+                      description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPV2).
                     username:
                       type: string
-                      description: Username for TTLS/PEAP with MSCHAPv2.
+                      description: Username for TTLS/PEAP with MSCHAPV2.
                     password:
                       type: string
-                      description: Password for TTLS/PEAP with MSCHAPv2.
+                      description: Password for TTLS/PEAP with MSCHAPV2.
                     certificate:
                       type: string
                       description: Client certificate name used for TLS-based authentication.
@@ -13577,7 +13845,7 @@ components:
                       description: IPv6 gateway address for this interface.
                     prefix:
                       type: string
-                      description: IPv6 prefix for the assigned address.
+                      description: IPv6 prefix length (CIDR) of the assigned address, for example `64`. IPv6 has no subnetMask field; this value is the prefix length.
                     dnsAddress:
                       type: string
                       description: IPv6 DNS server address for this interface.
@@ -13632,13 +13900,13 @@ components:
                               description: EAP authentication method (TLS, TTLS, PEAP).
                             innerAuthentication:
                               type: string
-                              description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPv2).
+                              description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPV2).
                             username:
                               type: string
-                              description: Username for TTLS/PEAP with MSCHAPv2.
+                              description: Username for TTLS/PEAP with MSCHAPV2.
                             password:
                               type: string
-                              description: Password for TTLS/PEAP with MSCHAPv2.
+                              description: Password for TTLS/PEAP with MSCHAPV2.
                             certificate:
                               type: string
                               description: Client certificate name for TLS-based methods.
@@ -13651,13 +13919,13 @@ components:
                               description: EAP authentication method (TLS, TTLS, PEAP).
                             innerAuthentication:
                               type: string
-                              description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPv2).
+                              description: Inner EAP authentication method (for TTLS/PEAP with TLS or MSCHAPV2).
                             username:
                               type: string
-                              description: Username for TTLS/PEAP with MSCHAPv2.
+                              description: Username for TTLS/PEAP with MSCHAPV2.
                             password:
                               type: string
-                              description: Password for TTLS/PEAP with MSCHAPv2.
+                              description: Password for TTLS/PEAP with MSCHAPV2.
                             certificate:
                               type: string
                               description: Client certificate name for TLS-based methods.
@@ -13872,7 +14140,7 @@ components:
                   description: IPv4 domain name (required if dhcp is false).
             IPV6:
               type: object
-              description: IPv6 settings. Use dhcp:true for DHCP, or supply all static fields when dhcp:false.
+              description: IPv6 settings. Use dhcp:true for DHCP, or supply all static fields when dhcp:false (including prefix length).
               properties:
                 dhcp:
                   type: boolean
@@ -13885,7 +14153,7 @@ components:
                   description: IPv6 gateway address (required if dhcp is false).
                 prefix:
                   type: string
-                  description: IPv6 prefix (required if dhcp is false).
+                  description: IPv6 prefix length (CIDR), for example `64`. Required when dhcp is false. IPv6 has no subnetMask field; use prefix instead of an IPv4-style mask.
                 dnsAddress:
                   type: string
                   description: IPv6 DNS address (required if dhcp is false).
@@ -13894,13 +14162,18 @@ components:
                   description: IPv6 domain name (required if dhcp is false).
             security:
               type: object
-              description: 'Ethernet security configuration.  Include the appropriate security configuration to enable security: `802_1xEAP` for 802.1X authentication. If the `security` configuration is omitted, security is disabled and all other security-related fields are ignored.
+              description: 'Ethernet security configuration. Set `security.enable` to true and include `802_1XEAP` for 802.1X authentication. If the `security` configuration is omitted, security is disabled.
 
                 '
               properties:
-                802_1xEAP:
+                enable:
+                  type: boolean
+                  description: 'Set to true when configuring 802.1X on this interface. This is independent of the interface-level `enable` field, which turns the Ethernet port on or off.
+
+                    '
+                802_1XEAP:
                   type: object
-                  description: 802.1X EAP security configuration (when securityType is 802_1xEAP).
+                  description: 802.1X EAP security configuration. The JSON key is `802_1XEAP` (uppercase X).
                   properties:
                     authentication:
                       type: string
@@ -13911,19 +14184,19 @@ components:
                       - PEAP
                     innerAuthentication:
                       type: string
-                      description: 'Inner authentication method, used with `TTLS` and `PEAP`: `TLS` or `MSCHAPv2`. When `authentication` is `TLS` there is no inner method; the reader-captured body sends a single space (`" "`). NEED LIVE TEST: whether omitting the field entirely is also accepted has not been confirmed.
+                      description: 'Inner method for TTLS and PEAP (`MSCHAPV2` or `TLS`). For outer `TLS`, send an empty string (`""`).
 
                         '
                       enum:
                       - TLS
-                      - MSCHAPv2
-                      - ' '
+                      - MSCHAPV2
+                      - ''
                     username:
                       type: string
-                      description: Username (for TTLS/PEAP with MSCHAPv2).
+                      description: Username (for TTLS/PEAP with MSCHAPV2).
                     password:
                       type: string
-                      description: Password (for TTLS/PEAP with MSCHAPv2).
+                      description: Password (for TTLS/PEAP with MSCHAPV2).
                     certificate:
                       type: string
                       description: Client certificate name (for TLS-based methods).
@@ -13958,6 +14231,7 @@ components:
                   description: IPv4 domain name (required if dhcp is false).
             IPV6:
               type: object
+              description: IPv6 settings. Use dhcp:true for DHCP, or supply all static fields when dhcp:false (including prefix length).
               properties:
                 dhcp:
                   type: boolean
@@ -13970,7 +14244,7 @@ components:
                   description: IPv6 gateway address (required if dhcp is false).
                 prefix:
                   type: string
-                  description: IPv6 prefix (required if dhcp is false).
+                  description: IPv6 prefix length (CIDR), for example `64`. Required when dhcp is false. IPv6 has no subnetMask field; use prefix instead of an IPv4-style mask.
                 dnsAddress:
                   type: string
                   description: IPv6 DNS address (required if dhcp is false).
@@ -14030,19 +14304,19 @@ components:
                           - PEAP
                         innerAuthentication:
                           type: string
-                          description: 'Inner authentication method, used with `TTLS` and `PEAP`: `TLS` or `MSCHAPv2`. When `authentication` is `TLS` there is no inner method; the reader-captured body sends a single space (`" "`). NEED LIVE TEST: whether omitting the field entirely is also accepted has not been confirmed.
+                          description: 'Inner method for TTLS and PEAP (`MSCHAPV2` or `TLS`). For outer `TLS`, send an empty string (`""`). Do not send a space.
 
                             '
                           enum:
                           - TLS
-                          - MSCHAPv2
-                          - ' '
+                          - MSCHAPV2
+                          - ''
                         username:
                           type: string
-                          description: Username (for TTLS/PEAP with MSCHAPv2).
+                          description: Username (for TTLS/PEAP with MSCHAPV2).
                         password:
                           type: string
-                          description: Password (for TTLS/PEAP with MSCHAPv2).
+                          description: Password (for TTLS/PEAP with MSCHAPV2).
                         certificate:
                           type: string
                           description: Client certificate name (for TLS-based methods).
@@ -14059,19 +14333,19 @@ components:
                           - PEAP
                         innerAuthentication:
                           type: string
-                          description: 'Inner authentication method, used with `TTLS` and `PEAP`: `TLS` or `MSCHAPv2`. When `authentication` is `TLS` there is no inner method; the reader-captured body sends a single space (`" "`). NEED LIVE TEST: whether omitting the field entirely is also accepted has not been confirmed.
+                          description: 'Inner method for TTLS and PEAP (`MSCHAPV2` or `TLS`). For outer `TLS`, send an empty string (`""`). Do not send a space.
 
                             '
                           enum:
                           - TLS
-                          - MSCHAPv2
-                          - ' '
+                          - MSCHAPV2
+                          - ''
                         username:
                           type: string
-                          description: Username (for TTLS/PEAP with MSCHAPv2).
+                          description: Username (for TTLS/PEAP with MSCHAPV2).
                         password:
                           type: string
-                          description: Password (for TTLS/PEAP with MSCHAPv2).
+                          description: Password (for TTLS/PEAP with MSCHAPV2).
                         certificate:
                           type: string
                           description: Client certificate name (for TLS-based methods).
@@ -14184,7 +14458,7 @@ components:
               type: boolean
     UpdateNetworkResponse:
       type: string
-      description: Returns an empty string on success.
+      description: Returns an empty string on success. The reader does not echo the new configuration. Confirm the change with GET /cloud/network.
     GetAvailablewifinetworksResponse:
       type: object
       description: Available Wi-Fi networks discovered by the reader.
@@ -14392,23 +14666,19 @@ components:
           description: PEM-encoded private key content.
         installedCertificateType:
           type: string
-          description: Use an installed certificate by specifying its type.
+          enum:
+          - server
+          - client
+          - app
+          description: Type of a certificate already installed on the reader (from GET /cloud/certificates). Use this only for client TLS authentication during the download. Names must match the installed certificate (`Server`, `COMMON`, and so on) — not a placeholder such as `reader-server-cert`. To trust the download server, use `CACertificateFileContent` or `CACertificateFileLocation`.
         installedCertificateName:
           type: string
-          description: Name of an installed certificate to use.
+          description: Name of an installed certificate to use. Must match a name returned by GET /cloud/certificates.
         headers:
           type: object
           description: Optional HTTP headers to include in the download request (e.g. Authorization).
           additionalProperties:
             type: string
-        retry:
-          type: object
-          description: Retry configuration for the download operation.
-          properties:
-            count:
-              type: integer
-            delayInSec:
-              type: integer
     SetOsResponse:
       type: string
       description: Returns an empty string on success.
@@ -14717,8 +14987,13 @@ components:
         tagQuieting:
           $ref: '#/components/schemas/impinjTagQuieting.v1'
     SetImpinjGen2XResponse:
-      type: string
-      description: Returns an empty string on success.
+      type: object
+      properties:
+        message:
+          type: string
+          description: Confirmation that the Gen2X configuration was saved. The configuration is applied on the next start with applyImpinjGen2X true.
+      required:
+      - message
     SetImpinjGen2XResponse422:
       type: object
       properties:

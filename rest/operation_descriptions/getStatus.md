@@ -48,7 +48,7 @@ Key fields to check in the response:
 | `radioConnection` | Is the value `connected`? | Inventory cannot run if the radio is disconnected. |
 | `radioActivity` | Is it `active` or `inactive`? | Confirms whether an inventory session is currently in progress. |
 | `temperature` | Is the value within safe operating range? | Excessive temperature can cause throttling or hardware faults. |
-| `antennas` | Are expected ports `connected`? | A `disconnected` antenna port means tags on that port will not be read. |
+| `antennas` | Are expected ports `connected`? Only ports present on this reader are listed — not every reader has 8 antennas. | A `disconnected` antenna port means tags on that port will not be read. |
 | `ntp.offset` | Is the offset near zero? | A large NTP offset means event timestamps may be inaccurate. |
 | `ble.scanState` | Is the value `running`? | Confirms whether the BLE scanner is currently active (`running`) or `stopped`. |
 | `ble.scanStartTime` | When did the current scan start? | ISO 8601 timestamp marking when BLE scanning last started. |

@@ -4,14 +4,14 @@
     "accesspoint": {
       "autoConn": true,
       "connect": true,
-      "essid": "MyWPA3EnterpriseNetwork",
+      "essid": "Vulcan_WPA3_5_ENT_802.1x",
       "security": {
         "enable": true,
         "WPA3Enterprise": {
           "authentication": "PEAP",
-          "innerAuthentication": "MSCHAPv2",
-          "username": "john.doe",
-          "password": "secret"
+          "innerAuthentication": "MSCHAPV2",
+          "username": "testuser1",
+          "password": "X!k78@rH0nL1"
         }
       }
     }

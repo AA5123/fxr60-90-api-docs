@@ -5,4 +5,4 @@
 | Field | Value |
 |---|---|
 | **Example name** | `installUserapp` |
-| **Summary title** | `Install app over HTTPS (BASIC + installed cert)` |
+| **Summary title** | `Install app over SFTP (BASIC)` |

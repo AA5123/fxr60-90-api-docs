@@ -3,13 +3,15 @@
   "command_id": "req-set-network",
   "payload": {
     "eth0": {
+      "enable": true,
       "security": {
-        "802_1xEAP": {
+        "enable": true,
+        "802_1XEAP": {
           "authentication": "TLS",
+          "innerAuthentication": "",
           "certificate": "COMMON"
         }
-      },
-      "enable": true
+      }
     }
   }
 }

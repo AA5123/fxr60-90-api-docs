@@ -25,5 +25,5 @@ Plan for downtime — the reader reboots to the secondary partition to activate 
 
 | What You Need | Details |
 |---|---|
-| Current firmware version | Use `GET /cloud/version` to confirm the current and previous OS builds before rolling back. |
+| Current firmware version | Use `GET /cloud/version` to confirm the current OS build (`readerApplication`). This endpoint does not return the backup OS version on the secondary partition. |
 | Downtime window | The reader reboots to the secondary partition; allow time for the reboot and reconnect. |

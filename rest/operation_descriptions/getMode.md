@@ -5,9 +5,9 @@ The `GET /cloud/mode` REST endpoint retrieves the reader's current operating mod
 This endpoint returns:
 
 - The operating mode type (`SIMPLE`, `INVENTORY`, `PORTAL`, `CONVEYOR`, or `CUSTOM`)
-- Active antennas or beams and their transmit power settings
+- Active antennas and their transmit power settings
 - The environment profile in use
-- Mode-specific configuration settings (portal, conveyor, directionality, etc.)
+- Mode-specific configuration settings (portal, conveyor, etc.)
 - Gen2 query, select, and access settings
 - Report filtering, RSSI filtering, metadata fields, and radio start/stop conditions
 

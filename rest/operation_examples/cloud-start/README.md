@@ -21,7 +21,11 @@ cloud-start/
 | `PUT/start_Inventory_with_ImpinjGen2X.json` | PUT | request | `start_Inventory with ImpinjGen2X` | in-spec | yes |  |
 | `PUT/start_BLE_only.json` | PUT | request | `start_BLE_only` | in-spec | yes |  |
 | `PUT/start_RFID_only.json` | PUT | request | `start_RFID_only` | in-spec | yes |  |
-| `PUT/start_BLE_and_RFID.json` | PUT | request | `start_BLE_and_RFID` | in-spec | yes |  |
+| `PUT/start_BLE_and_RFID.json` | PUT | request | `start_BLE_and_RFID` | in-spec | yes | Global BLE and RFID |
+| `PUT/start_targeted_RFID.json` | PUT | request | `start_targeted_RFID` | added | yes | Targeted RFID on dataEndpoint1 and dataEndpoint2 |
+| `PUT/start_targeted_BLE.json` | PUT | request | `start_targeted_BLE` | added | yes | Targeted BLE on dataEndpoint1 and dataEndpoint2 |
+| `PUT/start_targeted_BLE_and_RFID.json` | PUT | request | `start_targeted_BLE_and_RFID` | added | yes | Targeted BLE and RFID on both endpoints |
+| `PUT/start_targeted_mixed.json` | PUT | request | `start_targeted_mixed` | added | yes | Targeted mixed — BLE on dataEndpoint1, RFID on dataEndpoint2 |
 
 ## Trying these against a reader
 

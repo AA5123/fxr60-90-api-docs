@@ -23,6 +23,7 @@ cloud-impinjgen2x/
 | `GET/tagProtect_configured.json` | GET | response 200 | `tagProtect_configured` | in-spec | yes |  |
 | `GET/tagQuieting_basic_configured.json` | GET | response 200 | `tagQuieting_basic_configured` | in-spec | yes |  |
 | `GET/tagQuieting_advanced_configured.json` | GET | response 200 | `tagQuieting_advanced_configured` | in-spec | yes |  |
+| `PUT/response_200_success.json` | PUT | response 200 | `success` | live | yes | Response: Gen2X configured (apply on start) |
 | `PUT/enable_fastID.json` | PUT | request | `enable_fastID` | in-spec | yes |  |
 | `PUT/disable_fastID.json` | PUT | request | `disable_fastID` | in-spec | yes |  |
 | `PUT/protect_tag.json` | PUT | request | `protect_tag` | in-spec | yes |  |

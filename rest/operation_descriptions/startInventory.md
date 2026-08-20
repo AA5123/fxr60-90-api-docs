@@ -2,7 +2,14 @@
 
 The `PUT /cloud/start` REST endpoint starts RFID inventory, BLE scanning, or both on the reader.
 
-By default, an empty request body starts RFID inventory only. Use the `scanType` field to explicitly start BLE, RFID, or both together. Optional flags allow you to apply a previously saved Impinj Gen2X configuration or control whether the start state persists across reboots.
+By default, an empty request body starts RFID inventory only. Use the `scanType` field to start BLE, RFID, or both.
+
+`scanType` can be:
+
+- An **array** — global start on every data endpoint
+- An **object** — targeted start per data endpoint (`dataEndpoint1`, `dataEndpoint2`)
+
+If `scanType` is omitted or empty, the reader starts RFID only.
 
 Use this endpoint to:
 
@@ -44,11 +51,23 @@ Once the `PUT /cloud/start` request succeeds, the reader transitions from **Idle
 
 The `scanType` field determines which scanners run and where the data is published.
 
+**Global start** — send an array. The same scan types apply to every data endpoint.
+
 | Scan Type | Behavior |
 |---|---|
-| `rfid` (default) | Starts RFID inventory only. Tag read events stream on the reader's RFID data channel. |
-| `ble` | Starts BLE scanning only. BLE advertisement events stream on the reader's BLE data channel. |
-| `["ble", "rfid"]` | Starts both scanners in a single session. RFID and BLE events stream independently on their respective data channels. |
+| omitted / `{}` | Starts RFID inventory only (default). |
+| `["rfid"]` | Starts RFID inventory only. |
+| `["ble"]` | Starts BLE scanning only. |
+| `["ble", "rfid"]` | Starts both scanners. |
+
+**Targeted start** — send an object. Keys are data endpoints; values are the scan types for that endpoint.
+
+| `scanType` | Behavior |
+|---|---|
+| `{ "dataEndpoint1": ["rfid"], "dataEndpoint2": ["rfid"] }` | RFID on both endpoints. |
+| `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["ble"] }` | BLE on both endpoints. |
+| `{ "dataEndpoint1": ["ble", "rfid"], "dataEndpoint2": ["ble", "rfid"] }` | BLE and RFID on both endpoints. |
+| `{ "dataEndpoint1": ["ble"], "dataEndpoint2": ["rfid"] }` | BLE on endpoint 1, RFID on endpoint 2. |
 
 > Firmware requirement: BLE scanning — and with it the `scanType` field — is available from reader build **4.0.11** onward. On builds older than 4.0.11, `scanType` is not supported: omit it, and `PUT /cloud/start` starts RFID inventory only. Check the installed build with `GET /cloud/version` (`readerApplication`).
 

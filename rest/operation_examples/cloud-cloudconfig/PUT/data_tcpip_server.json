@@ -5,6 +5,7 @@
         "connections": [
           {
             "name": "DATA_TCP",
+            "description": "Tag events over TCP/IP server",
             "type": "tcpip-server",
             "options": {
               "enableSecurity": false,

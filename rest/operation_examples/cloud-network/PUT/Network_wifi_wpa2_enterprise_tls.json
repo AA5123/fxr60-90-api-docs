@@ -9,7 +9,7 @@
         "enable": true,
         "WPA2Enterprise": {
           "authentication": "TLS",
-          "innerAuthentication": " ",
+          "innerAuthentication": "",
           "certificate": "COMMON"
         }
       }

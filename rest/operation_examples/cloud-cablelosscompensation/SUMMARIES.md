@@ -7,7 +7,7 @@
 | Field | Value |
 |---|---|
 | **Example name** | `cable_loss` |
-| **Summary title** | `Port 1: 90 ft at 18 dB/100ft` |
+| **Summary title** | `Ports 1–4 with per-port cable length and loss` |
 
 ---
 

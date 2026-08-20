@@ -17,14 +17,14 @@
       "RADIO_START": [
         {
           "color": "AMBER",
-          "led": 1,
+          "led": 3,
           "type": "LED"
         }
       ],
       "RADIO_STOP": [
         {
           "color": "GREEN",
-          "led": 1,
+          "led": 3,
           "type": "LED"
         }
       ],
@@ -36,7 +36,7 @@
             "ON": 100
           },
           "color": "AMBER",
-          "led": 1,
+          "led": 3,
           "postActionColor": "GREEN",
           "type": "LED"
         },

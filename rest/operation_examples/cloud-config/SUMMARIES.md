@@ -1,6 +1,18 @@
 # Example summary titles — `/cloud/config`
 
-GET: single live response example (`GET/full_configuration.json`).
+### `GET/full_configuration.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `full_configuration` |
+| **Summary title** | `Full configuration with GPIO-LED applied` |
+
+### `GET/gpio_led_not_configured.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `gpio_led_not_configured` |
+| **Summary title** | `GPIO-LED not configured (empty object)` |
 
 ### `PUT/data_mqtt.json`
 

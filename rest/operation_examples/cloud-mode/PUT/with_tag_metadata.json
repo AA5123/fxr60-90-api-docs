@@ -7,9 +7,17 @@
   "tagMetaData": [
     "ANTENNA",
     "RSSI",
+    "PHASE",
     "SEEN_COUNT",
     "CHANNEL",
     "PC",
-    "CRC"
+    "XPC",
+    "CRC",
+    "EPC",
+    "TID",
+    "USER",
+    "MAC",
+    "HOSTNAME",
+    "READER_LOCATION"
   ]
 }

@@ -14,6 +14,7 @@ Use this endpoint to:
 
 - Add (install) a new eSIM profile using its activation code
 - Enable a specific eSIM carrier profile on the reader
+- Disable a specific eSIM carrier profile on the reader
 - Switch between installed eSIM profiles for different cellular network providers
 - Delete an eSIM profile from the reader
 - Apply eSIM provisioning changes from your carrier management system

@@ -5,6 +5,7 @@
         "connections": [
           {
             "name": "DATA_HTTP",
+            "description": "Tag events over HTTP POST",
             "type": "httpPost",
             "options": {
               "URL": "https://webhook.site/your-unique-id",

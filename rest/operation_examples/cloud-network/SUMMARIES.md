@@ -18,12 +18,26 @@ though every example sends it one level up.
 
 ## GET
 
+### `GET/WiFi.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `WiFi` |
+| **Summary title** | `WiFi (mlan0) — WPA2 Enterprise (PEAP/MSCHAPV2)` |
+
 ### `GET/WAN.json`
 
 | Field | Value |
 |---|---|
 | **Example name** | `wan_fxr90` |
-| **Summary title** | `FXR90 WAN (wan0) — not on FXR60` |
+| **Summary title** | `FXR90 WAN (wan0) — esim with apn — not on FXR60` |
+
+### `GET/Hotspot.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `Hotspot` |
+| **Summary title** | `Hotspot (uap0) — VULCAN_HOTSPOT` |
 
 ## PUT
 
@@ -60,14 +74,14 @@ though every example sends it one level up.
 | Field | Value |
 |---|---|
 | **Example name** | `Network_ethernet_dhcp_8021x_ttls_mschapv2` |
-| **Summary title** | `Ethernet — 802.1X (TTLS/MSCHAPv2)` |
+| **Summary title** | `Ethernet — 802.1X (TTLS/MSCHAPV2)` |
 
 ### `PUT/Network_ethernet_dhcp_8021x_peap_mschapv2.json`
 
 | Field | Value |
 |---|---|
 | **Example name** | `Network_ethernet_dhcp_8021x_peap_mschapv2` |
-| **Summary title** | `Ethernet — 802.1X (PEAP/MSCHAPv2)` |
+| **Summary title** | `Ethernet — 802.1X (PEAP/MSCHAPV2)` |
 
 ### `PUT/Network_wifi_static.json`
 
@@ -83,6 +97,13 @@ though every example sends it one level up.
 | **Example name** | `Network_wifi_security_wpa2_personal` |
 | **Summary title** | `WiFi — WPA2 Personal` |
 
+### `PUT/Network_wifi_security_wpa3_personal.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `Network_wifi_security_wpa3_personal` |
+| **Summary title** | `WiFi — WPA3 Personal` |
+
 ### `PUT/Network_wifi_wpa2_enterprise_tls.json`
 
 | Field | Value |
@@ -95,7 +116,7 @@ though every example sends it one level up.
 | Field | Value |
 |---|---|
 | **Example name** | `Network_wifi_wpa3_enterprise_ttls_mschapv2` |
-| **Summary title** | `WiFi — WPA3 Enterprise (TTLS/MSCHAPv2).similarly applicable for WPA2 Enterprise (WPA2Enterprise)` |
+| **Summary title** | `WiFi — WPA3 Enterprise (TTLS/MSCHAPV2).similarly applicable for WPA2 Enterprise (WPA2Enterprise)` |
 
 ### `PUT/Network_wifi_wpa2_enterprise_peap_tls.json`
 
@@ -116,7 +137,7 @@ though every example sends it one level up.
 | Field | Value |
 |---|---|
 | **Example name** | `Network_wifi_wpa3_enterprise_peap_mschapv2` |
-| **Summary title** | `WiFi — WPA3 Enterprise (PEAP/MSCHAPv2).Similarly applicable for WPA2 Enterprise(WPA2Enterprise)` |
+| **Summary title** | `WiFi — WPA3 Enterprise (PEAP/MSCHAPV2).Similarly applicable for WPA2 Enterprise(WPA2Enterprise)` |
 
 ### `PUT/Network_bluetooth.json`
 
@@ -145,3 +166,14 @@ though every example sends it one level up.
 |---|---|
 | **Example name** | `Network_hotspot` |
 | **Summary title** | `Hotspot` |
+
+## PUT response
+
+### `PUT/success.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `success` |
+| **Summary title** | `Empty string on success` |
+| **HTTP status** | `200` |
+

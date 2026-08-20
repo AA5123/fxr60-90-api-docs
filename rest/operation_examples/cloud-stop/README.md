@@ -19,7 +19,11 @@ cloud-stop/
 | `PUT/stop_RFID_default.json` | PUT | request | `stop_RFID_default` | in-spec | yes |  |
 | `PUT/stop_RFID_explicit.json` | PUT | request | `stop_RFID_explicit` | in-spec | yes |  |
 | `PUT/stop_BLE_only.json` | PUT | request | `stop_BLE_only` | in-spec | yes |  |
-| `PUT/stop_BLE_and_RFID.json` | PUT | request | `stop_BLE_and_RFID` | in-spec | yes |  |
+| `PUT/stop_BLE_and_RFID.json` | PUT | request | `stop_BLE_and_RFID` | in-spec | yes | Global BLE and RFID |
+| `PUT/stop_targeted_RFID.json` | PUT | request | `stop_targeted_RFID` | added | yes | Targeted RFID on dataEndpoint1 and dataEndpoint2 |
+| `PUT/stop_targeted_BLE.json` | PUT | request | `stop_targeted_BLE` | added | yes | Targeted BLE on dataEndpoint1 and dataEndpoint2 |
+| `PUT/stop_targeted_BLE_and_RFID.json` | PUT | request | `stop_targeted_BLE_and_RFID` | added | yes | Targeted BLE and RFID on both endpoints |
+| `PUT/stop_targeted_mixed.json` | PUT | request | `stop_targeted_mixed` | added | yes | Targeted mixed — BLE on dataEndpoint1, RFID on dataEndpoint2 |
 
 ## Trying these against a reader
 

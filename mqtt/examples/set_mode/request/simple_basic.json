@@ -22,18 +22,6 @@
     },
     "inventoryProtocol": {
       "mode": "GEN2"
-    },
-    "radioStartConditions": {
-      "type": "GPI",
-      "gpis": [
-        {
-          "port": 1,
-          "signal": "HIGH"
-        }
-      ]
-    },
-    "radioStopConditions": {
-      "duration": 60
     }
   }
 }

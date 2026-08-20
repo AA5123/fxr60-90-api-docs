@@ -7,7 +7,7 @@
 
 | File | Example name | Summary |
 |---|---|---|
-| `PUT/cable_loss.json` | `cable_loss` | Port 1: 90 ft at 18 dB/100ft |
+| `PUT/cable_loss.json` | `cable_loss` | Ports 1–4 with per-port cable length and loss |
 | `PUT/success.json` | `success` | Empty string on success |
 
 ## Method folders
@@ -20,7 +20,7 @@ cloud-cablelosscompensation/
 
 | File | Method | Direction | Example name | Origin | Valid | Summary |
 |---|---|---|---|---|---|---|
-| `PUT/cable_loss.json` | PUT | request | `cable_loss` | reviewed | yes | Port 1: 90 ft at 18 dB/100ft |
+| `PUT/cable_loss.json` | PUT | request | `cable_loss` | reviewed | yes | Ports 1–4 with per-port cable length and loss |
 | `PUT/success.json` | PUT | response | `success` | reviewed | yes | Empty string on success |
 | `GET/inline.json` | GET | response 200 | `inline` | in-spec | yes |  |
 
