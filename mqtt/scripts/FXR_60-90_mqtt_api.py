@@ -196,7 +196,14 @@ def main() -> int:
     apply_mqtt_pack_examples(openapi, EXAMPLES_DIR)
 
     info = openapi.setdefault("info", OrderedDict())
-    info["title"] = "Zebra Fixed Reader MQTT API (FXR60 / FXR90)"
+    info["title"] = "Zebra Fixed Reader MQTT API (FXR readers)"
+    info["description"] = (
+        "# Overview\n"
+        "\n"
+        "This MQTT API controls Zebra **FXR** RFID readers. FXR documentation includes **FXR60** and **FXR90**.\n"
+        "\n"
+        "It covers command payloads, responses, events, and configuration workflows used to monitor and control reader operation."
+    )
 
     print("\n=== Write final ===")
     with FINAL_OUT.open("w", encoding="utf-8") as fh:

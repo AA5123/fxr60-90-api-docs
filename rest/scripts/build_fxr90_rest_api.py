@@ -47,10 +47,35 @@ def _represent_ordereddict(dumper, data):
     return dumper.represent_mapping("tag:yaml.org,2002:map", data.items())
 
 
+# YAML 1.1 treats values like 260995251E0047 as scientific-notation floats.
+# Quote those strings so Swagger shows a serial number, not 2.60995251e+55.
+_YAML11_AMBIGUOUS_STR = re.compile(
+    r"^(?:"
+    r"~|null|Null|NULL|"
+    r"y|Y|yes|Yes|YES|n|N|no|No|NO|"
+    r"true|True|TRUE|false|False|FALSE|"
+    r"on|On|ON|off|Off|OFF|"
+    r"[-+]?(?:0|[1-9][0-9_]*)|"
+    r"0x[0-9a-fA-F_]+|"
+    r"0b[01_]+|"
+    r"0o?[0-7_]+|"
+    r"[-+]?(?:[0-9][0-9_]*)(?:\.[0-9_]*)?(?:[eE][-+]?[0-9]+)|"
+    r"\.[0-9_]+(?:[eE][-+]?[0-9]+)?"
+    r")$"
+)
+
+
+def _represent_str(dumper, data):
+    style = '"' if _YAML11_AMBIGUOUS_STR.match(data) else None
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style=style)
+
+
 # The whole document is built from OrderedDicts to hold key order; without this
 # SafeDumper refuses to serialize them.
 yaml.add_representer(OrderedDict, _represent_ordereddict)
 yaml.SafeDumper.add_representer(OrderedDict, _represent_ordereddict)
+yaml.add_representer(str, _represent_str)
+yaml.SafeDumper.add_representer(str, _represent_str)
 
 
 # --- Markdown operation descriptions ----------------------------------------------

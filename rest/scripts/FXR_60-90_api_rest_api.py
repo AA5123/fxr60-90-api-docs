@@ -62,7 +62,7 @@ AUTO_HEADER = (
 INFO_PRODUCT_LINE = (
     "# Overview\n"
     "\n"
-    "FXR60 and FXR90 readers can be controlled using the REST API documented on this page.\n"
+    "This REST API controls Zebra **FXR** RFID readers. FXR documentation includes **FXR60** and **FXR90**.\n"
     "The definition can be found below.\n"
     "\n"
     "# Authentication\n"
@@ -426,12 +426,12 @@ def apply_reviewed_examples(paths: dict) -> tuple[int, int, list[str]]:
 
 
 def brand_info_for_fxr_60_90(info) -> OrderedDict:
-    """Ensure the final deliverable titles the shared FXR60 / FXR90 product line."""
+    """Title the shared FXR reader product line; list models in the description."""
     if not isinstance(info, dict):
         info = OrderedDict()
     else:
         info = OrderedDict(info)
-    info["title"] = "IoT Connector REST API (FXR60 / FXR90)"
+    info["title"] = "IoT Connector REST API (FXR readers)"
     info["description"] = INFO_PRODUCT_LINE
     return info
 
