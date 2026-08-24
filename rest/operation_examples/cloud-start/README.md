@@ -26,6 +26,7 @@ cloud-start/
 | `PUT/start_targeted_BLE.json` | PUT | request | `start_targeted_BLE` | added | yes | Targeted BLE on dataEndpoint1 and dataEndpoint2 |
 | `PUT/start_targeted_BLE_and_RFID.json` | PUT | request | `start_targeted_BLE_and_RFID` | added | yes | Targeted BLE and RFID on both endpoints |
 | `PUT/start_targeted_mixed.json` | PUT | request | `start_targeted_mixed` | added | yes | Targeted mixed — BLE on dataEndpoint1, RFID on dataEndpoint2 |
+| `PUT/start_targeted_BLE_and_RFID_mixed.json` | PUT | request | `start_targeted_BLE_and_RFID_mixed` | added | yes | Targeted mixed — BLE and RFID on dataEndpoint1, RFID only on dataEndpoint2 (matches `start_Targeted` in the developer spec) |
 
 ## Trying these against a reader
 

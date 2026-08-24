@@ -16,5 +16,6 @@ Stable `command_id`: `req-start`
 | `request/start_targeted_BLE.json` | request | `start_targeted_BLE` | `cloud-start/PUT/start_targeted_BLE.json` | Targeted BLE on dataEndpoint1 and dataEndpoint2 |
 | `request/start_targeted_BLE_and_RFID.json` | request | `start_targeted_BLE_and_RFID` | `cloud-start/PUT/start_targeted_BLE_and_RFID.json` | Targeted BLE and RFID on both endpoints |
 | `request/start_targeted_mixed.json` | request | `start_targeted_mixed` | `cloud-start/PUT/start_targeted_mixed.json` | Targeted mixed — BLE on dataEndpoint1, RFID on dataEndpoint2 |
+| `request/start_targeted_BLE_and_RFID_mixed.json` | request | `start_targeted_BLE_and_RFID_mixed` | `cloud-start/PUT/start_targeted_BLE_and_RFID_mixed.json` | Targeted mixed — BLE and RFID on dataEndpoint1, RFID only on dataEndpoint2 (matches `start_Targeted` in the developer spec) |
 | `response/success.json` | response | `success` | `—` | Command succeeded |
 
