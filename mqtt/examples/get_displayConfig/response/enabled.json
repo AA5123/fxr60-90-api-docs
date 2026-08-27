@@ -1,0 +1,14 @@
+{
+  "command": "get_displayConfig",
+  "command_id": "req-get-displayConfig",
+  "payload": {
+    "enable": true,
+    "enableOnscreenKeyboard": true,
+    "startUrl": "https://localhost/",
+    "resolution": "1920x1080",
+    "orientation": "landscape",
+    "screenTimeoutSec": 300,
+    "keyboardLayout": "Japanese"
+  },
+  "response": "success"
+}
