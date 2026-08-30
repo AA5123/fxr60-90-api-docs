@@ -2,7 +2,7 @@
 
 - **GET** - Retrieves the Reader Capabilities (`getReadercapabilities`)
 
-1 example(s) exported from the spec, 0 proposed.
+1 example(s) exported from the spec, 2 proposed.
 
 ## Method folders
 
@@ -17,6 +17,8 @@ cloud-readercapabilities/
 | File | Method | Direction | Example name | Origin | Valid | Summary |
 |---|---|---|---|---|---|---|
 | `GET/inline.json` | GET | response 200 | `inline` | in-spec | yes |  |
+| `GET/fxr60.json` | GET | response 200 | `fxr60` | live capture, 28 Aug 2026 | | FXR60 unit |
+| `GET/fxr90.json` | GET | response 200 | `fxr90` | live capture, 28 Aug 2026 | | FXR90 unit |
 
 ## Trying these against a reader
 

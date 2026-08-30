@@ -504,7 +504,7 @@ paths:
                   summary: Reader controls LED
                   value:
                     status: DEFAULT
-                overridden_state:
+                non_default_state:
                   summary: App controls LED
                   value:
                     status: NON_DEFAULT
@@ -577,10 +577,19 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SetAppledRequest'
-            example:
-              color: amber
-              flash: true
-              seconds: 60
+            examples:
+              app_led:
+                summary: Amber blink for 60 seconds
+                value:
+                  color: amber
+                  flash: true
+                  seconds: 60
+              continuous_alarm:
+                summary: 'Red, flashing, indefinite (seconds: 0)'
+                value:
+                  color: red
+                  flash: true
+                  seconds: 0
       responses:
         "200":
           description: OK
@@ -855,6 +864,7 @@ paths:
         | `4` | Is GPO pin 4 HIGH or LOW? | Confirms whether the device driven by port 4 is active. |
 
         '
+      operationId: getGpoStatus
       responses:
         "200":
           description: OK
@@ -2371,6 +2381,17 @@ paths:
             schema:
               $ref: '#/components/schemas/StartInventoryRequest'
             examples:
+              start_BLE_and_RFID:
+                summary: start BLE and RFID
+                value:
+                  scanType:
+                  - ble
+                  - rfid
+              start_BLE_only:
+                summary: start BLE only
+                value:
+                  scanType:
+                  - ble
               start_Global_BLE_and_RFID:
                 summary: Global BLE and RFID
                 value:
@@ -2398,12 +2419,60 @@ paths:
                 summary: Start inventory with Impinj Gen2X
                 value:
                   applyImpinjGen2X: true
+              start_RFID_only:
+                summary: start RFID only
+                value:
+                  scanType:
+                  - rfid
               start_Targeted:
                 summary: Targeted per data endpoint
                 value:
                   scanType:
                     dataEndpoint1:
                     - ble
+                    - rfid
+                    dataEndpoint2:
+                    - rfid
+              start_targeted_BLE:
+                summary: start targeted BLE
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - ble
+              start_targeted_BLE_and_RFID:
+                summary: start targeted BLE and RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    - rfid
+                    dataEndpoint2:
+                    - ble
+                    - rfid
+              start_targeted_BLE_and_RFID_mixed:
+                summary: start targeted BLE and RFID mixed
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    - rfid
+                    dataEndpoint2:
+                    - rfid
+              start_targeted_mixed:
+                summary: start targeted mixed
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - rfid
+              start_targeted_RFID:
+                summary: start targeted RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
                     - rfid
                     dataEndpoint2:
                     - rfid
@@ -2524,6 +2593,17 @@ paths:
             schema:
               $ref: '#/components/schemas/StopInventoryRequest'
             examples:
+              stop_BLE_and_RFID:
+                summary: stop BLE and RFID
+                value:
+                  scanType:
+                  - ble
+                  - rfid
+              stop_BLE_only:
+                summary: stop BLE only
+                value:
+                  scanType:
+                  - ble
               stop_Global_BLE_and_RFID:
                 summary: Global BLE and RFID
                 value:
@@ -2543,12 +2623,51 @@ paths:
               stop_RFID_default:
                 summary: Stop RFID (default)
                 value: {}
+              stop_RFID_explicit:
+                summary: stop RFID explicit
+                value:
+                  scanType:
+                  - rfid
               stop_Targeted:
                 summary: Targeted per data endpoint
                 value:
                   scanType:
                     dataEndpoint1:
                     - ble
+                    - rfid
+                    dataEndpoint2:
+                    - rfid
+              stop_targeted_BLE:
+                summary: stop targeted BLE
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - ble
+              stop_targeted_BLE_and_RFID:
+                summary: stop targeted BLE and RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    - rfid
+                    dataEndpoint2:
+                    - ble
+                    - rfid
+              stop_targeted_mixed:
+                summary: stop targeted mixed
+                value:
+                  scanType:
+                    dataEndpoint1:
+                    - ble
+                    dataEndpoint2:
+                    - rfid
+              stop_targeted_RFID:
+                summary: stop targeted RFID
+                value:
+                  scanType:
+                    dataEndpoint1:
                     - rfid
                     dataEndpoint2:
                     - rfid
@@ -4003,8 +4122,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SetPassthruResponse'
-              example:
-                response: 'Success: {"numTagReads": 8034512,"numTagReadsPerAntenna": {"1": 8034512,"2": 0,"3": 0,"4": 0},"numRadioPacketsRxed": 12131354,"numDataMessagesTxed": 8034512,"cpuUtilization": 0.0,"ramUtilization": 1.0,"uptime": "140:56:48","numErrors": 9313,"numWarnings": 20,"radioConnection": "connected","radioActivity": "active","antennas": {"1": "disconnected","2": "disconnected","3": "connected","4": "disconnected"},"temperature": {"ambient":33,"pa":30},"impinjGen2X": {"isActive": false,"feature": "none"}}'
+              examples:
+                mode_success:
+                  summary: RC mode reply
+                  value:
+                    response: 'Success: {"antennaStopCondition":{"type":"DURATION","value":100},"delayBetweenAntennaCycles":{"duration":0,"type":"DISABLED"},"linkProfile":3,"query":{"session":"S0","tagPopulation":256,"target":"AB"},"reportFilter":{"duration":0,"type":"PER_ANTENNA"},"tagMetaData":["ANTENNA","RSSI","CHANNEL","PC","XPC","CRC","SEEN_COUNT","PHASE"],"transmitPower":[30.0,30.0,30.0,30.0,30.0,30.0],"type":"CUSTOM"}'
+                success:
+                  summary: RC status reply
+                  value:
+                    response: 'Success: {"numTagReads": 8034512,"numTagReadsPerAntenna": {"1": 8034512,"2": 0,"3": 0,"4": 0},"numRadioPacketsRxed": 12131354,"numDataMessagesTxed": 8034512,"cpuUtilization": 0.0,"ramUtilization": 1.0,"uptime": "140:56:48","numErrors": 9313,"numWarnings": 20,"radioConnection": "connected","radioActivity": "active","antennas": {"1": "disconnected","2": "disconnected","3": "connected","4": "disconnected"},"temperature": {"ambient":33,"pa":30},"impinjGen2X": {"isActive": false,"feature": "none"}}'
       security:
       - bearerAuth: []
   /cloud/cloudConfig:
@@ -4907,147 +5033,462 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetReadercapabilitiesResponse'
-              example:
-                capabilities:
-                  antennas:
-                  - port: 1
-                    type: external
-                  - port: 2
-                    type: external
-                  - port: 3
-                    type: external
-                  - port: 4
-                    type: external
-                  apiSupported:
-                    versions:
-                    - documentation: https://zebradevs.github.io/rfid-ziotc-docs/index.html
-                      version: v1
-                  appLEDColors:
-                  - RED
-                  - GREEN
-                  - AMBER
-                  asyncManagementEventsSupported: true
-                  beepersSupported: false
-                  clockSupport: true
-                  daAppPackageFormat:
-                  - DEBIAN
-                  daAppsSupported: true
-                  daLanguageBindings:
-                  - PYTHON
-                  - NODEJS
-                  directionalitySupported: false
-                  endpointTypesSupported:
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - MTLS
-                    batchingSupported: true
-                    dataOnly: false
-                    retentionSupported: true
-                    type: MQTT
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - MTLS
-                    batchingSupported: true
-                    dataOnly: false
-                    retentionSupported: true
-                    type: MQTT_WS
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - MTLS
-                    batchingSupported: true
-                    dataOnly: true
-                    retentionSupported: true
-                    type: TCPIP
-                  - SSLSupported: false
-                    authenticationTypesSupported:
-                    - TLS
-                    batchingSupported: true
-                    dataOnly: true
-                    retentionSupported: true
-                    type: WEBSOCKET
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - MTLS
-                    batchingSupported: true
-                    dataOnly: false
-                    retentionSupported: true
-                    type: AWS_IOT_CORE
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - TLS
-                    batchingSupported: true
-                    dataOnly: false
-                    retentionSupported: true
-                    type: AZURE_IOT_HUB
-                  - SSLSupported: true
-                    authenticationTypesSupported:
-                    - BASIC
-                    - DIGEST
-                    - NTLM
-                    - TLS
-                    - ONLY
-                    - DIGEST_IE
-                    - NTLM_WB
-                    - ANY
-                    - ANYSAFE
-                    batchingSupported: true
-                    dataOnly: true
-                    retentionSupported: true
-                    type: HTTP
-                  externalSerialPort:
-                  - USER
-                  - DEBUG
-                  keypadSupport:
-                  - NONE
-                  llrpSupported: true
-                  maxAppLEDs: 1
-                  maxDataEndpoints: 2
-                  maxNumOperationsInAccessSequence: 32
-                  maxNumPreFilters: 32
-                  messageFormatsSupported:
-                  - JSON
-                  networkInterfaces:
-                  - type: ETHERNET
-                    internal: true
-                    ipStack:
-                    - IPv4
-                    - IPv6
-                    ipAssignment:
-                    - STATIC
-                    - DHCP
-                    802.1x: true
-                  - type: WIFI
-                    internal: false
-                    ipStack:
-                    - IPv4
-                    - IPv6
-                    ipAssignment:
-                    - STATIC
-                    - DHCP
-                    802.1x: true
-                  - type: BLUETOOTH
-                    internal: false
-                    ipStack:
-                    - IPv4
-                    ipAssignment:
-                    - DHCP
-                    802.1x: false
-                  numGPIs: 4
-                  numGPOs: 4
-                  restAPISupported: true
-                  rssiFilterSupported: true
-                  supportedDisplayType:
-                  - NONE
-                  supportedPowerSource:
-                  - POWERBRICK
-                  - POE
-                  - POE+
-                  supportedTagDataFormat:
-                  - GS1
-                  - HEX
-                  tagLocationingSupported: false
-                  triggers:
-                  - GPI
+              examples:
+                fxr60:
+                  summary: fxr60
+                  value:
+                    capabilities:
+                      antennas:
+                      - port: 1
+                        type: external
+                      - port: 2
+                        type: external
+                      - port: 3
+                        type: external
+                      - port: 4
+                        type: external
+                      - port: 5
+                        type: internal
+                      - port: 6
+                        type: internal
+                      apiSupported:
+                        versions:
+                        - documentation: https://zebradevs.github.io/rfid-ziotc-docs/index.html
+                          version: v1
+                      appLEDColors:
+                      - RED
+                      - GREEN
+                      - AMBER
+                      - BLUE
+                      asyncManagementEventsSupported: true
+                      beepersSupported: false
+                      clockSupport: true
+                      daAppPackageFormat:
+                      - DEBIAN
+                      daAppsSupported: true
+                      daLanguageBindings:
+                      - PYTHON
+                      - NODEJS
+                      directionalitySupported: false
+                      endpointTypesSupported:
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT_WS
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: TCPIP
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: WEBSOCKET
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AWS_IOT_CORE
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - BASIC
+                        - DIGEST
+                        - NTLM
+                        - TLS
+                        - ONLY
+                        - DIGEST_IE
+                        - NTLM_WB
+                        - ANY
+                        - ANYSAFE
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: HTTP
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AZURE_IOT_HUB
+                      externalSerialPort:
+                      - NONE
+                      gen2xFeaturesSupported:
+                      - FASTID
+                      - TAGFOCUS
+                      - TAGQUIETING
+                      - PROTECTEDMODE
+                      keypadSupport:
+                      - NONE
+                      llrpSupported: true
+                      maxAppLEDs: 1
+                      maxDataEndpoints: 2
+                      maxNumOperationsInAccessSequence: 32
+                      maxNumPreFilters: 32
+                      messageFormatsSupported:
+                      - JSON
+                      networkInterfaces:
+                      - 802.1x: true
+                        internal: true
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        type: ETHERNET
+                      - 802.1x: true
+                        internal: true
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        type: WIFI
+                      - 802.1x: false
+                        internal: true
+                        ipAssignment:
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        type: BLUETOOTH
+                      numGPIs: 4
+                      numGPOs: 4
+                      restAPISupported: true
+                      rssiFilterSupported: true
+                      stackLED:
+                        colors:
+                        - RED
+                        - GREEN
+                        - AMBER
+                        - BLUE
+                        supported: true
+                      supportedDisplayType:
+                      - HDMI
+                      supportedPowerSource:
+                      - POWERBRICK
+                      - POE
+                      - POE+
+                      supportedTagDataFormat:
+                      - GS1
+                      - HEX
+                      tagLocationingSupported: false
+                      triggers:
+                      - GPI
+                fxr90:
+                  summary: fxr90
+                  value:
+                    capabilities:
+                      antennas:
+                      - port: 1
+                        type: external
+                      - port: 2
+                        type: external
+                      - port: 3
+                        type: external
+                      - port: 4
+                        type: external
+                      - port: 5
+                        type: internal
+                      - port: 6
+                        type: internal
+                      apiSupported:
+                        versions:
+                        - documentation: https://zebradevs.github.io/rfid-ziotc-docs/index.html
+                          version: v1
+                      appLEDColors:
+                      - RED
+                      - GREEN
+                      - AMBER
+                      asyncManagementEventsSupported: true
+                      beepersSupported: false
+                      clockSupport: true
+                      daAppPackageFormat:
+                      - DEBIAN
+                      daAppsSupported: true
+                      daLanguageBindings:
+                      - PYTHON
+                      - NODEJS
+                      directionalitySupported: false
+                      endpointTypesSupported:
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT_WS
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: TCPIP
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: WEBSOCKET
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AWS_IOT_CORE
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - BASIC
+                        - DIGEST
+                        - NTLM
+                        - TLS
+                        - ONLY
+                        - DIGEST_IE
+                        - NTLM_WB
+                        - ANY
+                        - ANYSAFE
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: HTTP
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AZURE_IOT_HUB
+                      externalSerialPort:
+                      - NONE
+                      gen2xFeaturesSupported:
+                      - FASTID
+                      - TAGFOCUS
+                      - TAGQUIETING
+                      - PROTECTEDMODE
+                      keypadSupport:
+                      - NONE
+                      llrpSupported: true
+                      maxAppLEDs: 1
+                      maxDataEndpoints: 2
+                      maxNumOperationsInAccessSequence: 32
+                      maxNumPreFilters: 32
+                      messageFormatsSupported:
+                      - JSON
+                      networkInterfaces:
+                      - 802.1x: true
+                        internal: true
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        type: ETHERNET
+                      - 802.1x: true
+                        internal: true
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        type: WIFI
+                      - 802.1x: false
+                        internal: true
+                        ipAssignment:
+                        - DHCP
+                        ipStack:
+                        - IPv4
+                        type: BLUETOOTH
+                      numGPIs: 4
+                      numGPOs: 4
+                      restAPISupported: true
+                      rssiFilterSupported: true
+                      stackLED:
+                        supported: false
+                      supportedDisplayType:
+                      - NONE
+                      supportedPowerSource:
+                      - POWERBRICK
+                      - POE
+                      - POE+
+                      supportedTagDataFormat:
+                      - GS1
+                      - HEX
+                      tagLocationingSupported: false
+                      triggers:
+                      - GPI
+                inline:
+                  summary: inline
+                  value:
+                    capabilities:
+                      antennas:
+                      - port: 1
+                        type: external
+                      - port: 2
+                        type: external
+                      - port: 3
+                        type: external
+                      - port: 4
+                        type: external
+                      apiSupported:
+                        versions:
+                        - documentation: https://zebradevs.github.io/rfid-ziotc-docs/index.html
+                          version: v1
+                      appLEDColors:
+                      - RED
+                      - GREEN
+                      - AMBER
+                      asyncManagementEventsSupported: true
+                      beepersSupported: false
+                      clockSupport: true
+                      daAppPackageFormat:
+                      - DEBIAN
+                      daAppsSupported: true
+                      daLanguageBindings:
+                      - PYTHON
+                      - NODEJS
+                      directionalitySupported: false
+                      endpointTypesSupported:
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: MQTT_WS
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: TCPIP
+                      - SSLSupported: false
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: WEBSOCKET
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - MTLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AWS_IOT_CORE
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - TLS
+                        batchingSupported: true
+                        dataOnly: false
+                        retentionSupported: true
+                        type: AZURE_IOT_HUB
+                      - SSLSupported: true
+                        authenticationTypesSupported:
+                        - BASIC
+                        - DIGEST
+                        - NTLM
+                        - TLS
+                        - ONLY
+                        - DIGEST_IE
+                        - NTLM_WB
+                        - ANY
+                        - ANYSAFE
+                        batchingSupported: true
+                        dataOnly: true
+                        retentionSupported: true
+                        type: HTTP
+                      externalSerialPort:
+                      - USER
+                      - DEBUG
+                      keypadSupport:
+                      - NONE
+                      llrpSupported: true
+                      maxAppLEDs: 1
+                      maxDataEndpoints: 2
+                      maxNumOperationsInAccessSequence: 32
+                      maxNumPreFilters: 32
+                      messageFormatsSupported:
+                      - JSON
+                      networkInterfaces:
+                      - type: ETHERNET
+                        internal: true
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        802.1x: true
+                      - type: WIFI
+                        internal: false
+                        ipStack:
+                        - IPv4
+                        - IPv6
+                        ipAssignment:
+                        - STATIC
+                        - DHCP
+                        802.1x: true
+                      - type: BLUETOOTH
+                        internal: false
+                        ipStack:
+                        - IPv4
+                        ipAssignment:
+                        - DHCP
+                        802.1x: false
+                      numGPIs: 4
+                      numGPOs: 4
+                      restAPISupported: true
+                      rssiFilterSupported: true
+                      supportedDisplayType:
+                      - NONE
+                      supportedPowerSource:
+                      - POWERBRICK
+                      - POE
+                      - POE+
+                      supportedTagDataFormat:
+                      - GS1
+                      - HEX
+                      tagLocationingSupported: false
+                      triggers:
+                      - GPI
       security:
       - bearerAuth: []
   /cloud/cableLossCompensation:
@@ -5374,6 +5815,7 @@ paths:
         | `preSelection` | Is the filter enabled or disabled? | Enabling the SAW filter improves receiver selectivity in noisy RF environments but may reduce sensitivity in clean environments. |
 
         '
+      operationId: getPreSelection
       responses:
         "200":
           description: OK
@@ -5440,6 +5882,7 @@ paths:
         | Deployment RF environment | Consider enabling the filter when the reader operates near other UHF RFID systems or dense RF infrastructure. Disable it in quiet, isolated RF environments to maximize read range. |
 
         '
+      operationId: setPreSelection
       requestBody:
         content:
           application/json:
@@ -5794,6 +6237,7 @@ paths:
         | `binary` | Is the Base64 string non-empty? | Syslog captures low-level OS events that application logs may not surface; an empty value indicates no syslog data was available. |
 
         '
+      operationId: getLogsSyslog
       responses:
         "200":
           description: OK
@@ -5802,7 +6246,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetLogsSyslogResponse'
               example:
-                binary: H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=
+                binary: H4sIAAAAAAAAA9xda48bN5bN5/0Vgj5lMbHC96MBf0hsZyaYccZjex5AHBhyq9rRjlrqSOo4RpD/vpekynG7VdJhkaXVrJHAdku+h8UiDy8vL8+9bjab6dtm89mAvxj9MkrF3+nXnd+50VwI9RnXQinDtWH2M8a5lPKzERuyUe2v2812uh6NPluvVttD3zv2+X/oL8GEecDcA+FfCnnB2QVjE2cd4/oPTF9INvrmX88N818/keqr0XrzfrNYvZ1djL5fredv58vRZnW1fTddNw/H7Wfj0ebdP5r1Zr5aPhy7iVBMTNh49MuDm/ns4VgY4W3863x5tXo4/nG7vdlcfPnlu3fvJjsLk8vV9fiHD1ijd9PN6E9/f9bz9+fvz9+fvz9+fvz9/f/7+/P35+/P35+/P35+/P39//v78/fn78/fn78/fn78/f3/+/vz9+fvz9+fvz9+fvz9/f/7+/P35+/P352/s3/8PBjyq7wCABwA=
                 filename: syslog.tar.gz
       security:
       - bearerAuth: []
@@ -5853,6 +6297,7 @@ paths:
         | Diagnostic baseline | If you plan to run a diagnostic session after purging, ensure all relevant services are in a known state before the purge so the new logs capture only the events of interest. |
 
         '
+      operationId: delLogsSyslog
       responses:
         "200":
           description: OK
@@ -5930,6 +6375,7 @@ paths:
         | `binary` | Is the Base64 string non-empty? | The Base64-encoded `.tar.gz` content holds radio control state changes, errors, and diagnostics; an empty value means no data was recorded. |
 
         '
+      operationId: getRcLog
       responses:
         "200":
           description: OK
@@ -6011,6 +6457,7 @@ paths:
         | `binary` | Is the Base64 string non-empty? | Repeated warnings often precede errors; an empty value means no warnings have been logged since the last purge. |
 
         '
+      operationId: getRgWarningLog
       responses:
         "200":
           description: OK
@@ -6092,6 +6539,7 @@ paths:
         | `binary` | Is the Base64 string non-empty? | The Base64-encoded `.tar.gz` content reveals the specific failures affecting Reader Gateway operation; an empty value means no errors have been logged since the last purge. |
 
         '
+      operationId: getRgErrorLog
       responses:
         "200":
           description: OK
@@ -6173,6 +6621,7 @@ paths:
         | `binary` | Is the Base64 string non-empty? | The Base64-encoded `.tar.gz` content holds the RF packet data; an empty value means radio packet logging was not enabled when the events occurred. |
 
         '
+      operationId: getRadioPacketLog
       security:
       - bearerAuth: []
       responses:
@@ -6183,8 +6632,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetRadioPacketLogResponse'
               example:
-                binary: H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=
-                filename: radio_packet.pcap.gz
+                binary: H4sIAAAAAAAAA+y9W44EPZKdWc+9Ct+AEn6/vWkVehTiKgiSMEKrGtDyh3bxyAwnzXlOA3oQZho/Wq2q8/FnZJ5kGI1G4/+8Pf7b65//+b//P//lP3Q///zf//zH/4H/adP/zMso/2+3TMPf/7dt+3lo++Ef3dQP49IuQ7v8o+3Gfu7/0bT/JyZz/p9/+1//vP1r0/zjn//6/q/P2/N/RLraf/9/6f/8p9ez+Y//9l+aZmq6bW+3feqaPv1S/uVf/uX4//8My9L8a3O7Nbd7065N2zVt27SD/t+9/N/ro+mH5g+wts0//wCLAm2z3Jv58aXrwoGX5t3JwK/1C5i+BtZ/e/rfvZKvodm2L/XXvDsbfnR1+qdvm3ti3n+YsSc/6zh04ZS65j009/VLPYRT0v87/R/b2Kyvv8wykFNKv69gSulf+Eo/1r8/pXFroyn5/903j6F5/f3FTUOLTqlr9zYBY1+ckmGvuemfX+qxMKXb8S9pj3+GZu2bpW2GRzPemn9pvv9nfjW3RzwqMum1YuNDt6E2dmAaIBsf6omwsTPbTH7W9K9EbGzque0IGzszxn/sxSnNY/jH/mVjV08bYWNntvgXl0+p636WrkVtrOoetXH6/yZTDU33zmzcj036awtHRSY9122sunjpy20sQB8vfScbqzpe+nQ+6bMv42nqM7z0HUC49J1trOrQM2UbJ2PGAiywGauaNOPETERg3wHYjFVNmrEwREWvATNsxqJeqAw3ZeYOv/Qvx7QXLR8uzFjVsFPxvN1XecirPH8ky97WeFVg04hToTo84OYA7FSomgq4GbMwNiMA7lSomkrUVGahnAoFYKdC1KxTIQzlVMwCwGasatiMX1LEf+9vYzlQbJtvry5eFdj0Bpix6hjfWAHYjFVN+saJWfHBwg6MsBmruuUbn8xYGCK65QBsxqKO4zl1M07MRvheq9wJtyCeU5ixq+Hnj9ft9brdF3nMeFlt5VGDSHRAbmw7vbxwAeBcv1NRdPGeIZ48cKD97dLaxqam7eMYMVExnABwbq7onV2NliLe5tn3qbDMP2tjUaGmQ2Pg5NRI83tIt3lN+4nfzv7/P3+fv8/f5+/x9/j5/n7/P3+fv8/f5+/x9/j5/n7/P3+fv89/8/B+eun5xAIARAA==
+                filename: radioPktLog.tar.gz
     delete:
       tags:
       - Logs
@@ -6232,6 +6681,7 @@ paths:
         | Logging state | If radio packet logging (`radioPacketLog`) is currently enabled, the reader will start writing new log data immediately after purge. Disable logging first (via `PUT /cloud/logs`) if you want to start a clean session with no logging active. |
 
         '
+      operationId: delRadioPacketLog
       security:
       - bearerAuth: []
       responses:
@@ -6462,6 +6912,7 @@ paths:
         | `server` | Is this the correct NTP server address? | An incorrect or unreachable NTP server causes clock drift, making event timestamps unreliable. |
 
         '
+      operationId: getNtpServer
       responses:
         "200":
           description: OK

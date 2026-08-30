@@ -109,7 +109,7 @@ Auto-generated from `grok-examples/` + `mqtt/openapi_md.json`.
 | `—` | `set_hostname/response/success.json` | synthetic success |
 | `—` | `get_appled/request/default.json` | synthetic empty request |
 | `cloud-app-led/GET/default_state.json` | `get_appled/response/default_state.json` | response payload |
-| `cloud-app-led/GET/overridden_state.json` | `get_appled/response/overridden_state.json` | response payload |
+| `cloud-app-led/GET/non_default_state.json` | `get_appled/response/non_default_state.json` | response payload |
 | `cloud-app-led/PUT/app_led.json` | `set_appled/request/app_led.json` | request payload |
 | `—` | `set_appled/response/success.json` | synthetic success |
 | `—` | `get_gpostatus/request/default.json` | synthetic empty request |
@@ -127,8 +127,8 @@ Auto-generated from `grok-examples/` + `mqtt/openapi_md.json`.
 | `cloud-region/PUT/region_india.json` | `set_region/request/region_india.json` | request payload |
 | `cloud-region/PUT/region_usa.json` | `set_region/request/region_usa.json` | request payload |
 | `—` | `set_region/response/success.json` | synthetic success |
-| `—` | `get_SupportedRegionList/request/default.json` | synthetic empty request |
-| `cloud-supportedregionlist/GET/inline.json` | `get_SupportedRegionList/response/inline.json` | response payload |
+| `—` | `get_supportedRegionList/request/default.json` | synthetic empty request |
+| `cloud-supportedregionlist/GET/inline.json` | `get_supportedRegionList/response/inline.json` | response payload |
 | `—` | `get_supportedStandardList/request/default.json` | synthetic empty request |
 | `cloud-supportedstandardlist/GET/inline.json` | `get_supportedStandardList/response/inline.json` | response payload |
 | `—` | `get_logs/request/default.json` | synthetic empty request |

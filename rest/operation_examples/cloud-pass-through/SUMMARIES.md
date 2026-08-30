@@ -21,3 +21,13 @@
 | **Example name** | `success` |
 | **Summary title** | `RC status reply` |
 | **HTTP status** | `200` |
+| **Pairs with** | `PUT/status.json` (`payload: status`) |
+
+### `PUT/mode_success.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `mode_success` |
+| **Summary title** | `RC mode reply` |
+| **HTTP status** | `200` |
+| **Pairs with** | `PUT/passthru.json` (`payload: mode`) |

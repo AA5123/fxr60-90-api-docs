@@ -143,7 +143,7 @@
         "Region": [
             "get_region",
             "set_region",
-            "get_SupportedRegionList",
+            "get_supportedRegionList",
             "get_supportedStandardList"
         ],
         "Logs": [
@@ -3714,6 +3714,31 @@
                                 ]
                             },
                             "examples": {
+                                "start_BLE_and_RFID": {
+                                    "summary": "start BLE and RFID",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": [
+                                                "ble",
+                                                "rfid"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "start_BLE_only": {
+                                    "summary": "start BLE only",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": [
+                                                "ble"
+                                            ]
+                                        }
+                                    }
+                                },
                                 "start_Global_BLE_and_RFID": {
                                     "summary": "start Global BLE and RFID",
                                     "value": {
@@ -3779,6 +3804,18 @@
                                         "payload": {}
                                     }
                                 },
+                                "start_RFID_only": {
+                                    "summary": "start RFID only",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": [
+                                                "rfid"
+                                            ]
+                                        }
+                                    }
+                                },
                                 "start_Targeted": {
                                     "summary": "start Targeted",
                                     "value": {
@@ -3788,6 +3825,94 @@
                                             "scanType": {
                                                 "dataEndpoint1": [
                                                     "ble",
+                                                    "rfid"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "start_targeted_BLE": {
+                                    "summary": "start targeted BLE",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "ble"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "start_targeted_BLE_and_RFID": {
+                                    "summary": "start targeted BLE and RFID",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble",
+                                                    "rfid"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "ble",
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "start_targeted_BLE_and_RFID_mixed": {
+                                    "summary": "start targeted BLE and RFID mixed",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble",
+                                                    "rfid"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "start_targeted_mixed": {
+                                    "summary": "start targeted mixed",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "start_targeted_RFID": {
+                                    "summary": "start targeted RFID",
+                                    "value": {
+                                        "command": "start",
+                                        "command_id": "req-start",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
                                                     "rfid"
                                                 ],
                                                 "dataEndpoint2": [
@@ -3979,6 +4104,31 @@
                                 ]
                             },
                             "examples": {
+                                "stop_BLE_and_RFID": {
+                                    "summary": "stop BLE and RFID",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": [
+                                                "ble",
+                                                "rfid"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "stop_BLE_only": {
+                                    "summary": "stop BLE only",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": [
+                                                "ble"
+                                            ]
+                                        }
+                                    }
+                                },
                                 "stop_Global_BLE_and_RFID": {
                                     "summary": "stop Global BLE and RFID",
                                     "value": {
@@ -4024,6 +4174,18 @@
                                         "payload": {}
                                     }
                                 },
+                                "stop_RFID_explicit": {
+                                    "summary": "stop RFID explicit",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": [
+                                                "rfid"
+                                            ]
+                                        }
+                                    }
+                                },
                                 "stop_Targeted": {
                                     "summary": "stop Targeted",
                                     "value": {
@@ -4033,6 +4195,76 @@
                                             "scanType": {
                                                 "dataEndpoint1": [
                                                     "ble",
+                                                    "rfid"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "stop_targeted_BLE": {
+                                    "summary": "stop targeted BLE",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "ble"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "stop_targeted_BLE_and_RFID": {
+                                    "summary": "stop targeted BLE and RFID",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble",
+                                                    "rfid"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "ble",
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "stop_targeted_mixed": {
+                                    "summary": "stop targeted mixed",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
+                                                    "ble"
+                                                ],
+                                                "dataEndpoint2": [
+                                                    "rfid"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "stop_targeted_RFID": {
+                                    "summary": "stop targeted RFID",
+                                    "value": {
+                                        "command": "stop",
+                                        "command_id": "req-stop",
+                                        "payload": {
+                                            "scanType": {
+                                                "dataEndpoint1": [
                                                     "rfid"
                                                 ],
                                                 "dataEndpoint2": [
@@ -12312,6 +12544,17 @@
                                     ]
                                 },
                                 "examples": {
+                                    "mode_success": {
+                                        "summary": "mode success",
+                                        "value": {
+                                            "command": "set_passthru",
+                                            "command_id": "req-set-passthru-status",
+                                            "payload": {
+                                                "response": "Success: {\"antennaStopCondition\":{\"type\":\"DURATION\",\"value\":100},\"delayBetweenAntennaCycles\":{\"duration\":0,\"type\":\"DISABLED\"},\"linkProfile\":3,\"query\":{\"session\":\"S0\",\"tagPopulation\":256,\"target\":\"AB\"},\"reportFilter\":{\"duration\":0,\"type\":\"PER_ANTENNA\"},\"tagMetaData\":[\"ANTENNA\",\"RSSI\",\"CHANNEL\",\"PC\",\"XPC\",\"CRC\",\"SEEN_COUNT\",\"PHASE\"],\"transmitPower\":[30.0,30.0,30.0,30.0,30.0,30.0],\"type\":\"CUSTOM\"}"
+                                            },
+                                            "response": "success"
+                                        }
+                                    },
                                     "success": {
                                         "summary": "success",
                                         "value": {
@@ -14648,6 +14891,463 @@
                                     ]
                                 },
                                 "examples": {
+                                    "fxr60": {
+                                        "summary": "fxr60",
+                                        "value": {
+                                            "command": "get_readerCapabilities",
+                                            "command_id": "req-get-readerCapabilities",
+                                            "payload": {
+                                                "capabilities": {
+                                                    "antennas": [
+                                                        {
+                                                            "port": 1,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 2,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 3,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 4,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 5,
+                                                            "type": "internal"
+                                                        },
+                                                        {
+                                                            "port": 6,
+                                                            "type": "internal"
+                                                        }
+                                                    ],
+                                                    "apiSupported": {
+                                                        "versions": [
+                                                            {
+                                                                "documentation": "https://zebradevs.github.io/rfid-ziotc-docs/index.html",
+                                                                "version": "v1"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "appLEDColors": [
+                                                        "RED",
+                                                        "GREEN",
+                                                        "AMBER",
+                                                        "BLUE"
+                                                    ],
+                                                    "asyncManagementEventsSupported": true,
+                                                    "beepersSupported": false,
+                                                    "clockSupport": true,
+                                                    "daAppPackageFormat": [
+                                                        "DEBIAN"
+                                                    ],
+                                                    "daAppsSupported": true,
+                                                    "daLanguageBindings": [
+                                                        "PYTHON",
+                                                        "NODEJS"
+                                                    ],
+                                                    "directionalitySupported": false,
+                                                    "endpointTypesSupported": [
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "MQTT"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "MQTT_WS"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "TCPIP"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "WEBSOCKET"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "AWS_IOT_CORE"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "BASIC",
+                                                                "DIGEST",
+                                                                "NTLM",
+                                                                "TLS",
+                                                                "ONLY",
+                                                                "DIGEST_IE",
+                                                                "NTLM_WB",
+                                                                "ANY",
+                                                                "ANYSAFE"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "HTTP"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "AZURE_IOT_HUB"
+                                                        }
+                                                    ],
+                                                    "externalSerialPort": [
+                                                        "NONE"
+                                                    ],
+                                                    "gen2xFeaturesSupported": [
+                                                        "FASTID",
+                                                        "TAGFOCUS",
+                                                        "TAGQUIETING",
+                                                        "PROTECTEDMODE"
+                                                    ],
+                                                    "keypadSupport": [
+                                                        "NONE"
+                                                    ],
+                                                    "llrpSupported": true,
+                                                    "maxAppLEDs": 1,
+                                                    "maxDataEndpoints": 2,
+                                                    "maxNumOperationsInAccessSequence": 32,
+                                                    "maxNumPreFilters": 32,
+                                                    "messageFormatsSupported": [
+                                                        "JSON"
+                                                    ],
+                                                    "networkInterfaces": [
+                                                        {
+                                                            "802.1x": true,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "STATIC",
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4",
+                                                                "IPv6"
+                                                            ],
+                                                            "type": "ETHERNET"
+                                                        },
+                                                        {
+                                                            "802.1x": true,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "STATIC",
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4",
+                                                                "IPv6"
+                                                            ],
+                                                            "type": "WIFI"
+                                                        },
+                                                        {
+                                                            "802.1x": false,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4"
+                                                            ],
+                                                            "type": "BLUETOOTH"
+                                                        }
+                                                    ],
+                                                    "numGPIs": 4,
+                                                    "numGPOs": 4,
+                                                    "restAPISupported": true,
+                                                    "rssiFilterSupported": true,
+                                                    "stackLED": {
+                                                        "colors": [
+                                                            "RED",
+                                                            "GREEN",
+                                                            "AMBER",
+                                                            "BLUE"
+                                                        ],
+                                                        "supported": true
+                                                    },
+                                                    "supportedDisplayType": [
+                                                        "HDMI"
+                                                    ],
+                                                    "supportedPowerSource": [
+                                                        "POWERBRICK",
+                                                        "POE",
+                                                        "POE+"
+                                                    ],
+                                                    "supportedTagDataFormat": [
+                                                        "GS1",
+                                                        "HEX"
+                                                    ],
+                                                    "tagLocationingSupported": false,
+                                                    "triggers": [
+                                                        "GPI"
+                                                    ]
+                                                }
+                                            },
+                                            "response": "success"
+                                        }
+                                    },
+                                    "fxr90": {
+                                        "summary": "fxr90",
+                                        "value": {
+                                            "command": "get_readerCapabilities",
+                                            "command_id": "req-get-readerCapabilities",
+                                            "payload": {
+                                                "capabilities": {
+                                                    "antennas": [
+                                                        {
+                                                            "port": 1,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 2,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 3,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 4,
+                                                            "type": "external"
+                                                        },
+                                                        {
+                                                            "port": 5,
+                                                            "type": "internal"
+                                                        },
+                                                        {
+                                                            "port": 6,
+                                                            "type": "internal"
+                                                        }
+                                                    ],
+                                                    "apiSupported": {
+                                                        "versions": [
+                                                            {
+                                                                "documentation": "https://zebradevs.github.io/rfid-ziotc-docs/index.html",
+                                                                "version": "v1"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "appLEDColors": [
+                                                        "RED",
+                                                        "GREEN",
+                                                        "AMBER"
+                                                    ],
+                                                    "asyncManagementEventsSupported": true,
+                                                    "beepersSupported": false,
+                                                    "clockSupport": true,
+                                                    "daAppPackageFormat": [
+                                                        "DEBIAN"
+                                                    ],
+                                                    "daAppsSupported": true,
+                                                    "daLanguageBindings": [
+                                                        "PYTHON",
+                                                        "NODEJS"
+                                                    ],
+                                                    "directionalitySupported": false,
+                                                    "endpointTypesSupported": [
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "MQTT"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "MQTT_WS"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "TCPIP"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "WEBSOCKET"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "MTLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "AWS_IOT_CORE"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "BASIC",
+                                                                "DIGEST",
+                                                                "NTLM",
+                                                                "TLS",
+                                                                "ONLY",
+                                                                "DIGEST_IE",
+                                                                "NTLM_WB",
+                                                                "ANY",
+                                                                "ANYSAFE"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": true,
+                                                            "retentionSupported": true,
+                                                            "type": "HTTP"
+                                                        },
+                                                        {
+                                                            "SSLSupported": true,
+                                                            "authenticationTypesSupported": [
+                                                                "TLS"
+                                                            ],
+                                                            "batchingSupported": true,
+                                                            "dataOnly": false,
+                                                            "retentionSupported": true,
+                                                            "type": "AZURE_IOT_HUB"
+                                                        }
+                                                    ],
+                                                    "externalSerialPort": [
+                                                        "NONE"
+                                                    ],
+                                                    "gen2xFeaturesSupported": [
+                                                        "FASTID",
+                                                        "TAGFOCUS",
+                                                        "TAGQUIETING",
+                                                        "PROTECTEDMODE"
+                                                    ],
+                                                    "keypadSupport": [
+                                                        "NONE"
+                                                    ],
+                                                    "llrpSupported": true,
+                                                    "maxAppLEDs": 1,
+                                                    "maxDataEndpoints": 2,
+                                                    "maxNumOperationsInAccessSequence": 32,
+                                                    "maxNumPreFilters": 32,
+                                                    "messageFormatsSupported": [
+                                                        "JSON"
+                                                    ],
+                                                    "networkInterfaces": [
+                                                        {
+                                                            "802.1x": true,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "STATIC",
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4",
+                                                                "IPv6"
+                                                            ],
+                                                            "type": "ETHERNET"
+                                                        },
+                                                        {
+                                                            "802.1x": true,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "STATIC",
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4",
+                                                                "IPv6"
+                                                            ],
+                                                            "type": "WIFI"
+                                                        },
+                                                        {
+                                                            "802.1x": false,
+                                                            "internal": true,
+                                                            "ipAssignment": [
+                                                                "DHCP"
+                                                            ],
+                                                            "ipStack": [
+                                                                "IPv4"
+                                                            ],
+                                                            "type": "BLUETOOTH"
+                                                        }
+                                                    ],
+                                                    "numGPIs": 4,
+                                                    "numGPOs": 4,
+                                                    "restAPISupported": true,
+                                                    "rssiFilterSupported": true,
+                                                    "stackLED": {
+                                                        "supported": false
+                                                    },
+                                                    "supportedDisplayType": [
+                                                        "NONE"
+                                                    ],
+                                                    "supportedPowerSource": [
+                                                        "POWERBRICK",
+                                                        "POE",
+                                                        "POE+"
+                                                    ],
+                                                    "supportedTagDataFormat": [
+                                                        "GS1",
+                                                        "HEX"
+                                                    ],
+                                                    "tagLocationingSupported": false,
+                                                    "triggers": [
+                                                        "GPI"
+                                                    ]
+                                                }
+                                            },
+                                            "response": "success"
+                                        }
+                                    },
                                     "inline": {
                                         "summary": "inline",
                                         "value": {
@@ -16031,8 +16731,8 @@
                                             "response": "success"
                                         }
                                     },
-                                    "overridden_state": {
-                                        "summary": "overridden state",
+                                    "non_default_state": {
+                                        "summary": "non default state",
                                         "value": {
                                             "command": "get_appled",
                                             "command_id": "req-get-appled",
@@ -16113,6 +16813,18 @@
                                             "color": "amber",
                                             "flash": true,
                                             "seconds": 60
+                                        }
+                                    }
+                                },
+                                "continuous_alarm": {
+                                    "summary": "continuous alarm",
+                                    "value": {
+                                        "command": "set_appled",
+                                        "command_id": "req-set-appled",
+                                        "payload": {
+                                            "color": "red",
+                                            "flash": true,
+                                            "seconds": 0
                                         }
                                     }
                                 }
@@ -17804,7 +18516,7 @@
                     "Region"
                 ],
                 "summary": "Get Region",
-                "description": "## 1. Description\n\nThe `get_region` command retrieves the reader's currently configured RF region and the regulatory parameters in effect.\n\nThis command returns:\n\n- The active region code and country name\n- The regulatory standard currently applied\n- Listen Before Talk (LBT) enable state\n- Frequency hopping state\n- Enabled channel list for the active region\n- Minimum and maximum transmit power supported\n\nNo additional payload fields are required to retrieve the active region settings.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_region` |\n| Pattern Name | Region Configuration Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/region` |\n| Related Commands | [set_region](set_region.md), [get_SupportedRegionList](get_SupportedRegionList.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Supported Operations | Retrieve active RF region and regulatory settings |\n\n## 3. When to Use This Command\n\nUse `get_region` to:\n\n- Confirm the reader is set to the correct regulatory region before deployment\n- Verify LBT and channel configuration before starting inventory\n- Audit minimum and maximum transmit power for the region\n- Validate region settings after deploying to a new country\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `country` | Is the correct country configured? | The reader must match the regulatory region of its deployment location. |\n| `regulatoryStandard` | Which standard is applied (e.g., `CANADA_FCC_15`)? | Determines which transmission rules apply - channels, power limits, and LBT behavior. |\n| `lbtEnabled` | Is Listen Before Talk active? | Required in some regions (e.g., ETSI). Affects when the radio may transmit. |\n| `FrequencyHopping` | Is frequency hopping enabled? | Mandatory in most regions. Confirms the radio is operating compliantly. |\n| `maxTxPowerSupported` | What is the allowed power ceiling? | Use this to validate transmit power settings before starting inventory. |\n| `channelData` | How many channels are available? | The channel list defines where the reader can operate within the region. |",
+                "description": "## 1. Description\n\nThe `get_region` command retrieves the reader's currently configured RF region and the regulatory parameters in effect.\n\nThis command returns:\n\n- The active region code and country name\n- The regulatory standard currently applied\n- Listen Before Talk (LBT) enable state\n- Frequency hopping state\n- Enabled channel list for the active region\n- Minimum and maximum transmit power supported\n\nNo additional payload fields are required to retrieve the active region settings.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_region` |\n| Pattern Name | Region Configuration Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/region` |\n| Related Commands | [set_region](set_region.md), [get_supportedRegionList](get_supportedRegionList.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Supported Operations | Retrieve active RF region and regulatory settings |\n\n## 3. When to Use This Command\n\nUse `get_region` to:\n\n- Confirm the reader is set to the correct regulatory region before deployment\n- Verify LBT and channel configuration before starting inventory\n- Audit minimum and maximum transmit power for the region\n- Validate region settings after deploying to a new country\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `country` | Is the correct country configured? | The reader must match the regulatory region of its deployment location. |\n| `regulatoryStandard` | Which standard is applied (e.g., `CANADA_FCC_15`)? | Determines which transmission rules apply - channels, power limits, and LBT behavior. |\n| `lbtEnabled` | Is Listen Before Talk active? | Required in some regions (e.g., ETSI). Affects when the radio may transmit. |\n| `FrequencyHopping` | Is frequency hopping enabled? | Mandatory in most regions. Confirms the radio is operating compliantly. |\n| `maxTxPowerSupported` | What is the allowed power ceiling? | Use this to validate transmit power settings before starting inventory. |\n| `channelData` | How many channels are available? | The channel list defines where the reader can operate within the region. |",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -18042,7 +18754,7 @@
                     "Region"
                 ],
                 "summary": "Set Region",
-                "description": "## 1. Description\n\nThe `set_region` command updates the reader's RF region and the regulatory standard applied during inventory.\n\nThis command allows you to configure:\n\n- The deployment country through `country`\n- The regulatory standard to apply through `standardname`\n- Optionally, the Listen Before Talk (LBT) state through `isLBT`, when the selected standard supports it\n- Optionally, a specific channel frequency list (kHz) through `channeldata`, when the selected standard supports channel selection\n\nUse this command to:\n\n- Set the correct RF region before first use in a deployment country\n- Switch the reader to a different region when relocating hardware\n- Apply a specific regulatory standard within a multi-standard country\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `set_region` |\n| Pattern Name | Region Configuration |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `PUT /cloud/region` |\n| Related Commands | [get_region](get_region.md), [get_SupportedRegionList](get_SupportedRegionList.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Required Payload Fields | `country`, `standardname` |\n\n## 3. Before You Begin\n\nVerify the target country and standard are supported before sending this command. Applying an incorrect region may make the reader non-compliant with local RF regulations.\n\n| What You Need | Details |\n|---|---|\n| Country name | Use `get_SupportedRegionList` to retrieve the exact country name string accepted by the reader. |\n| Standard name | Use `get_SupportedStandardList` to retrieve valid standard names for the target country. |\n| LBT override (optional) | Provide `isLBT` (boolean) to set Listen Before Talk when the selected standard supports it. |\n| Channel selection (optional) | Provide `channeldata` (list of center frequencies in kHz) when the selected standard supports channel selection. |\n| Active inventory | Stop inventory with `stop` before changing region. Region changes take effect immediately and affect all RF parameters. |\n| LBT and channel behavior | Some standards mandate LBT always-on or restrict channel usage. Review the standard entry from `get_SupportedStandardList` before applying. |",
+                "description": "## 1. Description\n\nThe `set_region` command updates the reader's RF region and the regulatory standard applied during inventory.\n\nThis command allows you to configure:\n\n- The deployment country through `country`\n- The regulatory standard to apply through `standardname`\n- Optionally, the Listen Before Talk (LBT) state through `isLBT`, when the selected standard supports it\n- Optionally, a specific channel frequency list (kHz) through `channeldata`, when the selected standard supports channel selection\n\nUse this command to:\n\n- Set the correct RF region before first use in a deployment country\n- Switch the reader to a different region when relocating hardware\n- Apply a specific regulatory standard within a multi-standard country\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `set_region` |\n| Pattern Name | Region Configuration |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `PUT /cloud/region` |\n| Related Commands | [get_region](get_region.md), [get_supportedRegionList](get_supportedRegionList.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Required Payload Fields | `country`, `standardname` |\n\n## 3. Before You Begin\n\nVerify the target country and standard are supported before sending this command. Applying an incorrect region may make the reader non-compliant with local RF regulations.\n\n| What You Need | Details |\n|---|---|\n| Country name | Use `get_supportedRegionList` to retrieve the exact country name string accepted by the reader. |\n| Standard name | Use `get_supportedStandardList` to retrieve valid standard names for the target country. |\n| LBT override (optional) | Provide `isLBT` (boolean) to set Listen Before Talk when the selected standard supports it. |\n| Channel selection (optional) | Provide `channeldata` (list of center frequencies in kHz) when the selected standard supports channel selection. |\n| Active inventory | Stop inventory with `stop` before changing region. Region changes take effect immediately and affect all RF parameters. |\n| LBT and channel behavior | Some standards mandate LBT always-on or restrict channel usage. Review the standard entry from `get_supportedStandardList` before applying. |",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -18203,13 +18915,13 @@
                 }
             }
         },
-        "/get_SupportedRegionList": {
+        "/get_supportedRegionList": {
             "post": {
                 "tags": [
                     "Region"
                 ],
                 "summary": "Get Supportedregionlist",
-                "description": "## 1. Description\n\nThe `get_SupportedRegionList` command retrieves the list of RF regions this reader is permitted to operate in.\n\nThis command returns:\n\n- The set of supported country or region names that can be applied via `set_region`\n\nNo additional payload fields are required to retrieve the supported region list.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_SupportedRegionList` |\n| Pattern Name | Supported Region Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/supportedRegionList` |\n| Related Commands | [get_region](get_region.md), [set_region](set_region.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Supported Operations | Retrieve the list of permitted RF regions for this reader |\n\n## 3. When to Use This Command\n\nUse `get_SupportedRegionList` to:\n\n- Determine valid values before calling `set_region`\n- Confirm that the target deployment region is supported by this hardware\n- Build a region picker in a provisioning or configuration UI\n- Audit region support across different reader hardware variants in the same fleet\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| Region list | Is the target deployment region present? | Attempting to set an unsupported region via `set_region` will result in an error. |",
+                "description": "## 1. Description\n\nThe `get_supportedRegionList` command retrieves the list of RF regions this reader is permitted to operate in.\n\nThis command returns:\n\n- The set of supported country or region names that can be applied via `set_region`\n\nNo additional payload fields are required to retrieve the supported region list.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_supportedRegionList` |\n| Pattern Name | Supported Region Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/supportedRegionList` |\n| Related Commands | [get_region](get_region.md), [set_region](set_region.md), [get_supportedStandardList](get_supportedStandardList.md) |\n| Supported Operations | Retrieve the list of permitted RF regions for this reader |\n\n## 3. When to Use This Command\n\nUse `get_supportedRegionList` to:\n\n- Determine valid values before calling `set_region`\n- Confirm that the target deployment region is supported by this hardware\n- Build a region picker in a provisioning or configuration UI\n- Audit region support across different reader hardware variants in the same fleet\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| Region list | Is the target deployment region present? | Attempting to set an unsupported region via `set_region` will result in an error. |",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -18219,9 +18931,9 @@
                                 "properties": {
                                     "command": {
                                         "type": "string",
-                                        "description": "The value for the key command must be get_SupportedRegionList\n",
+                                        "description": "The value for the key command must be get_supportedRegionList\n",
                                         "enum": [
-                                            "get_SupportedRegionList"
+                                            "get_supportedRegionList"
                                         ]
                                     },
                                     "command_id": {
@@ -18233,7 +18945,7 @@
                                         "example": "gvjh"
                                     },
                                     "payload": {
-                                        "title": "get_SupportedRegionList",
+                                        "title": "get_supportedRegionList",
                                         "x-stoplight": {
                                             "id": "2rinlo1y5j2g4"
                                         },
@@ -18246,7 +18958,7 @@
                                 "default": {
                                     "summary": "default",
                                     "value": {
-                                        "command": "get_SupportedRegionList",
+                                        "command": "get_supportedRegionList",
                                         "command_id": "req-get-SupportedRegionList",
                                         "payload": {}
                                     }
@@ -18257,7 +18969,7 @@
                 },
                 "responses": {
                     "default": {
-                        "description": "get_SupportedRegionList response",
+                        "description": "get_supportedRegionList response",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -18265,9 +18977,9 @@
                                     "properties": {
                                         "command": {
                                             "type": "string",
-                                            "description": "The value for the key command must be get_SupportedRegionList",
+                                            "description": "The value for the key command must be get_supportedRegionList",
                                             "enum": [
-                                                "get_SupportedRegionList"
+                                                "get_supportedRegionList"
                                             ]
                                         },
                                         "command_id": {
@@ -18345,7 +19057,7 @@
                                     "inline": {
                                         "summary": "inline",
                                         "value": {
-                                            "command": "get_SupportedRegionList",
+                                            "command": "get_supportedRegionList",
                                             "command_id": "req-get-SupportedRegionList",
                                             "payload": {
                                                 "SupportedRegions": [
@@ -18399,7 +19111,7 @@
                     "Region"
                 ],
                 "summary": "Get Supportedstandardlist",
-                "description": "## 1. Description\n\nThe `get_SupportedStandardList` command retrieves the list of RF regulatory standards supported by the reader and the channel details for each.\n\nThis command returns:\n\n- Supported regulatory standard names\n- LBT and frequency hopping configurability per standard\n- Whether individual channels are selectable per standard\n- Enabled channel data per standard\n\nNo additional payload fields are required to retrieve the supported standard list.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_SupportedStandardList` |\n| Pattern Name | Supported Standard Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/supportedStandardList` |\n| Related Commands | [get_region](get_region.md), [set_region](set_region.md), [get_SupportedRegionList](get_SupportedRegionList.md) |\n| Supported Operations | Retrieve supported regulatory standards and their channel details |\n\n## 3. When to Use This Command\n\nUse `get_SupportedStandardList` to:\n\n- Discover which regulatory standards are available for a given region\n- Determine whether LBT or channel hopping is configurable per standard\n- Inspect channel availability before tuning RF settings\n- Populate standard selection options in provisioning tools\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `StandardName` | Is the target regulatory standard listed? | Confirms that the required standard is available before configuring the region. |\n| `isLBTConfigurable` | Can LBT be enabled or disabled for this standard? (string-encoded `\"true\"`/`\"false\"`) | Some standards mandate LBT; knowing configurability prevents invalid region settings. |\n| `isChannelSelectable` | Can individual channels be selected for this standard? | Determines whether `channeldata` can be supplied when setting the region. |\n| `channeldata` | Which channels are available for each standard? | Determines the frequency plan the reader will use for that standard. |",
+                "description": "## 1. Description\n\nThe `get_supportedStandardList` command retrieves the list of RF regulatory standards supported by the reader and the channel details for each.\n\nThis command returns:\n\n- Supported regulatory standard names\n- LBT and frequency hopping configurability per standard\n- Whether individual channels are selectable per standard\n- Enabled channel data per standard\n\nNo additional payload fields are required to retrieve the supported standard list.\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `get_supportedStandardList` |\n| Pattern Name | Supported Standard Query |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| REST Endpoint | `GET /cloud/supportedStandardList` |\n| Related Commands | [get_region](get_region.md), [set_region](set_region.md), [get_supportedRegionList](get_supportedRegionList.md) |\n| Supported Operations | Retrieve supported regulatory standards and their channel details |\n\n## 3. When to Use This Command\n\nUse `get_supportedStandardList` to:\n\n- Discover which regulatory standards are available for a given region\n- Determine whether LBT or channel hopping is configurable per standard\n- Inspect channel availability before tuning RF settings\n- Populate standard selection options in provisioning tools\n\nKey fields to check in the response:\n\n| Field | What to Check | Why It Matters |\n|---|---|---|\n| `StandardName` | Is the target regulatory standard listed? | Confirms that the required standard is available before configuring the region. |\n| `isLBTConfigurable` | Can LBT be enabled or disabled for this standard? (string-encoded `\"true\"`/`\"false\"`) | Some standards mandate LBT; knowing configurability prevents invalid region settings. |\n| `isChannelSelectable` | Can individual channels be selected for this standard? | Determines whether `channeldata` can be supplied when setting the region. |\n| `channeldata` | Which channels are available for each standard? | Determines the frequency plan the reader will use for that standard. |",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -18409,10 +19121,10 @@
                                 "properties": {
                                     "command": {
                                         "type": "string",
-                                        "example": "get_SupportedStandardList",
-                                        "description": "The value for the key command must be get_SupportedStandardList",
+                                        "example": "get_supportedStandardList",
+                                        "description": "The value for the key command must be get_supportedStandardList",
                                         "enum": [
-                                            "get_SupportedStandardList"
+                                            "get_supportedStandardList"
                                         ]
                                     },
                                     "command_id": {
@@ -18522,9 +19234,11 @@
                                 "default": {
                                     "summary": "default",
                                     "value": {
-                                        "command": "get_SupportedStandardList",
+                                        "command": "get_supportedStandardList",
                                         "command_id": "req-get-supportedStandardList",
-                                        "payload": {}
+                                        "payload": {
+                                            "region": "Argentina"
+                                        }
                                     }
                                 }
                             }
@@ -18542,10 +19256,10 @@
                                         "command": {
                                             "type": "string",
                                             "enum": [
-                                                "get_SupportedStandardList"
+                                                "get_supportedStandardList"
                                             ],
-                                            "description": "The value for the key command must be get_SupportedStandardList",
-                                            "example": "get_SupportedStandardList"
+                                            "description": "The value for the key command must be get_supportedStandardList",
+                                            "example": "get_supportedStandardList"
                                         },
                                         "command_id": {
                                             "type": "string",
@@ -18650,7 +19364,7 @@
                                     "inline": {
                                         "summary": "inline",
                                         "value": {
-                                            "command": "get_SupportedStandardList",
+                                            "command": "get_supportedStandardList",
                                             "command_id": "req-get-supportedStandardList",
                                             "payload": {
                                                 "SupportedStandards": [
@@ -19254,7 +19968,7 @@
                                             "command": "get_logs_syslog",
                                             "command_id": "req-get-logs-syslog",
                                             "payload": {
-                                                "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
+                                                "binary": "H4sIAAAAAAAAA9xda48bN5bN5/0Vgj5lMbHC96MBf0hsZyaYccZjex5AHBhyq9rRjlrqSOo4RpD/vpekynG7VdJhkaXVrJHAdku+h8UiDy8vL8+9bjab6dtm89mAvxj9MkrF3+nXnd+50VwI9RnXQinDtWH2M8a5lPKzERuyUe2v2812uh6NPluvVttD3zv2+X/oL8GEecDcA+FfCnnB2QVjE2cd4/oPTF9INvrmX88N818/keqr0XrzfrNYvZ1djL5fredv58vRZnW1fTddNw/H7Wfj0ebdP5r1Zr5aPhy7iVBMTNh49MuDm/ns4VgY4W3863x5tXo4/nG7vdlcfPnlu3fvJjsLk8vV9fiHD1ijd9PN6E9/f9bz9+fvz9+fvz9+fvz9/f/7+/P35+/P35+/P35+/P39//v78/fn78/fn78/fn78/f3/+/vz9+fvz9+fvz9+fvz9/f/7+/P35+/P352/s3/8PBjyq7wCABwA=",
                                                 "filename": "syslog.tar.gz"
                                             },
                                             "response": "success"
@@ -19396,10 +20110,7 @@
                                         "value": {
                                             "command": "del_logs_syslog",
                                             "command_id": "req-del-syslogs",
-                                            "payload": {
-                                                "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "syslog.tar.gz"
-                                            },
+                                            "payload": {},
                                             "response": "success"
                                         }
                                     }
@@ -20007,8 +20718,8 @@
                                             "command": "get_logs_radioPacketLog",
                                             "command_id": "req-get-radio-pkt-logs",
                                             "payload": {
-                                                "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "radio_packet.pcap.gz"
+                                                "binary": "H4sIAAAAAAAAA+y9W44EPZKdWc+9Ct+AEn6/vWkVehTiKgiSMEKrGtDyh3bxyAwnzXlOA3oQZho/Wq2q8/FnZJ5kGI1G4/+8Pf7b65//+b//P//lP3Q///zf//zH/4H/adP/zMso/2+3TMPf/7dt+3lo++Ef3dQP49IuQ7v8o+3Gfu7/0bT/JyZz/p9/+1//vP1r0/zjn//6/q/P2/N/RLraf/9/6f/8p9ez+Y//9l+aZmq6bW+3feqaPv1S/uVf/uX4//8My9L8a3O7Nbd7065N2zVt27SD/t+9/N/ro+mH5g+wts0//wCLAm2z3Jv58aXrwoGX5t3JwK/1C5i+BtZ/e/rfvZKvodm2L/XXvDsbfnR1+qdvm3ti3n+YsSc/6zh04ZS65j009/VLPYRT0v87/R/b2Kyvv8wykFNKv69gSulf+Eo/1r8/pXFroyn5/903j6F5/f3FTUOLTqlr9zYBY1+ckmGvuemfX+qxMKXb8S9pj3+GZu2bpW2GRzPemn9pvv9nfjW3RzwqMum1YuNDt6E2dmAaIBsf6omwsTPbTH7W9K9EbGzque0IGzszxn/sxSnNY/jH/mVjV08bYWNntvgXl0+p636WrkVtrOoetXH6/yZTDU33zmzcj036awtHRSY9122sunjpy20sQB8vfScbqzpe+nQ+6bMv42nqM7z0HUC49J1trOrQM2UbJ2PGAiywGauaNOPETERg3wHYjFVNmrEwREWvATNsxqJeqAw3ZeYOv/Qvx7QXLR8uzFjVsFPxvN1XecirPH8ky97WeFVg04hToTo84OYA7FSomgq4GbMwNiMA7lSomkrUVGahnAoFYKdC1KxTIQzlVMwCwGasatiMX1LEf+9vYzlQbJtvry5eFdj0Bpix6hjfWAHYjFVN+saJWfHBwg6MsBmruuUbn8xYGCK65QBsxqKO4zl1M07MRvheq9wJtyCeU5ixq+Hnj9ft9brdF3nMeFlt5VGDSHRAbmw7vbxwAeBcv1NRdPGeIZ48cKD97dLaxqam7eMYMVExnABwbq7onV2NliLe5tn3qbDMP2tjUaGmQ2Pg5NRI83tIt3lN+4nfzv7/P3+fv8/f5+/x9/j5/n7/P3+fv8/f5+/x9/j5/n7/P3+fv89/8/B+eun5xAIARAA==",
+                                                "filename": "radioPktLog.tar.gz"
                                             },
                                             "response": "success"
                                         }
@@ -20149,10 +20860,7 @@
                                         "value": {
                                             "command": "del_logs_radioPacketLog",
                                             "command_id": "req-del-radio-pkt-logs",
-                                            "payload": {
-                                                "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "radio_packet.pcap.gz"
-                                            },
+                                            "payload": {},
                                             "response": "success"
                                         }
                                     }
