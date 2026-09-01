@@ -2,7 +2,7 @@
   "command": "get_logs_rgErrorLog",
   "command_id": "req-get-rg-error-logs",
   "payload": {
-    "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
+    "binary": "H4sIAAAAAAAAA9RdXXMbt55YtW7ZsT7VfALUBZKYAQAEA",
     "filename": "rgErrorLog.tar.gz"
   },
   "response": "success"

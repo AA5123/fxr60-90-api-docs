@@ -7,16 +7,16 @@
 | **Example name** | `installed` |
 | **Summary title** | `Installed certificates` |
 
-### `PUT/updateCertificate.json`
+### `PUT/install_certificate_sftp.json`
 
 | Field | Value |
 |---|---|
-| **Example name** | `updateCertificate` |
-| **Summary title** | `Install client certificate (BASIC)` |
+| **Example name** | `install_certificate_sftp` |
+| **Summary title** | `Install certificate via SFTP, BASIC auth` |
 
-### `PUT/updateCertificate_async.json`
+### `PUT/install_certificate_https_headers.json`
 
 | Field | Value |
 |---|---|
-| **Example name** | `updateCertificate_async` |
-| **Summary title** | `Install certificate over HTTPS with retry (async)` |
+| **Example name** | `install_certificate_https_headers` |
+| **Summary title** | `Install certificate over HTTPS with custom headers and retry policy` |

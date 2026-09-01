@@ -11,6 +11,6 @@
 5. Optional TLS fields (`verifyPeer`, `CACertificateFileContent`) if used for HTTPS download of the PFX.
 6. After install, `GET /cloud/certificates` shows the new cert.
 
-Draft packs exist under `PUT/` (`updateCertificate.json`, client/app/inline variants) — do not finalize until live test.
+Draft packs exist under `PUT/` (`install_certificate_sftp.json`, `install_certificate_https_headers.json`, client/app/inline variants) — do not finalize until live test.
 
 Recorded: 2026-08-09

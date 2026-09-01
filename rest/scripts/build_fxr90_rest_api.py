@@ -247,9 +247,16 @@ def fix_delete_request_bodies(paths: dict, schemas: dict | None = None) -> int:
     HTTP clients often avoid DELETE bodies, so most log-delete operations are documented
     as query parameters. ``DELETE /cloud/certificates/{certname}`` is an exception: the
     reader expects ``type`` in the JSON body (confirmed on device 26 Aug 2026).
+    ``DELETE /cloud/caCertificates/{caname}`` is also an exception: the reader matches
+    the CA cert to delete by its ``content`` (full PEM), which is too large and
+    ill-suited for a query string (confirmed on device 30 Aug 2026 -- name-only, as a
+    query param or otherwise, was rejected with "INVALID CA CERTIFICATE NAME").
     """
     schemas = schemas or {}
-    keep_delete_body_paths = frozenset({"/cloud/certificates/{certname}"})
+    keep_delete_body_paths = frozenset({
+        "/cloud/certificates/{certname}",
+        "/cloud/caCertificates/{caname}",
+    })
     fixed = 0
 
     for path, path_item in paths.items():

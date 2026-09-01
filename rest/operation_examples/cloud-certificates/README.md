@@ -24,11 +24,11 @@ cloud-certificates/
 | File | Method | Direction | Example name | Origin | Valid | Summary |
 |---|---|---|---|---|---|---|
 | `GET/installed.json` | GET | response 200 | `installed` | reviewed | yes | Server and client certificates |
-| `PUT/updateCertificate.json` | PUT | request | `updateCertificate` | in-spec | yes |  |
-| `PUT/updateCertificate_async.json` | PUT | request | `updateCertificate_async` | proposed | yes | Install certificate over HTTPS with retry (async) |
-| `PUT/updateCertificate_client.json` | PUT | request | `updateCertificate_client` | proposed | yes | Client cert for mTLS MQTT |
-| `PUT/updateCertificate_app.json` | PUT | request | `updateCertificate_app` | proposed | yes | App certificate, no download auth |
-| `PUT/updateCertificate_inline_pem.json` | PUT | request | `updateCertificate_inline_pem` | proposed | yes | Inline CA content |
+| `PUT/install_certificate_sftp.json` | PUT | request | `install_certificate_sftp` | in-spec | yes | Install certificate via SFTP, BASIC auth |
+| `PUT/install_certificate_https_headers.json` | PUT | request | `install_certificate_https_headers` | proposed | yes | Install certificate over HTTPS with custom headers and retry policy |
+| `PUT/updateCertificate_client.json` | PUT | request | `updateCertificate_client` | proposed | not yet created | Client cert for mTLS MQTT |
+| `PUT/updateCertificate_app.json` | PUT | request | `updateCertificate_app` | proposed | not yet created | App certificate, no download auth |
+| `PUT/updateCertificate_inline_pem.json` | PUT | request | `updateCertificate_inline_pem` | proposed | not yet created | Inline CA content |
 
 ## Trying these against a reader
 
@@ -42,7 +42,7 @@ curl -sk -X GET "https://$READER/cloud/certificates" \
 curl -sk -X PUT "https://$READER/cloud/certificates" \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
-  -d @PUT/updateCertificate.json
+  -d @PUT/install_certificate_sftp.json
 
 ```
 

@@ -5610,6 +5610,38 @@ paths:
       summary: Delete CA certificate
       description: MQTT API :- del_CACertificate <br> Deletes the specified CA certificate from the device.
       operationId: delCACertificate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                name:
+                  type: string
+                  description: Required for MQTT API (`del_CACertificate`). Ignored for local REST where the path parameter `{caname}` is used.
+                  example: AmazonRootCA1
+                content:
+                  type: string
+                  description: >-
+                    PEM-encoded CA certificate content. Required — the reader matches the certificate to delete by
+                    its content, not by name alone. Confirmed by live test: a request with only `name` (with or
+                    without a `.crt` suffix) is rejected with "INVALID CA CERTIFICATE NAME"; the same `name` with
+                    the full PEM `content` included succeeds.
+                  example: |
+                    -----BEGIN CERTIFICATE-----
+                    MIIB...
+                    -----END CERTIFICATE-----
+            examples:
+              del_CACertificate:
+                value:
+                  name: AmazonRootCA1
+                  content: |
+                    -----BEGIN CERTIFICATE-----
+                    MIIB...
+                    -----END CERTIFICATE-----
       responses:
         '200':
           description: OK

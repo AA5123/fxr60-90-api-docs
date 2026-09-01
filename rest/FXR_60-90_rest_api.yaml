@@ -6385,7 +6385,7 @@ paths:
                 $ref: '#/components/schemas/GetRcLogResponse'
               example:
                 binary: H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=
-                filename: rc_info.log.gz
+                filename: rcLog.tar.gz
       security:
       - bearerAuth: []
   /cloud/logs/RgWarningLog:
@@ -6467,7 +6467,7 @@ paths:
                 $ref: '#/components/schemas/GetRgWarningLogResponse'
               example:
                 binary: H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=
-                filename: rg_warning.log.gz
+                filename: rgWarningLog.tar.gz
       security:
       - bearerAuth: []
   /cloud/logs/RgErrorLog:
@@ -6549,7 +6549,7 @@ paths:
                 $ref: '#/components/schemas/GetRgErrorLogResponse'
               example:
                 binary: H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=
-                filename: rg_error.log.gz
+                filename: rgErrorLog.tar.gz
       security:
       - bearerAuth: []
   /cloud/logs/radioPacketLog:
@@ -7242,19 +7242,8 @@ paths:
             schema:
               $ref: '#/components/schemas/SetUpdatecertificateRequest'
             examples:
-              updateCertificate:
-                summary: Install client certificate (BASIC)
-                value:
-                  authenticationOptions:
-                    password: L@bu$3rs
-                    username: labuser
-                  authenticationType: BASIC
-                  name: DOCK01
-                  pfxPassword: password123456
-                  type: client
-                  url: sftp://10.117.229.15/data2/home/labuser/Certs/testuser-2026.pfx
-              updateCertificate_async:
-                summary: Install certificate over HTTPS with retry (async)
+              install_certificate_https_headers:
+                summary: Install certificate over HTTPS with custom headers and retry policy
                 value:
                   authenticationType: BASIC
                   authenticationOptions:
@@ -7278,6 +7267,17 @@ paths:
                   timeouts:
                     connection: 5
                     read: 20
+              install_certificate_sftp:
+                summary: Install certificate via SFTP, BASIC auth
+                value:
+                  authenticationOptions:
+                    password: L@bu$3rs
+                    username: labuser
+                  authenticationType: BASIC
+                  name: DOCK01
+                  pfxPassword: password123456
+                  type: client
+                  url: sftp://10.117.229.15/data2/home/labuser/Certs/testuser-2026.pfx
       responses:
         "200":
           description: Synchronous requests return the final installation result. Asynchronous requests return an immediate acknowledgment; the final result is delivered through the management events channel.
@@ -7733,6 +7733,50 @@ paths:
 
         '
       operationId: delCACertificate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DelCACertificateRequest'
+            example:
+              content: '-----BEGIN CERTIFICATE-----
+
+                MIIDdzCCAl+gAwIBAgIEbJQz0jANBgkqhkiG9w0BAQsFADBvMQswCQYDVQQGEwJV
+
+                UzELMAkGA1UECBMCQ0ExEDAOBgNVBAcTB0lydmluZTEPMA0GA1UEChMGWmVicmEx
+
+                EzARBgNVBAsTCkVuZ2luZWVyaW5nMRcwFQYDVQQDEw5BbWF6b25Sb290Q0ExMB4X
+
+                DTE1MDUyNjAwMDAwMFoXDTM1MDUyNjAwMDAwMFowbzELMAkGA1UEBhMCVVMxCzAJ
+
+                BgNVBAgTAkNBMRAwDgYDVQQHEwdJcnZpbmUxDzANBgNVBAoTBlplYnJhMRMwEQYD
+
+                VQQLEwpFbmdpbmVlcmluZzEXMBUGA1UEAxMOQW1hem9uUm9vdENBMTCCASIwDQYJ
+
+                KoZIhvcNAQEBBQADggEPADCCAQoCggEBAN9x7k8m4rjQv2N2j9pYx0Qwdk6U4b5o
+
+                5xY+o2zj7n3q6WvWq6E4Yt8k1bH6Y3w2N7v0Y8o1Y4yYHqk8iCw8Wj8JmZ2dK8q3
+
+                1YJYQv1M2VxQy6G8z3yq8r4jG9Q2n7gY3D9v2v2V5Hh1oS8q5D7rX2f3W7n9j3aP
+
+                2r5sLrGv7R9yq8vM1Cq7y8l3b6Q2h9K1z0t6b4M2V8yN4o6W2n8p1v5z3f9dQ8m7
+
+                B6oK7wQ8m3v1w4b9n8z6m1o3k2p5q7r9s1v2x4y6z8a0b2c4d6e8f0g1h2i3j4k5
+
+                l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0CAwEAAaNQME4wHQYDVR0OBBYEFJ4i9Q6d
+
+                iQ0aQ1m3nY2j8f4K9l8WMB8GA1UdIwQYMBaAFJ4i9Q6diQ0aQ1m3nY2j8f4K9l8W
+
+                MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAB9N8eYk1Wl7d8q9m5fG
+
+                2b3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6A7B8C9D0E1F2G3H
+
+                4I5J6K7L8M9N0O1P2Q3R4S5T6U7V8W9X0Y1Z2a3b4c5d6e7f8g9h0i1j2k3l4m5n
+
+                -----END CERTIFICATE-----
+
+                '
       responses:
         "200":
           description: OK
@@ -15314,6 +15358,17 @@ components:
     SetInstallCACertificateResponse:
       type: string
       description: Returns an empty string on success.
+    DelCACertificateRequest:
+      type: object
+      required:
+      - content
+      properties:
+        name:
+          type: string
+          description: Required for MQTT API (`del_CACertificate`). Ignored for local REST where the path parameter `{caname}` is used.
+        content:
+          type: string
+          description: 'PEM-encoded CA certificate content. Required — the reader matches the certificate to delete by its content, not by name alone. Confirmed by live test: a request with only `name` (with or without a `.crt` suffix) is rejected with "INVALID CA CERTIFICATE NAME"; the same `name` with the full PEM `content` included succeeds.'
     DelCACertificateResponse:
       type: string
       description: Returns an empty string on success.

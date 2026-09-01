@@ -20264,7 +20264,7 @@
                                             "command_id": "req-get-rc-log",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "rc_info.log.gz"
+                                                "filename": "rcLog.tar.gz"
                                             },
                                             "response": "success"
                                         }
@@ -20415,7 +20415,7 @@
                                             "command_id": "req-get-rg-warn-logs",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "rg_warning.log.gz"
+                                                "filename": "rgWarningLog.tar.gz"
                                             },
                                             "response": "success"
                                         }
@@ -20568,7 +20568,7 @@
                                             "command_id": "req-get-rg-error-logs",
                                             "payload": {
                                                 "binary": "H4sIAAAAAAAAA+3RQQqAIBBA0a8E7VtEUdEBOoEHEBWKQCJt0e3Ldm3atGjxHwzDMMPAyFI=",
-                                                "filename": "rg_error.log.gz"
+                                                "filename": "rgErrorLog.tar.gz"
                                             },
                                             "response": "success"
                                         }
@@ -22511,26 +22511,8 @@
                                 ]
                             },
                             "examples": {
-                                "updateCertificate": {
-                                    "summary": "updateCertificate",
-                                    "value": {
-                                        "command": "set_updateCertificate",
-                                        "command_id": "req-set-update-cert",
-                                        "payload": {
-                                            "authenticationOptions": {
-                                                "password": "L@bu$3rs",
-                                                "username": "labuser"
-                                            },
-                                            "authenticationType": "BASIC",
-                                            "name": "DOCK01",
-                                            "pfxPassword": "password123456",
-                                            "type": "client",
-                                            "url": "sftp://10.117.229.15/data2/home/labuser/Certs/testuser-2026.pfx"
-                                        }
-                                    }
-                                },
-                                "updateCertificate_async": {
-                                    "summary": "updateCertificate async",
+                                "install_certificate_https_headers": {
+                                    "summary": "install certificate https headers",
                                     "value": {
                                         "command": "set_updateCertificate",
                                         "command_id": "req-set-update-cert",
@@ -22563,6 +22545,24 @@
                                                 "connection": 5,
                                                 "read": 20
                                             }
+                                        }
+                                    }
+                                },
+                                "install_certificate_sftp": {
+                                    "summary": "install certificate sftp",
+                                    "value": {
+                                        "command": "set_updateCertificate",
+                                        "command_id": "req-set-update-cert",
+                                        "payload": {
+                                            "authenticationOptions": {
+                                                "password": "L@bu$3rs",
+                                                "username": "labuser"
+                                            },
+                                            "authenticationType": "BASIC",
+                                            "name": "DOCK01",
+                                            "pfxPassword": "password123456",
+                                            "type": "client",
+                                            "url": "sftp://10.117.229.15/data2/home/labuser/Certs/testuser-2026.pfx"
                                         }
                                     }
                                 }
@@ -23182,7 +23182,7 @@
                     "Certificate"
                 ],
                 "summary": "Del Cacertificate",
-                "description": "## 1. Description\n\nThe `del_CACertificate` command removes an installed CA (Certificate Authority) root certificate from the reader. When you run this command, the CA certificate identified by name is permanently deleted from the reader's CA certificate store.\n\nUse this command to:\n\n- Remove a CA certificate that is no longer trusted or has been compromised\n- Clean up the CA store before installing a replacement with `set_InstallCACertificate`\n- Rotate PKI trust anchors on the reader as part of a certificate lifecycle policy\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `del_CACertificate` |\n| Pattern Name | CA Certificate Deletion |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| Related Commands | [set_installCACertificate](set_installCACertificate.md), [del_certs](del_certs.md) |\n| Required Payload Fields | `name` |\n\n## 3. Before You Begin\n\nConfirm the CA certificate is safe to remove before sending this command. Deleting a CA that is actively used for TLS verification will cause all TLS connections that depend on it to fail.\n\n| What You Need | Details |\n|---|---|\n| CA certificate name | The exact `name` of the CA certificate to delete, as returned by `get_certificates`. The name is case-sensitive. |\n| Active use check | Identify all MQTT or HTTPS endpoints whose server or client certificates are issued by this CA. Remove those dependencies or install a replacement CA before deleting. |",
+                "description": "## 1. Description\n\nThe `del_CACertificate` command removes an installed CA (Certificate Authority) root certificate from the reader. When you run this command, the CA certificate identified by name is permanently deleted from the reader's CA certificate store.\n\nUse this command to:\n\n- Remove a CA certificate that is no longer trusted or has been compromised\n- Clean up the CA store before installing a replacement with `set_InstallCACertificate`\n- Rotate PKI trust anchors on the reader as part of a certificate lifecycle policy\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `del_CACertificate` |\n| Pattern Name | CA Certificate Deletion |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| Related Commands | [set_installCACertificate](set_installCACertificate.md), [del_certs](del_certs.md) |\n| Required Payload Fields | `name`, `content` |\n\n## 3. Before You Begin\n\nConfirm the CA certificate is safe to remove before sending this command. Deleting a CA that is actively used for TLS verification will cause all TLS connections that depend on it to fail.\n\n| What You Need | Details |\n|---|---|\n| CA certificate name | The exact `name` of the CA certificate to delete, as returned by `get_certificates`. The name is case-sensitive. |\n| Active use check | Identify all MQTT or HTTPS endpoints whose server or client certificates are issued by this CA. Remove those dependencies or install a replacement CA before deleting. |",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -23222,10 +23222,15 @@
                                                     "id": "7m444vi2dsnj7"
                                                 },
                                                 "description": "Name of the CA certificate that needs to be deleted"
+                                            },
+                                            "content": {
+                                                "type": "string",
+                                                "description": "PEM-encoded CA certificate content. Required -- the reader matches the certificate to delete by its content, not by name alone. Confirmed by live test: name-only requests (with or without a .crt suffix) are rejected with 'INVALID CA CERTIFICATE NAME'; the same name with content included succeeds."
                                             }
                                         },
                                         "required": [
-                                            "name"
+                                            "name",
+                                            "content"
                                         ],
                                         "description": "Deletes the CA Certificate from the reader"
                                     }
