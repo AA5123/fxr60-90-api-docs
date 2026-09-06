@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 ~$*
+
+# Firmware images exceed GitHub 100MB file limit -- keep local only
+*.tar.bz2

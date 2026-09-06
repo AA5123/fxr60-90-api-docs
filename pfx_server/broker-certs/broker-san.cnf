@@ -1,0 +1,12 @@
+[req]
+distinguished_name = dn
+req_extensions = ext
+prompt = no
+[dn]
+C = IN
+ST = KA
+O = Zebra Technologies
+OU = RFID Dev
+CN = 10.117.229.18
+[ext]
+subjectAltName = IP:10.117.229.18, DNS:pfx-broker

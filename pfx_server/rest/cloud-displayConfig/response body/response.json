@@ -1,0 +1,9 @@
+{
+  "enable": true,
+  "enableOnscreenKeyboard": true,
+  "keyboardLayout": "English-US",
+  "orientation": "landscape",
+  "resolution": "1920x1080",
+  "screenTimeoutSec": 0,
+  "startUrl": "https://localhost/"
+}

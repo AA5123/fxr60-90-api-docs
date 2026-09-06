@@ -1,0 +1,33 @@
+{
+  "keyboard": {
+    "keyboardLayout": "English-US",
+    "status": "disconnected"
+  },
+  "monitor": {
+    "details": [
+      {
+        "currentResolution": "1920x1080",
+        "manufacturer": "MST",
+        "model": "XENARC",
+        "orientation": "landscape",
+        "screenActive": true,
+        "supportedResolutions": [
+          "1280x720",
+          "1920x1080",
+          "1024x768",
+          "800x600",
+          "720x576",
+          "720x480",
+          "640x480"
+        ]
+      }
+    ],
+    "status": "connected"
+  },
+  "mouse": {
+    "status": "disconnected"
+  },
+  "touch": {
+    "status": "disconnected"
+  }
+}
