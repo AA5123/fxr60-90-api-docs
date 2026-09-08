@@ -1,8 +1,0 @@
-{
-  "tagProtect": {
-    "action": "enableTagProtection",
-    "enableShortRange": false,
-    "password": "A1B2C3D4",
-    "tagID": "333311112222333344445555"
-  }
-}
