@@ -1,9 +1,9 @@
 {
   "enable": true,
   "enableOnscreenKeyboard": true,
-  "startUrl": "https://localhost/",
-  "resolution": "1920x1080",
+  "keyboardLayout": "English-US",
   "orientation": "landscape",
-  "screenTimeoutSec": 300,
-  "keyboardLayout": "Japanese"
+  "resolution": "1920x1080",
+  "screenTimeoutSec": 0,
+  "startUrl": "https://localhost/"
 }

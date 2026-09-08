@@ -7,16 +7,16 @@
 | **Example name** | `installed` |
 | **Summary title** | `Installed certificates` |
 
-### `PUT/install_certificate_sftp.json`
+### `PUT/basic_https.json`
 
 | Field | Value |
 |---|---|
-| **Example name** | `install_certificate_sftp` |
-| **Summary title** | `Install certificate via SFTP, BASIC auth` |
+| **Example name** | `basic_https` |
+| **Summary title** | `Install client PFX over HTTPS with BASIC` |
 
-### `PUT/install_certificate_https_headers.json`
+### `PUT/mtls_optional.json`
 
 | Field | Value |
 |---|---|
-| **Example name** | `install_certificate_https_headers` |
-| **Summary title** | `Install certificate over HTTPS with custom headers and retry policy` |
+| **Example name** | `mtls_optional` |
+| **Summary title** | `Install client PFX over HTTPS with BASIC and CA` |

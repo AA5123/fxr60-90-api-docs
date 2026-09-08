@@ -1,5 +1,4 @@
 {
-  "radioPacketLog": true,
   "components": [
     {
       "componentName": "radio_control",
@@ -7,7 +6,8 @@
     },
     {
       "componentName": "reader_gateway",
-      "level": "DEBUG"
+      "level": "INFO"
     }
-  ]
+  ],
+  "radioPacketLog": false
 }

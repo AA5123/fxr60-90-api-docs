@@ -2,7 +2,7 @@
   "command": "get_hostName",
   "command_id": "req-get-hostname",
   "payload": {
-    "hostName": "FXR90C60C001"
+    "hostName": "FXR609BE34A"
   },
   "response": "success"
 }

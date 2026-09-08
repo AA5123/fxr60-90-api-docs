@@ -309,6 +309,7 @@ def fix_delete_request_bodies(paths: dict, schemas: dict | None = None) -> int:
 # Fallback when RestDeveloperfile omits operationId (path+method -> markdown stem).
 # Only list entries that cannot be resolved via operationId + case-insensitive match.
 PATH_METHOD_ALIASES: dict[tuple[str, str], str] = {
+    ("GET", "/cloud/supportedRegionList"): "getSupportedregionlist",
     ("GET", "/cloud/preSelection"): "getPreSelection",
     ("PUT", "/cloud/preSelection"): "setPreSelection",
     ("PUT", "/cloud/updatePassword"): "updatePassword",

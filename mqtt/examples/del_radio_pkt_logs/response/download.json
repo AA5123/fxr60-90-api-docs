@@ -1,6 +1,9 @@
 {
   "command": "del_logs_radioPacketLog",
   "command_id": "req-del-radio-pkt-logs",
-  "payload": {},
+  "payload": {
+    "binary": "<base64 gzip>",
+    "filename": "radioPktLog.tar.gz"
+  },
   "response": "success"
 }

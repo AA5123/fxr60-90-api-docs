@@ -7,7 +7,6 @@
 
 | File | Example name | Summary |
 |---|---|---|
-| `DELETE/request.json` | `request` | Live-confirmed: `content` (full PEM) required — `name` alone is rejected |
 | `DELETE/success.json` | `success` | Empty string on success |
 
 Path parameter: `caname` = `AmazonRootCA1`
@@ -17,12 +16,11 @@ Path parameter: `caname` = `AmazonRootCA1`
 ```
 cloud-cacertificates-caname/
   PUT/     # install request examples
-  DELETE/  # delete request + success response
+  DELETE/  # delete success response
 ```
 
 | File | Method | Direction | Example name | Origin | Valid | Summary |
 |---|---|---|---|---|---|---|
-| `DELETE/request.json` | DELETE | request | `request` | live capture, 30 Aug 2026 | yes | Reader matches the cert to delete by content, not name — confirmed live |
 | `DELETE/success.json` | DELETE | response | `success` | reviewed | yes | Empty string on success |
 | `PUT/InstallCACertificate.json` | PUT | request | `InstallCACertificate` | in-spec | yes |  |
 | `PUT/InstallCACertificate_named.json` | PUT | request | `InstallCACertificate_named` | proposed | yes | MQTT-style body includes name; REST uses path {caname} |
