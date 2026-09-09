@@ -8056,7 +8056,7 @@ paths:
       tags:
         - ImpinjGen2X
       summary: Set Impinj Gen2X configuration
-      description: MQTT API :- set_impinjGen2X <br> Configures Impinj Gen2X proprietary features (FastID, TagProtect, TagFocus, TagQuieting). Exactly one feature object (fastID, tagProtect, tagFocus, or tagQuieting) must be provided per request; combining any two or more features is rejected. Note - start command with applyImpinjGen2X flag should be used to start the Gen2X operations. The flag is per inventory session.
+      description: MQTT API :- set_impinjGen2X <br> Configures Impinj Gen2X proprietary features (FastID, TagProtect, TagFocus, TagQuieting). Exactly one feature object (fastID, tagProtect, tagFocus, or tagQuieting) must be provided per request; combining any two or more features is rejected. Note - start command with applyImpinjGen2X flag should be used to start the Gen2X operations.
       operationId: setImpinjGen2X
       requestBody:
         required: true
