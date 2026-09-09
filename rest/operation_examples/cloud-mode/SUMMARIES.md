@@ -67,7 +67,7 @@ PUT refreshed from `FXR-Series/examples/mode_testing/PUT_cloud_mode`.
 | Field | Value |
 |---|---|
 | **Example name** | `CONVEYOR` |
-| **Summary title** | `Response: CONVEYOR mode after live PUT` |
+| **Summary title** | `Response: CONVEYOR mode` |
 
 ### `PUT/SIMPLE.json`
 

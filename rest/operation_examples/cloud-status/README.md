@@ -14,9 +14,9 @@ cloud-status/
   PUT/     # PUT request/response examples
   DELETE/  # when present
 ```
-| File | Method | Direction | Example name | Origin | Valid | Summary |
-|---|---|---|---|---|---|---|
-| `GET/status.json` | GET | response 200 | `status` | live | yes | Reader status |
+| File | Method | Direction | Example name | Summary |
+|---|---|---|---|---|
+| `GET/status.json` | GET | response 200 | `status` | Reader status |
 
 ## Trying these against a reader
 

@@ -4,8 +4,6 @@ REST: `PUT /cloud/impinjGen2X` → `cloud-impinjgen2x/`
 
 Stable `command_id`: `req-set-impinjGen2X`
 
-All 12 request bodies were accepted live on 6 September 2026 (FXR60 5.0.7). Rejected combination and validation probes are not published.
-
 | File | Direction | Example | REST source | Summary |
 |---|---|---|---|---|
 | `request/enable_fastID.json` | request | `enable_fastID` | `cloud-impinjgen2x/PUT/enable_fastID.json` | Enable FastID |

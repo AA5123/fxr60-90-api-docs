@@ -58,7 +58,7 @@ paths:
       description: '## 1. Description
 
 
-        The `GET /cloud/localRestLogin` REST endpoint returns a bearer token.
+        The `GET /cloud/localRestLogin` endpoint authenticates with the reader and returns a Bearer token for subsequent API requests.
 
 
         This endpoint returns:
@@ -94,7 +94,7 @@ paths:
         ## 3. Before You Begin
 
 
-        Use HTTP Basic Auth with the reader admin username and password.
+        Use HTTP Basic Auth with the reader admin username and password. In the API docs viewer, enter the credentials in the **Authorize** dialog and click **Authorize** before calling this endpoint.
 
         '
       operationId: localrestlogin
@@ -343,25 +343,11 @@ paths:
         This endpoint returns:
 
 
-        - `keyboard.status` — `connected` or `disconnected`
+        - Connection status for the attached keyboard, mouse, touch panel, and monitor
 
-        - `keyboard.keyboardLayout` — `English-US`, `English-UK`, `German`, `Spanish`, `Italian`, `French`, `Brazilian`, `Swedish`, or `Japanese`
+        - The active keyboard layout
 
-        - `mouse.status` — `connected` or `disconnected`
-
-        - `touch.status` — `connected` or `disconnected`
-
-        - `monitor.status` — `connected` or `disconnected`
-
-        - `manufacturer`, `model` — monitor hardware (in `monitor.details[]`)
-
-        - `currentResolution` — active `WidthxHeight`
-
-        - `supportedResolutions` — modes the hardware allows
-
-        - `orientation` — `landscape`, `portrait`, `landscape-flipped`, or `portrait-flipped`
-
-        - `screenActive` — `true` if the panel is awake, `false` if blanked by screen timeout
+        - Monitor hardware details, current and supported resolutions, orientation, and whether the panel is awake
 
 
         ## 2. Endpoint Details
@@ -447,7 +433,7 @@ paths:
         This endpoint returns:
 
 
-        - `status` — `DEFAULT` or `NON_DEFAULT`
+        - `status` — `DEFAULT` means the LED reflects the reader''s normal LED status (reader-controlled). `NON_DEFAULT` means a prior `PUT /cloud/app-led` set the LED to an explicit color, flash, and duration, overriding the normal status.
 
 
         ## 2. Endpoint Details
@@ -2133,7 +2119,7 @@ paths:
                 $ref: '#/components/schemas/operatingMode.v1'
               examples:
                 CONVEYOR:
-                  summary: 'Response: CONVEYOR mode after live PUT'
+                  summary: 'Response: CONVEYOR mode'
                   value:
                     antennaStopCondition:
                       type: DURATION
@@ -9782,6 +9768,24 @@ paths:
 
         - Read `essid`, `signalStrength`, `capabilities`, and `configuration`
 
+
+        Key fields to check in the response:
+
+
+        | Field | What to Check | Why It Matters |
+
+        |---|---|---|
+
+        | `essid` | Which network is this? | The broadcast SSID name shown to users when choosing a network. |
+
+        | `signalStrength` | Is the signal strong enough to connect? | Reported as a percentage; low values mean an unreliable connection. |
+
+        | `capabilities` | What security modes does the access point advertise? | Array of strings such as `WPA2`, `WPA2-802.1X`, `WPA3`, `WPA3-802.1X`. Confirms which authentication methods the reader can use to join. |
+
+        | `configuration.autoConnect` | Is the reader set to join this network automatically? | `true` means the reader connects to this network without manual action. |
+
+        | `configuration.security` | What credentials are configured for this network? | Present only when security settings have been saved for this `essid`. Includes `type` (security mode) and, for enterprise modes, `details` (`auth`, `innerAuth`, `username`, `password`, `cert`). |
+
         '
       operationId: getAvailablewifinetworks
       responses:
@@ -11315,13 +11319,13 @@ paths:
 
         - `{appname}` — installed name in the URL
 
-        - `userapp` — same installed name in the JSON body
-
 
         Optional:
 
 
         - `command` — object the application accepts
+
+        - `userapp` — same installed name in the JSON body. Not required for local REST; the `{appname}` path parameter identifies the application. The MQTT API requires it, because it has no path parameter.
 
 
         ## 2. Endpoint Details
@@ -11347,7 +11351,7 @@ paths:
 
         | Path Parameter | `appname` |
 
-        | Required Request Fields | `userapp` |
+        | Required Request Fields | None |
 
 
         ## 3. Before You Begin
@@ -11362,7 +11366,7 @@ paths:
 
         | `appname` | Installed name from `GET /cloud/apps`. URL path. |
 
-        | `userapp` | Same installed name. |
+        | `userapp` | Optional for local REST. Same installed name. Required by the MQTT API. |
 
         | `command` | Optional. Object the application accepts, for example `command.message`. |
 
@@ -18148,8 +18152,6 @@ components:
       description: Returns an empty string on success.
     SetReqtouserappRequest:
       type: object
-      required:
-      - userapp
       properties:
         command:
           type: object
@@ -18160,7 +18162,7 @@ components:
               description: Message to send to the user application.
         userapp:
           type: string
-          description: Name of the target user application.
+          description: Name of the target user application. Not required for local REST, where the application is identified by the `{appname}` path parameter. Required for the MQTT API, which has no path parameter.
     SetReqtouserappResponse:
       type: object
       description: Response payload returned by the user application. Structure is application-defined and not fixed.

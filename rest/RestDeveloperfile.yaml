@@ -7733,8 +7733,6 @@ paths:
           application/json:
             schema:
               type: object
-              required:
-                - userapp
               properties:
                 command:
                   type: object
@@ -7746,7 +7744,7 @@ paths:
                       example: Hello World!!!
                 userapp:
                   type: string
-                  description: Name of the target user application.
+                  description: Name of the target user application. Not required for local REST, where the application is identified by the `{appname}` path parameter. Required for the MQTT API, which has no path parameter.
                   example: mylogger
             examples:
               set_reqToUserapp:
