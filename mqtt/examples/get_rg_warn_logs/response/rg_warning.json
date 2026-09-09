@@ -1,0 +1,9 @@
+{
+  "command": "get_logs_rgWarningLog",
+  "command_id": "req-get-rg-warn-logs",
+  "payload": {
+    "binary": "<base64 gzip>",
+    "filename": "rgWarningLog.tar.gz"
+  },
+  "response": "success"
+}

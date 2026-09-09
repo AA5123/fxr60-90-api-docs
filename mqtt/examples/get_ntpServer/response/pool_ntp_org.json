@@ -1,0 +1,8 @@
+{
+  "command": "get_ntpServer",
+  "command_id": "req-get-ntpServer",
+  "payload": {
+    "server": "pool.ntp.org"
+  },
+  "response": "success"
+}

@@ -1,0 +1,29 @@
+{
+  "command": "get_certificates",
+  "command_id": "req-get-certs",
+  "payload": [
+    {
+      "installTime": "Sat Sep  5 13:00:46 2026",
+      "issuerName": "Local RFID Test CA",
+      "name": "FXR60-LAB-CLIENT",
+      "publickey": "",
+      "serial": "0x14EC30174903912F709980C9E71AB3B4EA466A0A",
+      "subjectName": "FXR60-LAB-CLIENT",
+      "type": "client",
+      "validityEnd": "06/12/2028",
+      "validityStart": "03/09/2026"
+    },
+    {
+      "installTime": "Thu Sep  3 13:33:39 2026",
+      "issuerName": "FXR609BE34A",
+      "name": "Server",
+      "publickey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtbQdN/YJqakTE02f81An\nqQU3ahfB+HA750GjwyfW6LCO4PcfnkFG6bJD/8dPNg0lH5MZSoJm8ihJPffNHDLl\nuar3t/faBbP3TAUBBRK5gBvtHpbwtZtJXJInPKU0MkUl3Xy5qmck8W0EAkv77UKw\nZnFqKCwJTRXRxwJo2TtqY3VIhO64IJDITLHajUBATJRnC9QKtJaWTS2n93e3Fecu\ndy6e+Ed/demShfJoSVCRn35xFHVTfe46HpIG6iXfHdAW4I4/YsBs2kSHlWF9DfYA\nKDva3YamdLIppOphLhsY5C0Y+SqyqKmOjQO4n7UdEvv2dsq3km4Gnp2h/Utzz2/W\nVwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "serial": "0x3039",
+      "subjectName": "FXR609BE34A",
+      "type": "server",
+      "validityEnd": "29/08/2046",
+      "validityStart": "03/09/2026"
+    }
+  ],
+  "response": "success"
+}

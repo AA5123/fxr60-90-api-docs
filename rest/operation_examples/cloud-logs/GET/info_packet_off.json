@@ -1,0 +1,13 @@
+{
+  "components": [
+    {
+      "componentName": "radio_control",
+      "level": "INFO"
+    },
+    {
+      "componentName": "reader_gateway",
+      "level": "INFO"
+    }
+  ],
+  "radioPacketLog": false
+}

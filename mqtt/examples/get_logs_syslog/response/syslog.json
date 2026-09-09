@@ -1,0 +1,9 @@
+{
+  "command": "get_logs_syslog",
+  "command_id": "req-get-logs-syslog",
+  "payload": {
+    "binary": "<base64 gzip>",
+    "filename": "syslog.tar.gz"
+  },
+  "response": "success"
+}

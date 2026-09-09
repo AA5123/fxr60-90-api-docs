@@ -1,0 +1,9 @@
+{
+  "command": "get_logs_rcLog",
+  "command_id": "req-get-rc-log",
+  "payload": {
+    "binary": "<base64 gzip>",
+    "filename": "rcLog.tar.gz"
+  },
+  "response": "success"
+}
