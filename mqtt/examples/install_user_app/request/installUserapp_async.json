@@ -10,18 +10,8 @@
     },
     "url": "https://example.com/packages/sample-app.deb",
     "retry": {
-      "type": "randomWait",
-      "policy": {
-        "retries": 3,
-        "wait": {
-          "min": 10,
-          "max": 30
-        }
-      }
-    },
-    "timeouts": {
-      "connection": 5,
-      "read": 20
+      "count": 3,
+      "delayInSec": 10
     }
   }
 }

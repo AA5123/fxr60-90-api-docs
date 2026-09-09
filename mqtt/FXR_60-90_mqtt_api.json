@@ -27257,7 +27257,7 @@
                     "Firmware"
                 ],
                 "summary": "Set Os",
-                "description": "## 1. Description\n\nThe `set_os` command updates the reader OS from a download URL.\n\nThis command requires:\n\n- `url` — `https://`, `scp://`, `sftp://`, or `ftps://`\n- `authenticationType` — `NONE` or `BASIC`\n\nWhen `authenticationType` is `BASIC`, also send `authenticationOptions` — `username` and `password`. If `authenticationOptions` is not accepted, send `options`.\n\nOptional:\n\n- `verifyPeer`, `verifyHost`\n- `retry`, `timeouts` — HTTPS only\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `set_os` |\n| Pattern Name | OS Firmware Update |\n| REST Endpoint | `PUT /cloud/os` |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| Content-Type | `application/json` |\n| Required Request Fields | `url`, `authenticationType` |\n\n## 3. Before You Begin\n\nDecide the download URL and authentication. Use the JSON field names below.\n\n| Field | What to set |\n|---|---|\n| `url` | `https://`, `scp://`, `sftp://`, or `ftps://` URL of the OS image. |\n| `authenticationType` | `NONE` or `BASIC`. |\n| `authenticationOptions` | `username` and `password` when `authenticationType` is `BASIC`. If `authenticationOptions` is not accepted, send `options`. |\n| `verifyPeer` | Optional. `true` to check the file server certificate. |\n| `verifyHost` | Optional. `true` to check the file server hostname. |\n| `retry` | Optional. HTTPS only. `type` `randomWait` with `policy.retries` and `wait.min` / `wait.max`. |\n| `timeouts` | Optional. HTTPS only. `connection` and `read` in seconds. |\n",
+                "description": "## 1. Description\n\nThe `set_os` command updates the reader OS from a download URL.\n\nThis command requires:\n\n- `url` — `https://`, `scp://`, `sftp://`, or `ftps://`\n- `authenticationType` — `NONE` or `BASIC`\n\nWhen `authenticationType` is `BASIC`, also send `authenticationOptions` — `username` and `password`. If `authenticationOptions` is not accepted, send `options`.\n\nOptional:\n\n- `verifyPeer`, `verifyHost`\n- `retry` — `count` and `delayInSec`\n\n## 2. Command Details\n\n| Property | Value |\n|---|---|\n| MQTT Command | `set_os` |\n| Pattern Name | OS Firmware Update |\n| REST Endpoint | `PUT /cloud/os` |\n| Communication Type | Bidirectional (Cloud to Device, Device to Cloud) |\n| Applies To | FXR60 / FXR90 |\n| Content-Type | `application/json` |\n| Required Request Fields | `url`, `authenticationType` |\n\n## 3. Before You Begin\n\nDecide the download URL and authentication. Use the JSON field names below.\n\n| Field | What to set |\n|---|---|\n| `url` | `https://`, `scp://`, `sftp://`, or `ftps://` URL of the OS image. |\n| `authenticationType` | `NONE` or `BASIC`. |\n| `authenticationOptions` | `username` and `password` when `authenticationType` is `BASIC`. If `authenticationOptions` is not accepted, send `options`. |\n| `verifyPeer` | Optional. `true` to check the file server certificate. |\n| `verifyHost` | Optional. `true` to check the file server hostname. |\n| `retry` | Optional. `count` and `delayInSec`. |\n",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -27393,60 +27393,13 @@
                                             },
                                             "retry": {
                                                 "type": "object",
-                                                "description": "Optional backoff retry for HTTPS OS download. Firmware updates are always asynchronous. Do not send this for scp://, sftp://, or ftps://.",
+                                                "description": "Retry configuration for the download operation.",
                                                 "properties": {
-                                                    "type": {
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "randomWait"
-                                                        ],
-                                                        "example": "randomWait"
+                                                    "count": {
+                                                        "type": "integer"
                                                     },
-                                                    "policy": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "retries": {
-                                                                "type": "integer",
-                                                                "minimum": 1,
-                                                                "maximum": 50,
-                                                                "example": 3
-                                                            },
-                                                            "wait": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "min": {
-                                                                        "type": "integer",
-                                                                        "minimum": 0,
-                                                                        "maximum": 3600,
-                                                                        "example": 10
-                                                                    },
-                                                                    "max": {
-                                                                        "type": "integer",
-                                                                        "minimum": 1,
-                                                                        "maximum": 3600,
-                                                                        "example": 30
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "type": "object",
-                                                "description": "Transfer timeouts for HTTPS OS download. Do not send this for scp://, sftp://, or ftps://.",
-                                                "properties": {
-                                                    "connection": {
-                                                        "type": "integer",
-                                                        "minimum": 1,
-                                                        "maximum": 3600,
-                                                        "example": 5
-                                                    },
-                                                    "read": {
-                                                        "type": "integer",
-                                                        "minimum": 1,
-                                                        "maximum": 3600,
-                                                        "example": 20
+                                                    "delayInSec": {
+                                                        "type": "integer"
                                                     }
                                                 }
                                             }
@@ -27477,18 +27430,8 @@
                                             "verifyPeer": false,
                                             "verifyHost": false,
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -27506,18 +27449,8 @@
                                             },
                                             "url": "https://example.com/firmware/reader-os.tar.bz2",
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -27548,18 +27481,8 @@
                                             "verifyPeer": false,
                                             "verifyHost": false,
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -27588,18 +27511,8 @@
                                             },
                                             "url": "https://example.com/firmware/reader-os.tar.bz2",
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -27988,18 +27901,8 @@
                                             "verifyPeer": false,
                                             "verifyHost": false,
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -28019,18 +27922,8 @@
                                                 "Authorization": "Bearer @1T@uT0dud3"
                                             },
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -28054,18 +27947,8 @@
                                             "installedCertificateType": "client",
                                             "installedCertificateName": "scenario-basic",
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -28082,18 +27965,8 @@
                                             "verifyPeer": false,
                                             "verifyHost": false,
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }
@@ -28128,18 +28001,8 @@
                                             },
                                             "url": "https://example.com/packages/sample-app.deb",
                                             "retry": {
-                                                "type": "randomWait",
-                                                "policy": {
-                                                    "retries": 3,
-                                                    "wait": {
-                                                        "min": 10,
-                                                        "max": 30
-                                                    }
-                                                }
-                                            },
-                                            "timeouts": {
-                                                "connection": 5,
-                                                "read": 20
+                                                "count": 3,
+                                                "delayInSec": 10
                                             }
                                         }
                                     }

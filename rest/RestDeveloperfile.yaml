@@ -7357,48 +7357,12 @@ paths:
                     type: string
                 retry:
                   type: object
-                  description: Optional backoff retry for HTTPS OS download. Firmware updates are always asynchronous. Do not send this for scp://, sftp://, or ftps://.
+                  description: Retry configuration for the download operation.
                   properties:
-                    type:
-                      type: string
-                      enum:
-                        - randomWait
-                      example: randomWait
-                    policy:
-                      type: object
-                      properties:
-                        retries:
-                          type: integer
-                          minimum: 1
-                          maximum: 50
-                          example: 3
-                        wait:
-                          type: object
-                          properties:
-                            min:
-                              type: integer
-                              minimum: 0
-                              maximum: 3600
-                              example: 10
-                            max:
-                              type: integer
-                              minimum: 1
-                              maximum: 3600
-                              example: 30
-                timeouts:
-                  type: object
-                  description: Transfer timeouts for HTTPS OS download. Do not send this for scp://, sftp://, or ftps://.
-                  properties:
-                    connection:
+                    count:
                       type: integer
-                      minimum: 1
-                      maximum: 3600
-                      example: 5
-                    read:
+                    delayInSec:
                       type: integer
-                      minimum: 1
-                      maximum: 3600
-                      example: 20
             examples:
               set_os:
                 value:
@@ -7410,15 +7374,8 @@ paths:
                   verifyPeer: false
                   verifyHost: false
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
       responses:
         '200':
           description: OK

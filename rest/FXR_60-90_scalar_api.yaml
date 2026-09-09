@@ -9139,7 +9139,7 @@ paths:
         Optional:
 
         - `verifyPeer`, `verifyHost`
-        - `retry`, `timeouts` — HTTPS only
+        - `retry` — `count` and `delayInSec`
 
         ## Endpoint Details
 
@@ -9165,8 +9165,7 @@ paths:
         | `authenticationOptions` | `username` and `password` when `authenticationType` is `BASIC`. If `authenticationOptions` is not accepted, send `options`. |
         | `verifyPeer` | Optional. `true` to check the file server certificate. |
         | `verifyHost` | Optional. `true` to check the file server hostname. |
-        | `retry` | Optional. HTTPS only. `type` `randomWait` with `policy.retries` and `wait.min` / `wait.max`. |
-        | `timeouts` | Optional. HTTPS only. `connection` and `read` in seconds. |
+        | `retry` | Optional. `count` and `delayInSec`. |
       operationId: setOs
       requestBody:
         content:
@@ -9185,15 +9184,8 @@ paths:
                   verifyPeer: false
                   verifyHost: false
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               https_basic_retry:
                 summary: BASIC with retry and timeouts
                 value:
@@ -9203,15 +9195,8 @@ paths:
                     password: demo-password
                   url: https://example.com/firmware/reader-os.tar.bz2
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               https_none:
                 summary: authenticationType NONE
                 value:
@@ -9228,15 +9213,8 @@ paths:
                   verifyPeer: false
                   verifyHost: false
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               os:
                 summary: os
                 value:
@@ -9251,15 +9229,8 @@ paths:
                     password: demo-password
                   url: https://example.com/firmware/reader-os.tar.bz2
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
       responses:
         "200":
           description: OK
@@ -9389,15 +9360,8 @@ paths:
                   verifyPeer: false
                   verifyHost: false
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               app-install-bearer:
                 summary: HTTPS NONE with Authorization
                 value:
@@ -9409,15 +9373,8 @@ paths:
                   headers:
                     Authorization: Bearer @1T@uT0dud3
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               app-install-mtls:
                 summary: HTTPS BASIC with installed cert and CA
                 value:
@@ -9455,15 +9412,8 @@ paths:
                   installedCertificateType: client
                   installedCertificateName: scenario-basic
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               app-install-none:
                 summary: HTTPS NONE
                 value:
@@ -9473,15 +9423,8 @@ paths:
                   verifyPeer: false
                   verifyHost: false
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               installUserapp:
                 summary: installUserapp
                 value:
@@ -9501,15 +9444,8 @@ paths:
                     password: demo-password
                   url: https://example.com/packages/sample-app.deb
                   retry:
-                    type: randomWait
-                    policy:
-                      retries: 3
-                      wait:
-                        min: 10
-                        max: 30
-                  timeouts:
-                    connection: 5
-                    read: 20
+                    count: 3
+                    delayInSec: 10
               sftp_basic:
                 summary: SFTP BASIC
                 value:
@@ -16512,42 +16448,12 @@ components:
             type: string
         retry:
           type: object
-          description: Optional backoff retry for HTTPS OS download. Firmware updates are always asynchronous. Do not send this for scp://, sftp://, or ftps://.
+          description: Retry configuration for the download operation.
           properties:
-            type:
-              type: string
-              enum:
-                - randomWait
-            policy:
-              type: object
-              properties:
-                retries:
-                  type: integer
-                  minimum: 1
-                  maximum: 50
-                wait:
-                  type: object
-                  properties:
-                    min:
-                      type: integer
-                      minimum: 0
-                      maximum: 3600
-                    max:
-                      type: integer
-                      minimum: 1
-                      maximum: 3600
-        timeouts:
-          type: object
-          description: Transfer timeouts for HTTPS OS download. Do not send this for scp://, sftp://, or ftps://.
-          properties:
-            connection:
+            count:
               type: integer
-              minimum: 1
-              maximum: 3600
-            read:
+            delayInSec:
               type: integer
-              minimum: 1
-              maximum: 3600
     SetOsResponse:
       type: string
       description: Returns an empty string on success.
