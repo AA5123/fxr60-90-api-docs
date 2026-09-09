@@ -2,7 +2,7 @@
 
 - **PUT** - Stop RFID Inventory or BLE scan (`stopInventory`)
 
-`scanType` is an array of `ble` and/or `rfid`. These four examples match the published schema and the live 6 Sep 2026 stop tests.
+`scanType` is an array of `ble` and/or `rfid`. These four examples match the published schema.
 
 | File | Example name | Summary |
 |---|---|---|

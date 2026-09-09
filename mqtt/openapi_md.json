@@ -5359,7 +5359,7 @@
                             },
                             "examples": {
                                 "advanced_quiet_tags": {
-                                    "summary": "Advanced quiet tags (live 6 Sep 2026)",
+                                    "summary": "Advanced quiet tags",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5400,7 +5400,7 @@
                                     }
                                 },
                                 "advanced_unquiet_tags": {
-                                    "summary": "Advanced unquiet tags (live 6 Sep 2026)",
+                                    "summary": "Advanced unquiet tags",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5441,7 +5441,7 @@
                                     }
                                 },
                                 "disable_fastID": {
-                                    "summary": "Disable FastID (live 6 Sep 2026)",
+                                    "summary": "Disable FastID",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5453,7 +5453,7 @@
                                     }
                                 },
                                 "disable_protect_read": {
-                                    "summary": "Disable protected-tag visibility (live 6 Sep 2026)",
+                                    "summary": "Disable protected-tag visibility",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5466,7 +5466,7 @@
                                     }
                                 },
                                 "disable_tagFocus": {
-                                    "summary": "Disable TagFocus (live 6 Sep 2026)",
+                                    "summary": "Disable TagFocus",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5478,7 +5478,7 @@
                                     }
                                 },
                                 "enable_fastID": {
-                                    "summary": "Enable FastID (live 6 Sep 2026)",
+                                    "summary": "Enable FastID",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5490,7 +5490,7 @@
                                     }
                                 },
                                 "enable_protect_read": {
-                                    "summary": "Enable protected-tag visibility (live 6 Sep 2026)",
+                                    "summary": "Enable protected-tag visibility",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5503,7 +5503,7 @@
                                     }
                                 },
                                 "enable_tagFocus": {
-                                    "summary": "Enable TagFocus (live 6 Sep 2026)",
+                                    "summary": "Enable TagFocus",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5515,7 +5515,7 @@
                                     }
                                 },
                                 "protect_tag": {
-                                    "summary": "Protect tag (live 6 Sep 2026)",
+                                    "summary": "Protect tag",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5530,7 +5530,7 @@
                                     }
                                 },
                                 "quiet_tags": {
-                                    "summary": "Quiet tags by EPC list (live 6 Sep 2026)",
+                                    "summary": "Quiet tags by EPC list",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5548,7 +5548,7 @@
                                     }
                                 },
                                 "unprotect_tag": {
-                                    "summary": "Unprotect tag (live 6 Sep 2026)",
+                                    "summary": "Unprotect tag",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",
@@ -5562,7 +5562,7 @@
                                     }
                                 },
                                 "unquiet_tags": {
-                                    "summary": "Unquiet tags by EPC list (accepted 6 Sep 2026)",
+                                    "summary": "Unquiet tags by EPC list",
                                     "value": {
                                         "command": "set_impinjGen2X",
                                         "command_id": "req-set-impinjGen2X",

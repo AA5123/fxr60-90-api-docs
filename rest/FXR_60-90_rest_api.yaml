@@ -11742,7 +11742,7 @@ paths:
                     fastID:
                       enabled: true
                 fastID_disabled:
-                  summary: Last saved FastID, enabled false (live 8 Sep 2026)
+                  summary: Last saved FastID, enabled false
                   value:
                     fastID:
                       enabled: false
@@ -11817,7 +11817,7 @@ paths:
               $ref: '#/components/schemas/SetImpinjGen2XRequest'
             examples:
               advanced_quiet_tags:
-                summary: Advanced quiet tags (live 6 Sep 2026)
+                summary: Advanced quiet tags
                 value:
                   tagQuieting:
                     advanced:
@@ -11842,7 +11842,7 @@ paths:
                       target: SL
                       stateAwareAction: ASSERTSL_DEASSERTSL
               advanced_unquiet_tags:
-                summary: Advanced unquiet tags (live 6 Sep 2026)
+                summary: Advanced unquiet tags
                 value:
                   tagQuieting:
                     advanced:
@@ -11867,39 +11867,39 @@ paths:
                       target: SL
                       stateAwareAction: DEASSERTSL_ASSERTSL
               disable_fastID:
-                summary: Disable FastID (live 6 Sep 2026)
+                summary: Disable FastID
                 value:
                   fastID:
                     enabled: false
               disable_protect_read:
-                summary: Disable protected-tag visibility (live 6 Sep 2026)
+                summary: Disable protected-tag visibility
                 value:
                   tagProtect:
                     action: disableTagVisibility
                     password: "77777777"
               disable_tagFocus:
-                summary: Disable TagFocus (live 6 Sep 2026)
+                summary: Disable TagFocus
                 value:
                   tagFocus:
                     enabled: false
               enable_fastID:
-                summary: Enable FastID (live 6 Sep 2026)
+                summary: Enable FastID
                 value:
                   fastID:
                     enabled: true
               enable_protect_read:
-                summary: Enable protected-tag visibility (live 6 Sep 2026)
+                summary: Enable protected-tag visibility
                 value:
                   tagProtect:
                     action: enableTagVisibility
                     password: "77777777"
               enable_tagFocus:
-                summary: Enable TagFocus (live 6 Sep 2026)
+                summary: Enable TagFocus
                 value:
                   tagFocus:
                     enabled: true
               protect_tag:
-                summary: Protect tag (live 6 Sep 2026)
+                summary: Protect tag
                 value:
                   tagProtect:
                     action: enableTagProtection
@@ -11907,7 +11907,7 @@ paths:
                     tagID: e2801191a5030069073b426d
                     enableShortRange: true
               quiet_tags:
-                summary: Quiet tags by EPC list (live 6 Sep 2026)
+                summary: Quiet tags by EPC list
                 value:
                   tagQuieting:
                     basic:
@@ -11916,14 +11916,14 @@ paths:
                       - e2801191a5030069073b426d
                       - e2801191a5030069073b426e
               unprotect_tag:
-                summary: Unprotect tag (live 6 Sep 2026)
+                summary: Unprotect tag
                 value:
                   tagProtect:
                     action: disableTagProtection
                     password: "77777777"
                     tagID: e2801191a5030069073b426d
               unquiet_tags:
-                summary: Unquiet tags by EPC list (accepted 6 Sep 2026)
+                summary: Unquiet tags by EPC list
                 value:
                   tagQuieting:
                     basic:
