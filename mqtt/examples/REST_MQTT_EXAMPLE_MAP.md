@@ -125,6 +125,7 @@ Generated from REST `operation_examples` into MQTT `examples`.
 | `cloud-mode/PUT/PORTAL.json` | `set_mode/request/PORTAL.json` | request payload |
 | `cloud-mode/PUT/SIMPLE.json` | `set_mode/request/SIMPLE.json` | request payload |
 | `cloud-mode/PUT/CUSTOM_accesses.json` | `set_mode/request/CUSTOM_accesses.json` | request payload |
+| `cloud-mode/PUT/CUSTOM_write_access_password.json` | `set_mode/request/CUSTOM_write_access_password.json` | request payload |
 | `cloud-mode/PUT/CUSTOM_filter.json` | `set_mode/request/CUSTOM_filter.json` | request payload |
 | `cloud-mode/PUT/CUSTOM_metadata.json` | `set_mode/request/CUSTOM_metadata.json` | request payload |
 | `cloud-mode/PUT/CUSTOM_query.json` | `set_mode/request/CUSTOM_query.json` | request payload |

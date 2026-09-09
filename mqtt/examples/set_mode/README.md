@@ -12,6 +12,7 @@ REST: `PUT /cloud/mode` → `cloud-mode/`
 | `request/CUSTOM_query.json` | request | `CUSTOM_query` | `cloud-mode/PUT/CUSTOM_query.json` | CUSTOM query |
 | `request/CUSTOM_selects.json` | request | `CUSTOM_selects` | `cloud-mode/PUT/CUSTOM_selects.json` | CUSTOM selects |
 | `request/CUSTOM_accesses.json` | request | `CUSTOM_accesses` | `cloud-mode/PUT/CUSTOM_accesses.json` | CUSTOM accesses |
+| `request/CUSTOM_write_access_password.json` | request | `CUSTOM_write_access_password` | `cloud-mode/PUT/CUSTOM_write_access_password.json` | Assign an access password (WRITE to RESERVED bank) |
 | `request/CUSTOM_report_filter.json` | request | `CUSTOM_report_filter` | `cloud-mode/PUT/CUSTOM_report_filter.json` | CUSTOM report filter |
 | `request/CUSTOM_metadata.json` | request | `CUSTOM_metadata` | `cloud-mode/PUT/CUSTOM_metadata.json` | CUSTOM metadata |
 | `request/CUSTOM_radio_stop.json` | request | `CUSTOM_radio_stop` | `cloud-mode/PUT/CUSTOM_radio_stop.json` | CUSTOM radio stop |

@@ -33,6 +33,7 @@ PUT examples sourced from `FXR-Series/examples/mode_testing/PUT_cloud_mode` (lab
 | `PUT/CUSTOM_query.json` | `CUSTOM_query` | CUSTOM query |
 | `PUT/CUSTOM_selects.json` | `CUSTOM_selects` | CUSTOM selects |
 | `PUT/CUSTOM_accesses.json` | `CUSTOM_accesses` | CUSTOM accesses |
+| `PUT/CUSTOM_write_access_password.json` | `CUSTOM_write_access_password` | Assign an access password (WRITE to RESERVED bank) |
 | `PUT/CUSTOM_report_filter.json` | `CUSTOM_report_filter` | CUSTOM report filter |
 | `PUT/CUSTOM_metadata.json` | `CUSTOM_metadata` | CUSTOM metadata |
 | `PUT/CUSTOM_radio_stop.json` | `CUSTOM_radio_stop` | CUSTOM radio stop |

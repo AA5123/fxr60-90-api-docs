@@ -125,6 +125,13 @@ PUT refreshed from `FXR-Series/examples/mode_testing/PUT_cloud_mode`.
 | **Example name** | `CUSTOM_accesses` |
 | **Summary title** | `CUSTOM accesses` |
 
+### `PUT/CUSTOM_write_access_password.json`
+
+| Field | Value |
+|---|---|
+| **Example name** | `CUSTOM_write_access_password` |
+| **Summary title** | `Assign an access password (WRITE to RESERVED bank)` |
+
 ### `PUT/CUSTOM_report_filter.json`
 
 | Field | Value |
